@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<document case="lower" version="1.0">
+    <ddn>
+        <version TEXT="2.99">
+                <major>2</major>
+                <minor>99</minor>
+        </version>
+        <date>19/10/2015</date>
+
+        <!-- EFX pairings for TMS usage - all primary - secondary and tertiary EFX PoPs -->
+        <livepartnersitepairs>
+             <item site1="NTC" site2="HDC"/>
+             <item site1="NJ2" site2="NJ3"/>
+             <item site1="CC1" site2="CC2"/>
+             <item site1="TR1" site2="TR2"/>
+             <item site1="HDC" site2="HTC"/>
+             <item site1="UK1" site2="GVA" site3="DTC" site4="UK2"/>
+             <item site1="LN1" site2="LN2"/>
+             <item site1="FF1" site2="FF2"/>
+             <item site1="MS1" site2="MS2"/>
+             <item site1="JB1" site2="JB2"/>
+             <item site1="DB1" site2="DB2"/>
+             <item site1="SG2" site2="SG3"/>
+             <item site1="SG1" site2="HK1"/>
+             <item site1="HK2" site2="HK3"/>
+             <item site1="TK1" site2="TK2"/>
+             <item site1="SY3" site2="SY4"/>
+             <item site1="MB1" site2="MB2"/>
+             <item site1="SE1" site2="SE2"/>
+             <item site1="TP2" site2="TP3"/>
+             <item site1="BJ1" site2="BJ2"/>
+             <item site1="SH1" site2="SH2"/>
+        </livepartnersitepairs>
+    </ddn>
+</document>

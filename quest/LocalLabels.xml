@@ -1,0 +1,3266 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<ddn>
+        <version TEXT="2.29">
+                <major>2</major>
+                <minor>29.02</minor>
+        </version>
+        <date>10/08/2015</date>
+
+        <!-- Available Resources. Each server with DDN addresses -->
+        <servers>
+                <xi:include href="ddnServers.xml"/>
+        </servers>
+
+        <multAddrs>
+                <!-- Port number enumeration -->
+                <port ID="MrktData">7777</port>
+
+                <!-- DSCP number enumeration -->
+                <dscp ID="Local">39</dscp>
+                <dscp ID="Regional">51</dscp>
+                <dscp ID="WestGlobal">49</dscp>
+                <dscp ID="InterAreaToAsia">63</dscp>
+                <dscp ID="GlobalT2">63</dscp>
+                <dscp ID="Global">50</dscp>
+                <dscp ID="RecReq">23</dscp>
+                <dscp ID="InternalFeeds">52</dscp>
+                <dscp ID="LocalCntrlSync">39</dscp>
+                <dscp ID="RegionalCntrlSync">51</dscp>
+                <dscp ID="DevRegional">7</dscp>
+
+             <multAddr TAG="AMER_CORE_WG_IDN_01" ADDR="232.2.4.112" PORT="MrktData" DSCP="WestGlobal"></multAddr>
+             <multAddr TAG="AMER_CORE_WG_IDN_02" ADDR="232.2.4.113" PORT="MrktData" DSCP="WestGlobal"></multAddr>
+             <multAddr TAG="AMER_CORE_WG_IDN_03" ADDR="232.2.4.114" PORT="MrktData" DSCP="WestGlobal"></multAddr>
+             <multAddr TAG="AMER_CORE_WG_IDN_04" ADDR="232.2.4.115" PORT="MrktData" DSCP="WestGlobal"></multAddr>
+             <multAddr TAG="AMER_CORE_WG_IDN_05" ADDR="232.2.4.116" PORT="MrktData" DSCP="WestGlobal"></multAddr>
+             <multAddr TAG="AMER_CORE_WG_IDN_06" ADDR="232.2.4.117" PORT="MrktData" DSCP="WestGlobal"></multAddr>
+             <multAddr TAG="AMER_CORE_WG_IDN_07" ADDR="232.2.4.118" PORT="MrktData" DSCP="WestGlobal"></multAddr>
+             <multAddr TAG="AMER_CORE_WG_IDN_08" ADDR="232.2.4.119" PORT="MrktData" DSCP="WestGlobal"></multAddr>
+             <multAddr TAG="AMER_CORE_IA_ASIA_1" ADDR="232.2.4.128" PORT="MrktData" DSCP="InterAreaToAsia"></multAddr>
+             <multAddr TAG="AMER_CORE_IA_ASIA_2" ADDR="232.2.4.129" PORT="MrktData" DSCP="InterAreaToAsia"></multAddr>
+             <multAddr TAG="AMER_CORE_IA_ASIA_3" ADDR="232.2.4.130" PORT="MrktData" DSCP="InterAreaToAsia"></multAddr>
+             <multAddr TAG="AMER_CORE_IA_ASIA_4" ADDR="232.2.4.131" PORT="MrktData" DSCP="InterAreaToAsia"></multAddr>
+             <multAddr TAG="AMER_CORE_IA_ASIA_5" ADDR="232.2.4.132" PORT="MrktData" DSCP="InterAreaToAsia"></multAddr>
+             <multAddr TAG="AMER_CORE_IA_ASIA_6" ADDR="232.2.4.133" PORT="MrktData" DSCP="InterAreaToAsia"></multAddr>
+             <multAddr TAG="AMER_CORE_IA_ASIA_7" ADDR="232.2.4.134" PORT="MrktData" DSCP="InterAreaToAsia"></multAddr>
+             <multAddr TAG="AMER_CORE_IA_ASIA_8" ADDR="232.2.4.135" PORT="MrktData" DSCP="InterAreaToAsia"></multAddr>
+             <multAddr TAG="AMER_CD_GAI_TUN_01" ADDR="232.2.4.224" PORT="MrktData" DSCP="Global"></multAddr>
+             <multAddr TAG="AMER_CD_GAI_TUN_02" ADDR="232.2.4.225" PORT="MrktData" DSCP="Global"></multAddr>
+             <multAddr TAG="AMER_CD_GAI_TUN_03" ADDR="232.2.4.226" PORT="MrktData" DSCP="Global"></multAddr>
+             <multAddr TAG="AMER_CD_GAI_TUN_04" ADDR="232.2.4.227" PORT="MrktData" DSCP="Global"></multAddr>
+             <multAddr TAG="AMER_CORE_G_IDN_01" ADDR="232.2.4.240" PORT="MrktData" DSCP="Global"></multAddr>
+             <multAddr TAG="AMER_CORE_G_IDN_02" ADDR="232.2.4.241" PORT="MrktData" DSCP="Global"></multAddr>
+             <multAddr TAG="AMER_CORE_G_IDN_03" ADDR="232.2.4.242" PORT="MrktData" DSCP="Global"></multAddr>
+             <multAddr TAG="AMER_CORE_G_IDN_04" ADDR="232.2.4.243" PORT="MrktData" DSCP="Global"></multAddr>
+             <multAddr TAG="AMER_CORE_G_IDN_05" ADDR="232.2.4.244" PORT="MrktData" DSCP="Global"></multAddr>
+             <multAddr TAG="AMER_CORE_G_IDN_06" ADDR="232.2.4.245" PORT="MrktData" DSCP="Global"></multAddr>
+             <multAddr TAG="AMER_CORE_G_IDN_07" ADDR="232.2.4.246" PORT="MrktData" DSCP="Global"></multAddr>
+             <multAddr TAG="AMER_CORE_G_IDN_08" ADDR="232.2.4.247" PORT="MrktData" DSCP="Global"></multAddr>
+             <multAddr TAG="AMER_IF_1" ADDR="232.2.4.255" PORT="MrktData" DSCP="Global"></multAddr>
+             <multAddr TAG="AMER_SIAC_1" ADDR="232.2.1.0" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="AMER_SIAC_2" ADDR="232.2.1.1" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="AMER_NASDAQ_1" ADDR="232.2.1.2" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="AMER_NDBASIC" ADDR="232.2.1.3" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="AMER_NA_NIB" ADDR="232.2.1.4" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="OPRA_BBO_MG1_ORIG" ADDR="232.2.1.5" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="OPRA_BBO_MG2_ORIG" ADDR="232.2.1.6" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="US_L1_WG_IDN" ADDR="232.2.1.7" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="US_L2_WG_IDN" ADDR="232.2.1.8" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="US_L1_WG" ADDR="232.2.1.9" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="US_L2_WG" ADDR="232.2.1.10" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="NASDAQ_LEVEL2_LEGACY" ADDR="232.2.1.15" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="NASDAQ_LEVEL2_STRATEGIC" ADDR="232.2.1.16" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="OPRA_BBO_MG1" ADDR="232.2.1.17" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="OPRA_BBO_MG2" ADDR="232.2.1.18" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="OPRA_BBO_MG3" ADDR="232.2.1.19" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="OPRA_BBO_MG4" ADDR="232.2.1.20" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="AMER_L1_WG" ADDR="232.2.1.21" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="BATS_L1_R" ADDR="232.2.1.31" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="BATS_L2_R" ADDR="232.2.1.32" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="US_L1_R" ADDR="232.2.1.33" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="OPRA_REGIONALS_MG1_ORIG" ADDR="232.2.1.35" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="OPRA_REGIONALS_MG2_ORIG" ADDR="232.2.1.36" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="OPRA_REGIONALS_MG3_ORIG" ADDR="232.2.1.37" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="OPRA_REGIONALS_MG4_ORIG" ADDR="232.2.1.38" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="NASDAQ_TTV_L1" ADDR="232.2.1.39" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="NASDAQ_TTV_L2P1" ADDR="232.2.1.40" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="NASDAQ_TTV_L2P2" ADDR="232.2.1.41" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="DIRECT_EDGE_L1" ADDR="232.2.1.42" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="DIRECT_EDGE_L2" ADDR="232.2.1.43" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="OPRA_REGIONALS_MG1" ADDR="232.2.1.44" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="OPRA_REGIONALS_MG2" ADDR="232.2.1.45" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="OPRA_REGIONALS_MG3" ADDR="232.2.1.46" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="OPRA_REGIONALS_MG4" ADDR="232.2.1.47" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="CHICAGO_L1_IDN" ADDR="232.2.1.50" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="CHICAGO_L2_IDN" ADDR="232.2.1.51" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="TORONTO_L1_WG" ADDR="232.2.1.54" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="TORONTO_L2_WG" ADDR="232.2.1.55" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="AMER_CD_GAI_01" ADDR="232.2.1.60" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="AMER_CD_GAI_02" ADDR="232.2.1.61" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="AMER_CD_GAI_03" ADDR="232.2.1.62" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="AMER_CD_GAI_04" ADDR="232.2.1.63" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="AMER_EVAI" ADDR="232.2.1.72" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="AMER_ICHE_L1_WG" ADDR="232.2.1.76" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="AMER_ICHE_L2_WG" ADDR="232.2.1.77" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="AMER_CDS_DCS" ADDR="232.2.1.80" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="AMER_CDS_01" ADDR="232.2.1.81" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="AMER_CDS_02" ADDR="232.2.1.82" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="AMER_CDS_03" ADDR="232.2.1.83" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="SIR_AMER_TO_EFX" ADDR="232.2.1.87" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="SIR_NJ_TO_EFX" ADDR="232.2.1.88" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="SIR_CC_TO_EFX" ADDR="232.2.1.89" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="SIR_TR_TO_EFX" ADDR="232.2.1.90" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="NEWS_MRN_AMER_R" ADDR="232.2.1.97" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="NEWS_NFCP_AMER_R" ADDR="232.2.1.98" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="AMER_ITDG_1" ADDR="232.2.1.101" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="AMER_ITDG_2" ADDR="232.2.1.102" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="AMER_ITDG_3" ADDR="232.2.1.103" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="AMER_ITDG_4" ADDR="232.2.1.104" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="AMER_ITDG_5" ADDR="232.2.1.105" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="AMER_ITDG_6" ADDR="232.2.1.106" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="AMER_ITDG_7" ADDR="232.2.1.107" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="AMER_ITDG_8" ADDR="232.2.1.108" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="AMER_ERAS_PE_MG" ADDR="232.2.1.110" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="ITDG_AMER_1" ADDR="232.2.1.128" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_AMER_2" ADDR="232.2.1.129" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_AMER_3" ADDR="232.2.1.130" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_AMER_4" ADDR="232.2.1.131" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_AMER_5" ADDR="232.2.1.132" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_AMER_6" ADDR="232.2.1.133" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_AMER_7" ADDR="232.2.1.134" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_AMER_8" ADDR="232.2.1.135" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_AMER_9" ADDR="232.2.1.136" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_AMER_10" ADDR="232.2.1.137" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_AMER_11" ADDR="232.2.1.138" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_AMER_12" ADDR="232.2.1.139" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_AMER_13" ADDR="232.2.1.140" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_AMER_14" ADDR="232.2.1.141" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_AMER_15" ADDR="232.2.1.142" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_AMER_16" ADDR="232.2.1.143" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_AMER_17" ADDR="232.2.1.144" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_AMER_18" ADDR="232.2.1.145" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_AMER_19" ADDR="232.2.1.146" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_AMER_20" ADDR="232.2.1.147" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_AMER_21" ADDR="232.2.1.148" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_AMER_22" ADDR="232.2.1.149" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_AMER_23" ADDR="232.2.1.150" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_AMER_24" ADDR="232.2.1.151" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="AMER_IF_2" ADDR="232.2.1.192" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="AMER_IF_3" ADDR="232.2.1.193" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="AMER_IF_4" ADDR="232.2.1.194" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="NEWS_AMER_UCDP" ADDR="232.2.1.227" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="AMER_CORE_R_01" ADDR="232.2.1.240" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="AMER_CORE_R_02" ADDR="232.2.1.241" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="AMER_CORE_R_03" ADDR="232.2.1.242" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="AMER_CORE_R_04" ADDR="232.2.1.243" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="AMER_CORE_R_05" ADDR="232.2.1.244" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="AMER_CORE_R_06" ADDR="232.2.1.245" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="AMER_CORE_R_07" ADDR="232.2.1.246" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="AMER_CORE_R_08" ADDR="232.2.1.247" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="EMEA_CORE_WG_IDN_01" ADDR="232.2.5.108" PORT="MrktData" DSCP="WestGlobal"></multAddr>
+             <multAddr TAG="EMEA_CORE_WG_IDN_02" ADDR="232.2.5.109" PORT="MrktData" DSCP="WestGlobal"></multAddr>
+             <multAddr TAG="EMEA_CORE_WG_IDN_03" ADDR="232.2.5.110" PORT="MrktData" DSCP="WestGlobal"></multAddr>
+             <multAddr TAG="EMEA_CORE_WG_IDN_04" ADDR="232.2.5.111" PORT="MrktData" DSCP="WestGlobal"></multAddr>
+             <multAddr TAG="EMEA_CORE_WG_IDN_05" ADDR="232.2.5.112" PORT="MrktData" DSCP="WestGlobal"></multAddr>
+             <multAddr TAG="EMEA_CORE_WG_IDN_06" ADDR="232.2.5.113" PORT="MrktData" DSCP="WestGlobal"></multAddr>
+             <multAddr TAG="EMEA_CORE_WG_IDN_07" ADDR="232.2.5.114" PORT="MrktData" DSCP="WestGlobal"></multAddr>
+             <multAddr TAG="EMEA_CORE_WG_IDN_08" ADDR="232.2.5.115" PORT="MrktData" DSCP="WestGlobal"></multAddr>
+             <multAddr TAG="EMEA_CORE_IA_ASIA_1" ADDR="232.2.5.128" PORT="MrktData" DSCP="InterAreaToAsia"></multAddr>
+             <multAddr TAG="EMEA_CORE_IA_ASIA_2" ADDR="232.2.5.129" PORT="MrktData" DSCP="InterAreaToAsia"></multAddr>
+             <multAddr TAG="EMEA_CORE_IA_ASIA_3" ADDR="232.2.5.130" PORT="MrktData" DSCP="InterAreaToAsia"></multAddr>
+             <multAddr TAG="EMEA_CORE_IA_ASIA_4" ADDR="232.2.5.131" PORT="MrktData" DSCP="InterAreaToAsia"></multAddr>
+             <multAddr TAG="EMEA_CORE_IA_ASIA_5" ADDR="232.2.5.132" PORT="MrktData" DSCP="InterAreaToAsia"></multAddr>
+             <multAddr TAG="EMEA_CORE_IA_ASIA_6" ADDR="232.2.5.133" PORT="MrktData" DSCP="InterAreaToAsia"></multAddr>
+             <multAddr TAG="EMEA_CORE_IA_ASIA_7" ADDR="232.2.5.134" PORT="MrktData" DSCP="InterAreaToAsia"></multAddr>
+             <multAddr TAG="EMEA_CORE_IA_ASIA_8" ADDR="232.2.5.135" PORT="MrktData" DSCP="InterAreaToAsia"></multAddr>
+             <multAddr TAG="EMEA_CD_GAI_TUN_01" ADDR="232.2.5.224" PORT="MrktData" DSCP="Global"></multAddr>
+             <multAddr TAG="EMEA_CD_GAI_TUN_02" ADDR="232.2.5.225" PORT="MrktData" DSCP="Global"></multAddr>
+             <multAddr TAG="EMEA_CD_GAI_TUN_03" ADDR="232.2.5.226" PORT="MrktData" DSCP="Global"></multAddr>
+             <multAddr TAG="EMEA_CD_GAI_TUN_04" ADDR="232.2.5.227" PORT="MrktData" DSCP="Global"></multAddr>
+             <multAddr TAG="EMEA_CORE_G_IDN_01" ADDR="232.2.5.240" PORT="MrktData" DSCP="Global"></multAddr>
+             <multAddr TAG="EMEA_CORE_G_IDN_02" ADDR="232.2.5.241" PORT="MrktData" DSCP="Global"></multAddr>
+             <multAddr TAG="EMEA_CORE_G_IDN_03" ADDR="232.2.5.242" PORT="MrktData" DSCP="Global"></multAddr>
+             <multAddr TAG="EMEA_CORE_G_IDN_04" ADDR="232.2.5.243" PORT="MrktData" DSCP="Global"></multAddr>
+             <multAddr TAG="EMEA_CORE_G_IDN_05" ADDR="232.2.5.244" PORT="MrktData" DSCP="Global"></multAddr>
+             <multAddr TAG="EMEA_CORE_G_IDN_06" ADDR="232.2.5.245" PORT="MrktData" DSCP="Global"></multAddr>
+             <multAddr TAG="EMEA_CORE_G_IDN_07" ADDR="232.2.5.246" PORT="MrktData" DSCP="Global"></multAddr>
+             <multAddr TAG="EMEA_CORE_G_IDN_08" ADDR="232.2.5.247" PORT="MrktData" DSCP="Global"></multAddr>
+             <multAddr TAG="LONDON_L1_WG_IDN" ADDR="232.2.2.0" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="LONDON_L2_WG_IDN" ADDR="232.2.2.1" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="NYSE_ENX_CASH_L1" ADDR="232.2.2.2" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="NYSE_ENX_CASH_L2" ADDR="232.2.2.3" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="NYSE_LIFFE_L1" ADDR="232.2.2.4" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="NYSE_LIFFE_L2" ADDR="232.2.2.5" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="LON_BATS_L1" ADDR="232.2.2.6" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="LON_BATS_L2" ADDR="232.2.2.7" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="LONDON_L1_WG_IDN_2" ADDR="232.2.2.8" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="LONDON_L2_WG_IDN_2" ADDR="232.2.2.9" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="LON_CHIX_EMEA_L1" ADDR="232.2.2.10" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="LON_CHIX_EMEA_L2" ADDR="232.2.2.11" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="LONDON_L1_WG_IDN_3" ADDR="232.2.2.12" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="LONDON_L2_WG_IDN_3" ADDR="232.2.2.13" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="LONDON_L1_WG_IDN_4" ADDR="232.2.2.14" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="LONDON_L2_WG_IDN_4" ADDR="232.2.2.15" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="LON_AQUIS_WG_L1" ADDR="232.2.2.16" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="LON_AQUIS_R_L2" ADDR="232.2.2.17" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="LONDON_L1_WG_IDN_5" ADDR="232.2.2.18" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="LONDON_L2_WG_IDN_5" ADDR="232.2.2.19" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="LONDON_L1_WG_IDN_6" ADDR="232.2.2.20" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="LONDON_L2_WG_IDN_6A" ADDR="232.2.2.21" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="LONDON_L2_WG_IDN_6" ADDR="232.2.2.22" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="EMEA_L1_WG" ADDR="232.2.2.24" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="FFT_L2_R" ADDR="232.2.2.34" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="FFT_L1_WG_IDN" ADDR="232.2.2.35" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="FFT_L2_WG_IDN" ADDR="232.2.2.36" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="FFT_L1_WG_IDN_2" ADDR="232.2.2.37" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="FFT_L2_WG_IDN_2" ADDR="232.2.2.38" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="FFT_L1_WG_IDN_EUREX" ADDR="232.2.2.39" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="FFT_L2_WG_IDN_EUREX" ADDR="232.2.2.40" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="FFT_SCOACH" ADDR="232.2.2.41" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="FFT_EUWAX" ADDR="232.2.2.42" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="JOBURG_L1_WG" ADDR="232.2.2.43" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="JOBURG_L2_WG" ADDR="232.2.2.44" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="MOSCOW_L1_WG" ADDR="232.2.2.47" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="MOSCOW_L2_WG" ADDR="232.2.2.48" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="LON_ICHE_L1_REG" ADDR="232.2.2.51" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="LON_ICHE_L2_REG" ADDR="232.2.2.52" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="LON_ICHE_L1_WG" ADDR="232.2.2.53" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="LON_ICHE_L2_WG" ADDR="232.2.2.54" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="EMEA_EVAI" ADDR="232.2.2.55" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="EMEA_VDI_CONT" ADDR="232.2.2.58" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="EMEA_PPDS" ADDR="232.2.2.59" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="EMEA_CD_GAI_01" ADDR="232.2.2.60" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="EMEA_CD_GAI_02" ADDR="232.2.2.61" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="EMEA_CD_GAI_03" ADDR="232.2.2.62" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="EMEA_CD_GAI_04" ADDR="232.2.2.63" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="DUBAI_L1_WG" ADDR="232.2.2.68" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="DUBAI_L2_WG" ADDR="232.2.2.69" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="EMEA_CDS_DCS" ADDR="232.2.2.80" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="EMEA_CDS_01" ADDR="232.2.2.81" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="EMEA_CDS_02" ADDR="232.2.2.82" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="EMEA_CDS_03" ADDR="232.2.2.83" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="SIR_EMEA_TO_EFX" ADDR="232.2.2.87" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="SIR_LN_TO_EFX" ADDR="232.2.2.88" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="SIR_FF_TO_EFX" ADDR="232.2.2.89" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="SIR_DB_TO_EFX" ADDR="232.2.2.90" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="SIR_JB_TO_EFX" ADDR="232.2.2.91" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="SIR_MS_TO_EFX" ADDR="232.2.2.92" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="NEWS_MRN_EMEA_G" ADDR="232.2.2.96" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="NEWS_MRN_EMEA_R" ADDR="232.2.2.97" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="NEWS_NFCP_EMEA_R" ADDR="232.2.2.98" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="EMEA_ITDG_1" ADDR="232.2.2.101" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="EMEA_ITDG_2" ADDR="232.2.2.102" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="EMEA_ITDG_3" ADDR="232.2.2.103" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="EMEA_ITDG_4" ADDR="232.2.2.104" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="EMEA_ITDG_5" ADDR="232.2.2.105" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="EMEA_ITDG_6" ADDR="232.2.2.106" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="EMEA_ITDG_7" ADDR="232.2.2.107" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="EMEA_ITDG_8" ADDR="232.2.2.108" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="METADATA" ADDR="232.2.2.109" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="EMEA_ERAS_PE_MG" ADDR="232.2.2.110" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="ITDG_EMEA_1" ADDR="232.2.2.128" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_EMEA_2" ADDR="232.2.2.129" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_EMEA_3" ADDR="232.2.2.130" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_EMEA_4" ADDR="232.2.2.131" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_EMEA_5" ADDR="232.2.2.132" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_EMEA_6" ADDR="232.2.2.133" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_EMEA_7" ADDR="232.2.2.134" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_EMEA_8" ADDR="232.2.2.135" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_EMEA_9" ADDR="232.2.2.136" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_EMEA_10" ADDR="232.2.2.137" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_EMEA_11" ADDR="232.2.2.138" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_EMEA_12" ADDR="232.2.2.139" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_EMEA_13" ADDR="232.2.2.140" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_EMEA_14" ADDR="232.2.2.141" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_EMEA_15" ADDR="232.2.2.142" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_EMEA_16" ADDR="232.2.2.143" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_EMEA_17" ADDR="232.2.2.144" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_EMEA_18" ADDR="232.2.2.145" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_EMEA_19" ADDR="232.2.2.146" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_EMEA_20" ADDR="232.2.2.147" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_EMEA_21" ADDR="232.2.2.148" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_EMEA_22" ADDR="232.2.2.149" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_EMEA_23" ADDR="232.2.2.150" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_EMEA_24" ADDR="232.2.2.151" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="NEWS_EMEA_UCDP" ADDR="232.2.2.227" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="EMEA_CORE_R_01" ADDR="232.2.2.238" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="EMEA_CORE_R_02" ADDR="232.2.2.239" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="EMEA_CORE_R_03" ADDR="232.2.2.240" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="EMEA_CORE_R_04" ADDR="232.2.2.241" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="EMEA_CORE_R_05" ADDR="232.2.2.242" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="EMEA_CORE_R_06" ADDR="232.2.2.243" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="EMEA_CORE_R_07" ADDR="232.2.2.244" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="EMEA_CORE_R_08" ADDR="232.2.2.245" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ASIA_CD_GAI_TUN_01" ADDR="232.2.6.60" PORT="MrktData" DSCP="Global"></multAddr>
+             <multAddr TAG="ASIA_CD_GAI_TUN_02" ADDR="232.2.6.61" PORT="MrktData" DSCP="Global"></multAddr>
+             <multAddr TAG="ASIA_CD_GAI_TUN_03" ADDR="232.2.6.62" PORT="MrktData" DSCP="Global"></multAddr>
+             <multAddr TAG="ASIA_CD_GAI_TUN_04" ADDR="232.2.6.63" PORT="MrktData" DSCP="Global"></multAddr>
+             <multAddr TAG="ASIA_CORE_G_IDN_01" ADDR="232.2.6.112" PORT="MrktData" DSCP="Global"></multAddr>
+             <multAddr TAG="ASIA_CORE_G_IDN_02" ADDR="232.2.6.113" PORT="MrktData" DSCP="Global"></multAddr>
+             <multAddr TAG="ASIA_CORE_G_IDN_03" ADDR="232.2.6.114" PORT="MrktData" DSCP="Global"></multAddr>
+             <multAddr TAG="ASIA_CORE_G_IDN_04" ADDR="232.2.6.115" PORT="MrktData" DSCP="Global"></multAddr>
+             <multAddr TAG="ASIA_CORE_G_IDN_05" ADDR="232.2.6.116" PORT="MrktData" DSCP="Global"></multAddr>
+             <multAddr TAG="ASIA_CORE_G_IDN_06" ADDR="232.2.6.117" PORT="MrktData" DSCP="Global"></multAddr>
+             <multAddr TAG="ASIA_CORE_G_IDN_07" ADDR="232.2.6.118" PORT="MrktData" DSCP="Global"></multAddr>
+             <multAddr TAG="ASIA_CORE_G_IDN_08" ADDR="232.2.6.119" PORT="MrktData" DSCP="Global"></multAddr>
+             <multAddr TAG="TOKYO_L1_IDN" ADDR="232.2.3.0" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="TOKYO_L2_IDN" ADDR="232.2.3.1" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="TOKYO_L1_IDN_2" ADDR="232.2.3.2" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="TOKYO_L2_IDN_2" ADDR="232.2.3.3" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="TOKYO_L2_R" ADDR="232.2.3.5" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="TOKYO_L1_G_TEST" ADDR="232.2.3.6" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="TOKYO_L2_G_TEST" ADDR="232.2.3.7" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="HK_L1_IDN" ADDR="232.2.3.10" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="HK_L2_IDN" ADDR="232.2.3.11" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="HK_L1_G_2" ADDR="232.2.3.12" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="HK_L2_G_2" ADDR="232.2.3.13" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="HK_L2_R" ADDR="232.2.3.15" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="SY_L1_G" ADDR="232.2.3.16" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="SY_L2_G" ADDR="232.2.3.17" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="SY_L1_R" ADDR="232.2.3.18" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="SY_L2_R" ADDR="232.2.3.19" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="SG_L1_G" ADDR="232.2.3.20" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="SG_L2_G" ADDR="232.2.3.21" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="SG_L1_R" ADDR="232.2.3.22" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="SG_L2_R" ADDR="232.2.3.23" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="MUMBAI_L1_G" ADDR="232.2.3.26" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="MUMBAI_L2_G" ADDR="232.2.3.27" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="MUMBAI_L1_R" ADDR="232.2.3.28" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="MUMBAI_L2_R" ADDR="232.2.3.29" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="SEOUL_L1_G" ADDR="232.2.3.32" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="SEOUL_L2_G" ADDR="232.2.3.33" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="SEOUL_L1_R" ADDR="232.2.3.34" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="SEOUL_L2_R" ADDR="232.2.3.35" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="ASIA_EVAI" ADDR="232.2.3.56" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="ASIA_CD_GAI_01" ADDR="232.2.3.60" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="ASIA_CD_GAI_02" ADDR="232.2.3.61" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="ASIA_CD_GAI_03" ADDR="232.2.3.62" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="ASIA_CD_GAI_04" ADDR="232.2.3.63" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="ASIA_CDS_DCS" ADDR="232.2.3.80" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="ASIA_CDS_01" ADDR="232.2.3.81" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="ASIA_CDS_02" ADDR="232.2.3.82" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="ASIA_CDS_03" ADDR="232.2.3.83" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="SIR_ASIA_TO_EFX" ADDR="232.2.3.87" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="SIR_TK_TO_EFX" ADDR="232.2.3.88" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="SIR_SG_TO_EFX" ADDR="232.2.3.89" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="SIR_HK_TO_EFX" ADDR="232.2.3.90" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="SIR_SY_TO_EFX" ADDR="232.2.3.91" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="SIR_SE_TO_EFX" ADDR="232.2.3.92" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="SIR_MB_TO_EFX" ADDR="232.2.3.93" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="SIR_TP_TO_EFX" ADDR="232.2.3.94" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="SIR_BJ_TO_EFX" ADDR="232.2.3.95" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="SIR_SH_TO_EFX" ADDR="232.2.3.96" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="NEWS_MRN_ASIA_R" ADDR="232.2.3.97" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="NEWS_NFCP_ASIA_R" ADDR="232.2.3.98" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="ASIA_ITDG_1" ADDR="232.2.3.101" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="ASIA_ITDG_2" ADDR="232.2.3.102" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="ASIA_ITDG_3" ADDR="232.2.3.103" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="ASIA_ITDG_4" ADDR="232.2.3.104" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="ASIA_ITDG_5" ADDR="232.2.3.105" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="ASIA_ITDG_6" ADDR="232.2.3.106" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="ASIA_ITDG_7" ADDR="232.2.3.107" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="ASIA_ITDG_8" ADDR="232.2.3.108" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="ASIA_ERAS_PE_MG" ADDR="232.2.3.110" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="ITDG_ASIA_1" ADDR="232.2.3.128" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_ASIA_2" ADDR="232.2.3.129" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_ASIA_3" ADDR="232.2.3.130" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_ASIA_4" ADDR="232.2.3.131" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_ASIA_5" ADDR="232.2.3.132" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_ASIA_6" ADDR="232.2.3.133" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_ASIA_7" ADDR="232.2.3.134" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_ASIA_8" ADDR="232.2.3.135" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_ASIA_9" ADDR="232.2.3.136" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_ASIA_10" ADDR="232.2.3.137" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_ASIA_11" ADDR="232.2.3.138" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_ASIA_12" ADDR="232.2.3.139" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_ASIA_13" ADDR="232.2.3.140" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_ASIA_14" ADDR="232.2.3.141" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_ASIA_15" ADDR="232.2.3.142" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_ASIA_16" ADDR="232.2.3.143" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_ASIA_17" ADDR="232.2.3.144" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_ASIA_18" ADDR="232.2.3.145" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_ASIA_19" ADDR="232.2.3.146" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_ASIA_20" ADDR="232.2.3.147" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_ASIA_21" ADDR="232.2.3.148" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_ASIA_22" ADDR="232.2.3.149" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_ASIA_23" ADDR="232.2.3.150" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ITDG_ASIA_24" ADDR="232.2.3.151" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="NEWS_ASIA_UCDP" ADDR="232.2.3.227" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ASIA_CORE_R_01" ADDR="232.2.3.240" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ASIA_CORE_R_02" ADDR="232.2.3.241" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ASIA_CORE_R_03" ADDR="232.2.3.242" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ASIA_CORE_R_04" ADDR="232.2.3.243" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ASIA_CORE_R_05" ADDR="232.2.3.244" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ASIA_CORE_R_06" ADDR="232.2.3.245" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ASIA_CORE_R_07" ADDR="232.2.3.246" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="ASIA_CORE_R_08" ADDR="232.2.3.247" PORT="MrktData" DSCP="Regional"></multAddr>
+             <multAddr TAG="IF_AMER_NTT" ADDR="232.2.10.0" PORT="MrktData" DSCP="InternalFeeds"></multAddr>
+             <multAddr TAG="IF_AMER_DJT" ADDR="232.2.10.1" PORT="MrktData" DSCP="InternalFeeds"></multAddr>
+             <multAddr TAG="IF_AMER_ND1" ADDR="232.2.10.2" PORT="MrktData" DSCP="InternalFeeds"></multAddr>
+             <multAddr TAG="IF_AMER_ND2" ADDR="232.2.10.3" PORT="MrktData" DSCP="InternalFeeds"></multAddr>
+             <multAddr TAG="IF_EMEA_CO1" ADDR="232.2.10.20" PORT="MrktData" DSCP="InternalFeeds"></multAddr>
+             <multAddr TAG="IF_EMEA_CO2" ADDR="232.2.10.21" PORT="MrktData" DSCP="InternalFeeds"></multAddr>
+             <multAddr TAG="IF_EMEA_PHOBOS_EMEA" ADDR="232.2.10.22" PORT="MrktData" DSCP="InternalFeeds"></multAddr>
+             <multAddr TAG="IF_EMEA_PHOBOS_APAC" ADDR="232.2.10.23" PORT="MrktData" DSCP="InternalFeeds"></multAddr>
+             <multAddr TAG="IF_EMEA_PHOBOS_AMER" ADDR="232.2.10.24" PORT="MrktData" DSCP="InternalFeeds"></multAddr>
+             <multAddr TAG="IF_EMEA_PHOBOS_EMEA_P12" ADDR="232.2.10.25" PORT="MrktData" DSCP="InternalFeeds"></multAddr>
+             <multAddr TAG="IF_EMEA_NTT" ADDR="232.2.10.26" PORT="MrktData" DSCP="InternalFeeds"></multAddr>
+             <multAddr TAG="IF_EMEA_RTA" ADDR="232.2.10.27" PORT="MrktData" DSCP="InternalFeeds"></multAddr>
+             <multAddr TAG="IF_EMEA_CIB" ADDR="232.2.10.39" PORT="MrktData" DSCP="InternalFeeds"></multAddr>
+             <multAddr TAG="IF_ASIA_VA1" ADDR="232.2.10.40" PORT="MrktData" DSCP="InternalFeeds"></multAddr>
+             <multAddr TAG="IF_ASIA_VA2" ADDR="232.2.10.41" PORT="MrktData" DSCP="InternalFeeds"></multAddr>
+             <multAddr TAG="IF_ASIA_VA3" ADDR="232.2.10.42" PORT="MrktData" DSCP="InternalFeeds"></multAddr>
+             <multAddr TAG="IF_ASIA_VA4" ADDR="232.2.10.43" PORT="MrktData" DSCP="InternalFeeds"></multAddr>
+             <multAddr TAG="IF_ASIA_WG1" ADDR="232.2.10.44" PORT="MrktData" DSCP="InternalFeeds"></multAddr>
+             <multAddr TAG="AMER_CORE_WG_01" ADDR="232.2.4.96" PORT="MrktData" DSCP="WestGlobal"></multAddr>
+             <multAddr TAG="AMER_CORE_WG_02" ADDR="232.2.4.97" PORT="MrktData" DSCP="WestGlobal"></multAddr>
+             <multAddr TAG="AMER_CORE_WG_03" ADDR="232.2.4.98" PORT="MrktData" DSCP="WestGlobal"></multAddr>
+             <multAddr TAG="AMER_CORE_WG_04" ADDR="232.2.4.99" PORT="MrktData" DSCP="WestGlobal"></multAddr>
+             <multAddr TAG="AMER_CORE_WG_05" ADDR="232.2.4.100" PORT="MrktData" DSCP="WestGlobal"></multAddr>
+             <multAddr TAG="AMER_CORE_WG_06" ADDR="232.2.4.101" PORT="MrktData" DSCP="WestGlobal"></multAddr>
+             <multAddr TAG="AMER_CORE_WG_07" ADDR="232.2.4.102" PORT="MrktData" DSCP="WestGlobal"></multAddr>
+             <multAddr TAG="AMER_CORE_WG_08" ADDR="232.2.4.103" PORT="MrktData" DSCP="WestGlobal"></multAddr>
+             <multAddr TAG="CANADA_L1_IDN" ADDR="232.2.1.11" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="CANADA_L2_IDN" ADDR="232.2.1.12" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="PURE_L1_WG_IDN" ADDR="232.2.1.13" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="PURE_L2_WG_IDN" ADDR="232.2.1.14" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="EMEA_CORE_WG_01" ADDR="232.2.5.92" PORT="MrktData" DSCP="WestGlobal"></multAddr>
+             <multAddr TAG="EMEA_CORE_WG_02" ADDR="232.2.5.93" PORT="MrktData" DSCP="WestGlobal"></multAddr>
+             <multAddr TAG="EMEA_CORE_WG_03" ADDR="232.2.5.94" PORT="MrktData" DSCP="WestGlobal"></multAddr>
+             <multAddr TAG="EMEA_CORE_WG_04" ADDR="232.2.5.95" PORT="MrktData" DSCP="WestGlobal"></multAddr>
+             <multAddr TAG="EMEA_CORE_WG_05" ADDR="232.2.5.96" PORT="MrktData" DSCP="WestGlobal"></multAddr>
+             <multAddr TAG="EMEA_CORE_WG_06" ADDR="232.2.5.97" PORT="MrktData" DSCP="WestGlobal"></multAddr>
+             <multAddr TAG="EMEA_CORE_WG_07" ADDR="232.2.5.98" PORT="MrktData" DSCP="WestGlobal"></multAddr>
+             <multAddr TAG="EMEA_CORE_WG_08" ADDR="232.2.5.99" PORT="MrktData" DSCP="WestGlobal"></multAddr>
+             <multAddr TAG="EMEA_L2_WG" ADDR="232.2.2.25" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="FFT_L2_R" ADDR="232.2.2.33" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="LON_ICHE_L1_WG_P2" ADDR="232.2.2.51" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="TOKYO_L2_R_P2" ADDR="232.2.3.7" PORT="MrktData" DSCP="Local"></multAddr>
+             <multAddr TAG="EMEA_BS_ARCA_L1" ADDR="232.2.19.0" PORT="MrktData" DSCP="DevRegional"></multAddr>
+        </multAddrs>
+<!-- constituents to be used within this file -->
+        <constituents>
+                <constituent ID="INTERNAL">0</constituent>
+                <constituent ID="MASTER">1</constituent>
+        </constituents>
+<!-- Main label definitions -->
+        <labelTable>
+<!-- -->
+<!-- AMER_CORE_WG_IDN_01 -->
+             <label ID="1101">
+                 <source>AMER</source>
+                 <destination>WESTERN_GLOBAL</destination>
+                 <multTag>AMER_CORE_WG_IDN_01</multTag>
+                 <consumer>MASTER,DPOP,DTIG,TDN</consumer>
+                 <provider NAME="EFXTR101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTR116ID01</sps>
+                     <inst ID="A">TR1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TR1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXTR201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTR216ID01</sps>
+                     <inst ID="A">TR2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TR2P-DDNCEFX01B-1</inst>
+                 </provider>
+             </label>
+<!-- -->
+<!-- AMER_CORE_WG_IDN_02 -->
+             <label ID="1102">
+                 <source>AMER</source>
+                 <destination>WESTERN_GLOBAL</destination>
+                 <multTag>AMER_CORE_WG_IDN_02</multTag>
+                 <consumer>MASTER,DPOP,DTIG,TDN</consumer>
+                 <provider NAME="EFXTR101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTR116ID02</sps>
+                     <inst ID="A">TR1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TR1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXTR201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTR216ID02</sps>
+                     <inst ID="A">TR2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TR2P-DDNCEFX01B-1</inst>
+                 </provider>
+             </label>
+<!-- -->
+<!-- AMER_CORE_WG_IDN_03 -->
+             <label ID="1103">
+                 <source>AMER</source>
+                 <destination>WESTERN_GLOBAL</destination>
+                 <multTag>AMER_CORE_WG_IDN_03</multTag>
+                 <consumer>MASTER,DPOP,DTIG,TDN</consumer>
+                 <provider NAME="EFXTR101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTR116ID03</sps>
+                     <inst ID="A">TR1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TR1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXTR201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTR216ID03</sps>
+                     <inst ID="A">TR2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TR2P-DDNCEFX01B-1</inst>
+                 </provider>
+             </label>
+<!-- -->
+<!-- AMER_CORE_WG_IDN_04 -->
+             <label ID="1104">
+                 <source>AMER</source>
+                 <destination>WESTERN_GLOBAL</destination>
+                 <multTag>AMER_CORE_WG_IDN_04</multTag>
+                 <consumer>MASTER,DPOP,DTIG,TDN</consumer>
+                 <provider NAME="EFXTR101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTR116ID04</sps>
+                     <inst ID="A">TR1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TR1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXTR201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTR216ID04</sps>
+                     <inst ID="A">TR2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TR2P-DDNCEFX01B-1</inst>
+                 </provider>
+             </label>
+<!-- -->
+<!-- AMER_CORE_WG_IDN_05 -->
+             <label ID="1105">
+                 <source>AMER</source>
+                 <destination>WESTERN_GLOBAL</destination>
+                 <multTag>AMER_CORE_WG_IDN_05</multTag>
+                 <consumer>MASTER,DPOP,DTIG,TDN</consumer>
+                 <provider NAME="EFXTR101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTR116ID05</sps>
+                     <inst ID="A">TR1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TR1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXTR201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTR216ID05</sps>
+                     <inst ID="A">TR2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TR2P-DDNCEFX01B-1</inst>
+                 </provider>
+             </label>
+<!-- -->
+<!-- AMER_CORE_WG_IDN_06 -->
+             <label ID="1106">
+                 <source>AMER</source>
+                 <destination>WESTERN_GLOBAL</destination>
+                 <multTag>AMER_CORE_WG_IDN_06</multTag>
+                 <consumer>MASTER,DPOP,DTIG,TDN</consumer>
+                 <provider NAME="EFXTR101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTR116ID06</sps>
+                     <inst ID="A">TR1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TR1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXTR201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTR216ID06</sps>
+                     <inst ID="A">TR2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TR2P-DDNCEFX01B-1</inst>
+                 </provider>
+             </label>
+<!-- -->
+<!-- AMER_CORE_WG_IDN_07 -->
+             <label ID="1107">
+                 <source>AMER</source>
+                 <destination>WESTERN_GLOBAL</destination>
+                 <multTag>AMER_CORE_WG_IDN_07</multTag>
+                 <consumer>MASTER,DPOP,DTIG,TDN</consumer>
+                 <provider NAME="EFXTR101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTR116ID07</sps>
+                     <inst ID="A">TR1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TR1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXTR201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTR216ID07</sps>
+                     <inst ID="A">TR2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TR2P-DDNCEFX01B-1</inst>
+                 </provider>
+             </label>
+<!-- -->
+<!-- AMER_CORE_WG_IDN_08 -->
+             <label ID="1108">
+                 <source>AMER</source>
+                 <destination>WESTERN_GLOBAL</destination>
+                 <multTag>AMER_CORE_WG_IDN_08</multTag>
+                 <consumer>MASTER,DPOP,DTIG,TDN</consumer>
+                 <provider NAME="EFXTR101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTR116ID08</sps>
+                     <inst ID="A">TR1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TR1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXTR201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTR216ID08</sps>
+                     <inst ID="A">TR2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TR2P-DDNCEFX01B-1</inst>
+                 </provider>
+             </label>
+<!-- -->
+<!-- AMER_CORE_R_01 -->
+             <label ID="1501">
+                 <source>AMER</source>
+                 <destination>REGIONAL</destination>
+                 <multTag>AMER_CORE_R_01</multTag>
+                 <consumer>MASTER,DPOP,TDN</consumer>
+                 <provider NAME="EFXTR101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTR116RE01</sps>
+                     <inst ID="A">TR1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TR1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXTR201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTR216RE01</sps>
+                     <inst ID="A">TR2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TR2P-DDNCEFX01B-1</inst>
+                 </provider>
+             </label>
+<!-- -->
+<!-- AMER_CORE_R_02 -->
+             <label ID="1502">
+                 <source>AMER</source>
+                 <destination>REGIONAL</destination>
+                 <multTag>AMER_CORE_R_02</multTag>
+                 <consumer>MASTER,DPOP,TDN</consumer>
+                 <provider NAME="EFXTR101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTR116RE02</sps>
+                     <inst ID="A">TR1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TR1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXTR201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTR216RE02</sps>
+                     <inst ID="A">TR2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TR2P-DDNCEFX01B-1</inst>
+                 </provider>
+             </label>
+<!-- -->
+<!-- AMER_CORE_R_03 -->
+             <label ID="1503">
+                 <source>AMER</source>
+                 <destination>REGIONAL</destination>
+                 <multTag>AMER_CORE_R_03</multTag>
+                 <consumer>MASTER,DPOP,TDN</consumer>
+                 <provider NAME="EFXTR101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTR116RE03</sps>
+                     <inst ID="A">TR1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TR1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXTR201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTR216RE03</sps>
+                     <inst ID="A">TR2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TR2P-DDNCEFX01B-1</inst>
+                 </provider>
+             </label>
+<!-- -->
+<!-- AMER_CORE_R_04 -->
+             <label ID="1504">
+                 <source>AMER</source>
+                 <destination>REGIONAL</destination>
+                 <multTag>AMER_CORE_R_04</multTag>
+                 <consumer>MASTER,DPOP,TDN</consumer>
+                 <provider NAME="EFXTR101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTR116RE04</sps>
+                     <inst ID="A">TR1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TR1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXTR201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTR216RE04</sps>
+                     <inst ID="A">TR2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TR2P-DDNCEFX01B-1</inst>
+                 </provider>
+             </label>
+<!-- -->
+<!-- AMER_CORE_R_05 -->
+             <label ID="1505">
+                 <source>AMER</source>
+                 <destination>REGIONAL</destination>
+                 <multTag>AMER_CORE_R_05</multTag>
+                 <consumer>MASTER,DPOP,TDN</consumer>
+                 <provider NAME="EFXTR101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTR116RE05</sps>
+                     <inst ID="A">TR1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TR1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXTR201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTR216RE05</sps>
+                     <inst ID="A">TR2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TR2P-DDNCEFX01B-1</inst>
+                 </provider>
+             </label>
+<!-- -->
+<!-- AMER_CORE_R_06 -->
+             <label ID="1506">
+                 <source>AMER</source>
+                 <destination>REGIONAL</destination>
+                 <multTag>AMER_CORE_R_06</multTag>
+                 <consumer>MASTER,DPOP,TDN</consumer>
+                 <provider NAME="EFXTR101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTR116RE06</sps>
+                     <inst ID="A">TR1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TR1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXTR201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTR216RE06</sps>
+                     <inst ID="A">TR2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TR2P-DDNCEFX01B-1</inst>
+                 </provider>
+             </label>
+<!-- -->
+<!-- AMER_CORE_R_07 -->
+             <label ID="1507">
+                 <source>AMER</source>
+                 <destination>REGIONAL</destination>
+                 <multTag>AMER_CORE_R_07</multTag>
+                 <consumer>MASTER,DPOP,TDN</consumer>
+                 <provider NAME="EFXTR101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTR116RE07</sps>
+                     <inst ID="A">TR1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TR1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXTR201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTR216RE07</sps>
+                     <inst ID="A">TR2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TR2P-DDNCEFX01B-1</inst>
+                 </provider>
+             </label>
+<!-- -->
+<!-- AMER_CORE_R_08 -->
+             <label ID="1508">
+                 <source>AMER</source>
+                 <destination>REGIONAL</destination>
+                 <multTag>AMER_CORE_R_08</multTag>
+                 <consumer>MASTER,DPOP,TDN</consumer>
+                 <provider NAME="EFXTR101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTR116RE08</sps>
+                     <inst ID="A">TR1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TR1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXTR201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTR216RE08</sps>
+                     <inst ID="A">TR2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TR2P-DDNCEFX01B-1</inst>
+                 </provider>
+             </label>
+<!-- -->
+<!-- EMEA_CORE_WG_IDN_01 -->
+             <label ID="2301">
+                 <source>EMEA</source>
+                 <destination>WESTERN_GLOBAL</destination>
+                 <multTag>EMEA_CORE_WG_IDN_01</multTag>
+                 <consumer>MASTER,DPOP,DTIG,TDN</consumer>
+                 <provider NAME="EFXMS101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMS116ID01</sps>
+                     <inst ID="A">MS1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MS1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXMS201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMS216ID01</sps>
+                     <inst ID="A">MS2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MS2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXJB101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXJB118ID01</sps>
+                     <inst ID="A">JB1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">JB1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXJB201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXJB218ID01</sps>
+                     <inst ID="A">JB2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">JB2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXDB101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXDB120ID01</sps>
+                     <inst ID="A">DB1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">DB1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXDB201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXDB220ID01</sps>
+                     <inst ID="A">DB2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">DB2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXMH301">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMH306ID01</sps>
+                     <inst ID="A">MH3I-DDNCEFX01A-1</inst>
+                     <inst ID="B">MH3I-DDNCEFX01B-1</inst>
+                 </provider>
+             </label>
+<!-- -->
+<!-- EMEA_CORE_WG_IDN_02 -->
+             <label ID="2302">
+                 <source>EMEA</source>
+                 <destination>WESTERN_GLOBAL</destination>
+                 <multTag>EMEA_CORE_WG_IDN_02</multTag>
+                 <consumer>MASTER,DPOP,DTIG,TDN</consumer>
+                 <provider NAME="EFXMS101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMS116ID02</sps>
+                     <inst ID="A">MS1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MS1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXMS201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMS216ID02</sps>
+                     <inst ID="A">MS2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MS2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXJB101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXJB118ID02</sps>
+                     <inst ID="A">JB1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">JB1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXJB201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXJB218ID02</sps>
+                     <inst ID="A">JB2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">JB2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXDB101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXDB120ID02</sps>
+                     <inst ID="A">DB1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">DB1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXDB201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXDB220ID02</sps>
+                     <inst ID="A">DB2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">DB2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXMH301">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMH306ID02</sps>
+                     <inst ID="A">MH3I-DDNCEFX01A-1</inst>
+                     <inst ID="B">MH3I-DDNCEFX01B-1</inst>
+                 </provider>
+             </label>
+<!-- -->
+<!-- EMEA_CORE_WG_IDN_03 -->
+             <label ID="2303">
+                 <source>EMEA</source>
+                 <destination>WESTERN_GLOBAL</destination>
+                 <multTag>EMEA_CORE_WG_IDN_03</multTag>
+                 <consumer>MASTER,DPOP,DTIG,TDN</consumer>
+                 <provider NAME="EFXMS101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMS116ID03</sps>
+                     <inst ID="A">MS1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MS1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXMS201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMS216ID03</sps>
+                     <inst ID="A">MS2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MS2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXJB101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXJB118ID03</sps>
+                     <inst ID="A">JB1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">JB1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXJB201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXJB218ID03</sps>
+                     <inst ID="A">JB2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">JB2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXDB101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXDB120ID03</sps>
+                     <inst ID="A">DB1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">DB1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXDB201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXDB220ID03</sps>
+                     <inst ID="A">DB2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">DB2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXMH301">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMH306ID03</sps>
+                     <inst ID="A">MH3I-DDNCEFX01A-1</inst>
+                     <inst ID="B">MH3I-DDNCEFX01B-1</inst>
+                 </provider>
+             </label>
+<!-- -->
+<!-- EMEA_CORE_WG_IDN_04 -->
+             <label ID="2304">
+                 <source>EMEA</source>
+                 <destination>WESTERN_GLOBAL</destination>
+                 <multTag>EMEA_CORE_WG_IDN_04</multTag>
+                 <consumer>MASTER,DPOP,DTIG,TDN</consumer>
+                 <provider NAME="EFXMS101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMS116ID04</sps>
+                     <inst ID="A">MS1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MS1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXMS201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMS216ID04</sps>
+                     <inst ID="A">MS2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MS2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXJB101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXJB118ID04</sps>
+                     <inst ID="A">JB1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">JB1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXJB201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXJB218ID04</sps>
+                     <inst ID="A">JB2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">JB2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXDB101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXDB120ID04</sps>
+                     <inst ID="A">DB1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">DB1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXDB201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXDB220ID04</sps>
+                     <inst ID="A">DB2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">DB2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXMH301">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMH306ID04</sps>
+                     <inst ID="A">MH3I-DDNCEFX01A-1</inst>
+                     <inst ID="B">MH3I-DDNCEFX01B-1</inst>
+                 </provider>
+             </label>
+<!-- -->
+<!-- EMEA_CORE_WG_IDN_05 -->
+             <label ID="2305">
+                 <source>EMEA</source>
+                 <destination>WESTERN_GLOBAL</destination>
+                 <multTag>EMEA_CORE_WG_IDN_05</multTag>
+                 <consumer>MASTER,DPOP,DTIG,TDN</consumer>
+                 <provider NAME="EFXMS101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMS116ID05</sps>
+                     <inst ID="A">MS1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MS1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXMS201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMS216ID05</sps>
+                     <inst ID="A">MS2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MS2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXJB101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXJB118ID05</sps>
+                     <inst ID="A">JB1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">JB1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXJB201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXJB218ID05</sps>
+                     <inst ID="A">JB2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">JB2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXDB101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXDB120ID05</sps>
+                     <inst ID="A">DB1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">DB1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXDB201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXDB220ID05</sps>
+                     <inst ID="A">DB2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">DB2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXMH301">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMH306ID05</sps>
+                     <inst ID="A">MH3I-DDNCEFX01A-1</inst>
+                     <inst ID="B">MH3I-DDNCEFX01B-1</inst>
+                 </provider>
+             </label>
+<!-- -->
+<!-- EMEA_CORE_WG_IDN_06 -->
+             <label ID="2306">
+                 <source>EMEA</source>
+                 <destination>WESTERN_GLOBAL</destination>
+                 <multTag>EMEA_CORE_WG_IDN_06</multTag>
+                 <consumer>MASTER,DPOP,DTIG,TDN</consumer>
+                 <provider NAME="EFXMS101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMS116ID06</sps>
+                     <inst ID="A">MS1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MS1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXMS201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMS216ID06</sps>
+                     <inst ID="A">MS2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MS2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXJB101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXJB118ID06</sps>
+                     <inst ID="A">JB1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">JB1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXJB201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXJB218ID06</sps>
+                     <inst ID="A">JB2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">JB2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXDB101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXDB120ID06</sps>
+                     <inst ID="A">DB1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">DB1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXDB201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXDB220ID06</sps>
+                     <inst ID="A">DB2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">DB2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXMH301">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMH306ID06</sps>
+                     <inst ID="A">MH3I-DDNCEFX01A-1</inst>
+                     <inst ID="B">MH3I-DDNCEFX01B-1</inst>
+                 </provider>
+             </label>
+<!-- -->
+<!-- EMEA_CORE_WG_IDN_07 -->
+             <label ID="2307">
+                 <source>EMEA</source>
+                 <destination>WESTERN_GLOBAL</destination>
+                 <multTag>EMEA_CORE_WG_IDN_07</multTag>
+                 <consumer>MASTER,DPOP,DTIG,TDN</consumer>
+                 <provider NAME="EFXMS101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMS116ID07</sps>
+                     <inst ID="A">MS1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MS1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXMS201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMS216ID07</sps>
+                     <inst ID="A">MS2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MS2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXJB101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXJB118ID07</sps>
+                     <inst ID="A">JB1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">JB1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXJB201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXJB218ID07</sps>
+                     <inst ID="A">JB2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">JB2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXDB101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXDB120ID07</sps>
+                     <inst ID="A">DB1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">DB1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXDB201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXDB220ID07</sps>
+                     <inst ID="A">DB2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">DB2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXMH301">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMH306ID07</sps>
+                     <inst ID="A">MH3I-DDNCEFX01A-1</inst>
+                     <inst ID="B">MH3I-DDNCEFX01B-1</inst>
+                 </provider>
+             </label>
+<!-- -->
+<!-- EMEA_CORE_WG_IDN_08 -->
+             <label ID="2308">
+                 <source>EMEA</source>
+                 <destination>WESTERN_GLOBAL</destination>
+                 <multTag>EMEA_CORE_WG_IDN_08</multTag>
+                 <consumer>MASTER,DPOP,DTIG,TDN</consumer>
+                 <provider NAME="EFXMS101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMS116ID08</sps>
+                     <inst ID="A">MS1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MS1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXMS201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMS216ID08</sps>
+                     <inst ID="A">MS2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MS2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXJB101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXJB118ID08</sps>
+                     <inst ID="A">JB1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">JB1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXJB201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXJB218ID08</sps>
+                     <inst ID="A">JB2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">JB2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXDB101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXDB120ID08</sps>
+                     <inst ID="A">DB1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">DB1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXDB201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXDB220ID08</sps>
+                     <inst ID="A">DB2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">DB2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXMH301">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMH306ID08</sps>
+                     <inst ID="A">MH3I-DDNCEFX01A-1</inst>
+                     <inst ID="B">MH3I-DDNCEFX01B-1</inst>
+                 </provider>
+             </label>
+<!-- -->
+<!-- EMEA_CORE_R_01 -->
+             <label ID="2701">
+                 <source>EMEA</source>
+                 <destination>REGIONAL</destination>
+                 <multTag>EMEA_CORE_R_01</multTag>
+                 <consumer>MASTER,DPOP</consumer>
+                 <provider NAME="EFXMS101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMS116RE01</sps>
+                     <inst ID="A">MS1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MS1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXMS201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMS216RE01</sps>
+                     <inst ID="A">MS2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MS2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXJB101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXJB118RE01</sps>
+                     <inst ID="A">JB1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">JB1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXJB201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXJB218RE01</sps>
+                     <inst ID="A">JB2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">JB2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXDB101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXDB120RE01</sps>
+                     <inst ID="A">DB1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">DB1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXDB201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXDB220RE01</sps>
+                     <inst ID="A">DB2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">DB2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXMH301">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMH306RE01</sps>
+                     <inst ID="A">MH3I-DDNCEFX01A-1</inst>
+                     <inst ID="B">MH3I-DDNCEFX01B-1</inst>
+                 </provider>
+             </label>
+<!-- -->
+<!-- EMEA_CORE_R_02 -->
+             <label ID="2702">
+                 <source>EMEA</source>
+                 <destination>REGIONAL</destination>
+                 <multTag>EMEA_CORE_R_02</multTag>
+                 <consumer>MASTER,DPOP</consumer>
+                 <provider NAME="EFXMS101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMS116RE02</sps>
+                     <inst ID="A">MS1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MS1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXMS201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMS216RE02</sps>
+                     <inst ID="A">MS2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MS2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXJB101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXJB118RE02</sps>
+                     <inst ID="A">JB1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">JB1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXJB201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXJB218RE02</sps>
+                     <inst ID="A">JB2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">JB2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXDB101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXDB120RE02</sps>
+                     <inst ID="A">DB1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">DB1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXDB201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXDB220RE02</sps>
+                     <inst ID="A">DB2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">DB2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXMH301">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMH306RE02</sps>
+                     <inst ID="A">MH3I-DDNCEFX01A-1</inst>
+                     <inst ID="B">MH3I-DDNCEFX01B-1</inst>
+                 </provider>
+             </label>
+<!-- -->
+<!-- EMEA_CORE_R_03 -->
+             <label ID="2703">
+                 <source>EMEA</source>
+                 <destination>REGIONAL</destination>
+                 <multTag>EMEA_CORE_R_03</multTag>
+                 <consumer>MASTER,DPOP</consumer>
+                 <provider NAME="EFXMS101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMS116RE03</sps>
+                     <inst ID="A">MS1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MS1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXMS201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMS216RE03</sps>
+                     <inst ID="A">MS2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MS2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXJB101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXJB118RE03</sps>
+                     <inst ID="A">JB1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">JB1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXJB201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXJB218RE03</sps>
+                     <inst ID="A">JB2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">JB2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXDB101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXDB120RE03</sps>
+                     <inst ID="A">DB1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">DB1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXDB201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXDB220RE03</sps>
+                     <inst ID="A">DB2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">DB2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXMH301">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMH306RE03</sps>
+                     <inst ID="A">MH3I-DDNCEFX01A-1</inst>
+                     <inst ID="B">MH3I-DDNCEFX01B-1</inst>
+                 </provider>
+             </label>
+<!-- -->
+<!-- EMEA_CORE_R_04 -->
+             <label ID="2704">
+                 <source>EMEA</source>
+                 <destination>REGIONAL</destination>
+                 <multTag>EMEA_CORE_R_04</multTag>
+                 <consumer>MASTER,DPOP</consumer>
+                 <provider NAME="EFXMS101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMS116RE04</sps>
+                     <inst ID="A">MS1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MS1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXMS201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMS216RE04</sps>
+                     <inst ID="A">MS2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MS2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXJB101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXJB118RE04</sps>
+                     <inst ID="A">JB1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">JB1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXJB201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXJB218RE04</sps>
+                     <inst ID="A">JB2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">JB2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXDB101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXDB120RE04</sps>
+                     <inst ID="A">DB1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">DB1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXDB201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXDB220RE04</sps>
+                     <inst ID="A">DB2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">DB2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXMH301">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMH306RE04</sps>
+                     <inst ID="A">MH3I-DDNCEFX01A-1</inst>
+                     <inst ID="B">MH3I-DDNCEFX01B-1</inst>
+                 </provider>
+             </label>
+<!-- -->
+<!-- EMEA_CORE_R_05 -->
+             <label ID="2705">
+                 <source>EMEA</source>
+                 <destination>REGIONAL</destination>
+                 <multTag>EMEA_CORE_R_05</multTag>
+                 <consumer>MASTER,DPOP</consumer>
+                 <provider NAME="EFXMS101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMS116RE05</sps>
+                     <inst ID="A">MS1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MS1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXMS201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMS216RE05</sps>
+                     <inst ID="A">MS2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MS2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXJB101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXJB118RE05</sps>
+                     <inst ID="A">JB1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">JB1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXJB201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXJB218RE05</sps>
+                     <inst ID="A">JB2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">JB2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXDB101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXDB120RE05</sps>
+                     <inst ID="A">DB1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">DB1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXDB201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXDB220RE05</sps>
+                     <inst ID="A">DB2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">DB2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXMH301">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMH306RE05</sps>
+                     <inst ID="A">MH3I-DDNCEFX01A-1</inst>
+                     <inst ID="B">MH3I-DDNCEFX01B-1</inst>
+                 </provider>
+             </label>
+<!-- -->
+<!-- EMEA_CORE_R_06 -->
+             <label ID="2706">
+                 <source>EMEA</source>
+                 <destination>REGIONAL</destination>
+                 <multTag>EMEA_CORE_R_06</multTag>
+                 <consumer>MASTER,DPOP</consumer>
+                 <provider NAME="EFXMS101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMS116RE06</sps>
+                     <inst ID="A">MS1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MS1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXMS201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMS216RE06</sps>
+                     <inst ID="A">MS2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MS2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXJB101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXJB118RE06</sps>
+                     <inst ID="A">JB1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">JB1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXJB201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXJB218RE06</sps>
+                     <inst ID="A">JB2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">JB2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXDB101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXDB120RE06</sps>
+                     <inst ID="A">DB1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">DB1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXDB201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXDB220RE06</sps>
+                     <inst ID="A">DB2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">DB2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXMH301">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMH306RE06</sps>
+                     <inst ID="A">MH3I-DDNCEFX01A-1</inst>
+                     <inst ID="B">MH3I-DDNCEFX01B-1</inst>
+                 </provider>
+             </label>
+<!-- -->
+<!-- EMEA_CORE_R_07 -->
+             <label ID="2707">
+                 <source>EMEA</source>
+                 <destination>REGIONAL</destination>
+                 <multTag>EMEA_CORE_R_07</multTag>
+                 <consumer>MASTER,DPOP</consumer>
+                 <provider NAME="EFXMS101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMS116RE07</sps>
+                     <inst ID="A">MS1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MS1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXMS201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMS216RE07</sps>
+                     <inst ID="A">MS2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MS2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXJB101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXJB118RE07</sps>
+                     <inst ID="A">JB1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">JB1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXJB201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXJB218RE07</sps>
+                     <inst ID="A">JB2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">JB2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXDB101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXDB120RE07</sps>
+                     <inst ID="A">DB1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">DB1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXDB201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXDB220RE07</sps>
+                     <inst ID="A">DB2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">DB2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXMH301">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMH306RE07</sps>
+                     <inst ID="A">MH3I-DDNCEFX01A-1</inst>
+                     <inst ID="B">MH3I-DDNCEFX01B-1</inst>
+                 </provider>
+             </label>
+<!-- -->
+<!-- EMEA_CORE_R_08 -->
+             <label ID="2708">
+                 <source>EMEA</source>
+                 <destination>REGIONAL</destination>
+                 <multTag>EMEA_CORE_R_08</multTag>
+                 <consumer>MASTER,DPOP</consumer>
+                 <provider NAME="EFXMS101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMS116RE08</sps>
+                     <inst ID="A">MS1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MS1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXMS201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMS216RE08</sps>
+                     <inst ID="A">MS2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MS2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXJB101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXJB118RE08</sps>
+                     <inst ID="A">JB1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">JB1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXJB201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXJB218RE08</sps>
+                     <inst ID="A">JB2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">JB2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXDB101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXDB120RE08</sps>
+                     <inst ID="A">DB1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">DB1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXDB201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXDB220RE08</sps>
+                     <inst ID="A">DB2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">DB2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXMH301">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMH306RE08</sps>
+                     <inst ID="A">MH3I-DDNCEFX01A-1</inst>
+                     <inst ID="B">MH3I-DDNCEFX01B-1</inst>
+                 </provider>
+             </label>
+<!-- -->
+<!-- ASIA_CORE_G_IDN_01 -->
+             <label ID="3501">
+                 <source>ASIA</source>
+                 <destination>GLOBAL</destination>
+                 <multTag>ASIA_CORE_G_IDN_01</multTag>
+                 <consumer>MASTER,DPOP,DTIG,TDN</consumer>
+                 <provider NAME="EFXMB101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMB110GI01</sps>
+                     <inst ID="A">MB1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MB1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXMB201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMB210GI01</sps>
+                     <inst ID="A">MB2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MB2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSE101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSE112GI01</sps>
+                     <inst ID="A">SE1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SE1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSE201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSE212GI01</sps>
+                     <inst ID="A">SE2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SE2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXTP201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTP214GI01</sps>
+                     <inst ID="A">TP2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TP2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXTP301">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTP314GI01</sps>
+                     <inst ID="A">TP3P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TP3P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXBJ101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXBJ115GI01</sps>
+                     <inst ID="A">BJ1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">BJ1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXBJ201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXBJ215GI01</sps>
+                     <inst ID="A">BJ2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">BJ2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSH101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSH116GI01</sps>
+                     <inst ID="A">SH1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SH1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSH201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSH216GI01</sps>
+                     <inst ID="A">SH2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SH2P-DDNCEFX01B-1</inst>
+                 </provider>
+             </label>
+<!-- -->
+<!-- ASIA_CORE_G_IDN_02 -->
+             <label ID="3502">
+                 <source>ASIA</source>
+                 <destination>GLOBAL</destination>
+                 <multTag>ASIA_CORE_G_IDN_02</multTag>
+                 <consumer>MASTER,DPOP,DTIG,TDN</consumer>
+                 <provider NAME="EFXMB101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMB110GI02</sps>
+                     <inst ID="A">MB1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MB1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXMB201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMB210GI02</sps>
+                     <inst ID="A">MB2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MB2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSE101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSE112GI02</sps>
+                     <inst ID="A">SE1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SE1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSE201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSE212GI02</sps>
+                     <inst ID="A">SE2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SE2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXTP201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTP214GI02</sps>
+                     <inst ID="A">TP2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TP2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXTP301">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTP314GI02</sps>
+                     <inst ID="A">TP3P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TP3P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXBJ101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXBJ115GI02</sps>
+                     <inst ID="A">BJ1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">BJ1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXBJ201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXBJ215GI02</sps>
+                     <inst ID="A">BJ2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">BJ2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSH101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSH116GI02</sps>
+                     <inst ID="A">SH1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SH1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSH201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSH216GI02</sps>
+                     <inst ID="A">SH2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SH2P-DDNCEFX01B-1</inst>
+                 </provider>
+             </label>
+<!-- -->
+<!-- ASIA_CORE_G_IDN_03 -->
+             <label ID="3503">
+                 <source>ASIA</source>
+                 <destination>GLOBAL</destination>
+                 <multTag>ASIA_CORE_G_IDN_03</multTag>
+                 <consumer>MASTER,DPOP,DTIG,TDN</consumer>
+                 <provider NAME="EFXMB101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMB110GI03</sps>
+                     <inst ID="A">MB1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MB1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXMB201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMB210GI03</sps>
+                     <inst ID="A">MB2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MB2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSE101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSE112GI03</sps>
+                     <inst ID="A">SE1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SE1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSE201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSE212GI03</sps>
+                     <inst ID="A">SE2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SE2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXTP201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTP214GI03</sps>
+                     <inst ID="A">TP2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TP2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXTP301">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTP314GI03</sps>
+                     <inst ID="A">TP3P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TP3P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXBJ101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXBJ115GI03</sps>
+                     <inst ID="A">BJ1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">BJ1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXBJ201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXBJ215GI03</sps>
+                     <inst ID="A">BJ2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">BJ2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSH101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSH116GI03</sps>
+                     <inst ID="A">SH1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SH1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSH201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSH216GI03</sps>
+                     <inst ID="A">SH2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SH2P-DDNCEFX01B-1</inst>
+                 </provider>
+             </label>
+<!-- -->
+<!-- ASIA_CORE_G_IDN_04 -->
+             <label ID="3504">
+                 <source>ASIA</source>
+                 <destination>GLOBAL</destination>
+                 <multTag>ASIA_CORE_G_IDN_04</multTag>
+                 <consumer>MASTER,DPOP,DTIG,TDN</consumer>
+                 <provider NAME="EFXMB101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMB110GI04</sps>
+                     <inst ID="A">MB1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MB1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXMB201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMB210GI04</sps>
+                     <inst ID="A">MB2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MB2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSE101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSE112GI04</sps>
+                     <inst ID="A">SE1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SE1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSE201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSE212GI04</sps>
+                     <inst ID="A">SE2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SE2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXTP201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTP214GI04</sps>
+                     <inst ID="A">TP2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TP2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXTP301">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTP314GI04</sps>
+                     <inst ID="A">TP3P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TP3P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXBJ101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXBJ115GI04</sps>
+                     <inst ID="A">BJ1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">BJ1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXBJ201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXBJ215GI04</sps>
+                     <inst ID="A">BJ2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">BJ2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSH101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSH116GI04</sps>
+                     <inst ID="A">SH1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SH1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSH201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSH216GI04</sps>
+                     <inst ID="A">SH2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SH2P-DDNCEFX01B-1</inst>
+                 </provider>
+             </label>
+<!-- -->
+<!-- ASIA_CORE_G_IDN_05 -->
+             <label ID="3505">
+                 <source>ASIA</source>
+                 <destination>GLOBAL</destination>
+                 <multTag>ASIA_CORE_G_IDN_05</multTag>
+                 <consumer>MASTER,DPOP,DTIG,TDN</consumer>
+                 <provider NAME="EFXMB101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMB110GI05</sps>
+                     <inst ID="A">MB1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MB1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXMB201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMB210GI05</sps>
+                     <inst ID="A">MB2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MB2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSE101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSE112GI05</sps>
+                     <inst ID="A">SE1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SE1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSE201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSE212GI05</sps>
+                     <inst ID="A">SE2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SE2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXTP201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTP214GI05</sps>
+                     <inst ID="A">TP2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TP2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXTP301">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTP314GI05</sps>
+                     <inst ID="A">TP3P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TP3P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXBJ101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXBJ115GI05</sps>
+                     <inst ID="A">BJ1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">BJ1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXBJ201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXBJ215GI05</sps>
+                     <inst ID="A">BJ2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">BJ2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSH101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSH116GI05</sps>
+                     <inst ID="A">SH1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SH1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSH201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSH216GI05</sps>
+                     <inst ID="A">SH2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SH2P-DDNCEFX01B-1</inst>
+                 </provider>
+             </label>
+<!-- -->
+<!-- ASIA_CORE_G_IDN_06 -->
+             <label ID="3506">
+                 <source>ASIA</source>
+                 <destination>GLOBAL</destination>
+                 <multTag>ASIA_CORE_G_IDN_06</multTag>
+                 <consumer>MASTER,DPOP,DTIG,TDN</consumer>
+                 <provider NAME="EFXMB101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMB110GI06</sps>
+                     <inst ID="A">MB1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MB1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXMB201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMB210GI06</sps>
+                     <inst ID="A">MB2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MB2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSE101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSE112GI06</sps>
+                     <inst ID="A">SE1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SE1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSE201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSE212GI06</sps>
+                     <inst ID="A">SE2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SE2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXTP201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTP214GI06</sps>
+                     <inst ID="A">TP2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TP2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXTP301">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTP314GI06</sps>
+                     <inst ID="A">TP3P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TP3P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXBJ101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXBJ115GI06</sps>
+                     <inst ID="A">BJ1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">BJ1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXBJ201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXBJ215GI06</sps>
+                     <inst ID="A">BJ2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">BJ2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSH101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSH116GI06</sps>
+                     <inst ID="A">SH1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SH1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSH201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSH216GI06</sps>
+                     <inst ID="A">SH2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SH2P-DDNCEFX01B-1</inst>
+                 </provider>
+             </label>
+<!-- -->
+<!-- ASIA_CORE_G_IDN_07 -->
+             <label ID="3507">
+                 <source>ASIA</source>
+                 <destination>GLOBAL</destination>
+                 <multTag>ASIA_CORE_G_IDN_07</multTag>
+                 <consumer>MASTER,DPOP,DTIG,TDN</consumer>
+                 <provider NAME="EFXMB101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMB110GI07</sps>
+                     <inst ID="A">MB1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MB1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXMB201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMB210GI07</sps>
+                     <inst ID="A">MB2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MB2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSE101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSE112GI07</sps>
+                     <inst ID="A">SE1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SE1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSE201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSE212GI07</sps>
+                     <inst ID="A">SE2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SE2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXTP201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTP214GI07</sps>
+                     <inst ID="A">TP2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TP2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXTP301">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTP314GI07</sps>
+                     <inst ID="A">TP3P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TP3P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXBJ101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXBJ115GI07</sps>
+                     <inst ID="A">BJ1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">BJ1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXBJ201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXBJ215GI07</sps>
+                     <inst ID="A">BJ2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">BJ2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSH101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSH116GI07</sps>
+                     <inst ID="A">SH1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SH1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSH201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSH216GI07</sps>
+                     <inst ID="A">SH2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SH2P-DDNCEFX01B-1</inst>
+                 </provider>
+             </label>
+<!-- -->
+<!-- ASIA_CORE_G_IDN_08 -->
+             <label ID="3508">
+                 <source>ASIA</source>
+                 <destination>GLOBAL</destination>
+                 <multTag>ASIA_CORE_G_IDN_08</multTag>
+                 <consumer>MASTER,DPOP,DTIG,TDN</consumer>
+                 <provider NAME="EFXMB101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMB110GI08</sps>
+                     <inst ID="A">MB1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MB1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXMB201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMB210GI08</sps>
+                     <inst ID="A">MB2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MB2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSE101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSE112GI08</sps>
+                     <inst ID="A">SE1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SE1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSE201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSE212GI08</sps>
+                     <inst ID="A">SE2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SE2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXTP201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTP214GI08</sps>
+                     <inst ID="A">TP2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TP2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXTP301">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTP314GI08</sps>
+                     <inst ID="A">TP3P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TP3P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXBJ101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXBJ115GI08</sps>
+                     <inst ID="A">BJ1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">BJ1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXBJ201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXBJ215GI08</sps>
+                     <inst ID="A">BJ2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">BJ2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSH101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSH116GI08</sps>
+                     <inst ID="A">SH1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SH1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSH201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSH216GI08</sps>
+                     <inst ID="A">SH2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SH2P-DDNCEFX01B-1</inst>
+                 </provider>
+             </label>
+<!-- -->
+<!-- ASIA_CORE_R_01 -->
+             <label ID="3701">
+                 <source>ASIA</source>
+                 <destination>REGIONAL</destination>
+                 <multTag>ASIA_CORE_R_01</multTag>
+                 <consumer>MASTER,DPOP</consumer>
+                 <provider NAME="EFXMB101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMB110RE01</sps>
+                     <inst ID="A">MB1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MB1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXMB201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMB210RE01</sps>
+                     <inst ID="A">MB2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MB2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSE101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSE112RE01</sps>
+                     <inst ID="A">SE1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SE1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSE201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSE212RE01</sps>
+                     <inst ID="A">SE2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SE2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXTP201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTP214RE01</sps>
+                     <inst ID="A">TP2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TP2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXTP301">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTP314RE01</sps>
+                     <inst ID="A">TP3P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TP3P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXBJ101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXBJ115RE01</sps>
+                     <inst ID="A">BJ1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">BJ1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXBJ201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXBJ215RE01</sps>
+                     <inst ID="A">BJ2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">BJ2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSH101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSH116RE01</sps>
+                     <inst ID="A">SH1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SH1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSH201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSH216RE01</sps>
+                     <inst ID="A">SH2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SH2P-DDNCEFX01B-1</inst>
+                 </provider>
+             </label>
+<!-- -->
+<!-- ASIA_CORE_R_02 -->
+             <label ID="3702">
+                 <source>ASIA</source>
+                 <destination>REGIONAL</destination>
+                 <multTag>ASIA_CORE_R_02</multTag>
+                 <consumer>MASTER,DPOP</consumer>
+                 <provider NAME="EFXMB101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMB110RE02</sps>
+                     <inst ID="A">MB1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MB1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXMB201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMB210RE02</sps>
+                     <inst ID="A">MB2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MB2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSE101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSE112RE02</sps>
+                     <inst ID="A">SE1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SE1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSE201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSE212RE02</sps>
+                     <inst ID="A">SE2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SE2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXTP201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTP214RE02</sps>
+                     <inst ID="A">TP2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TP2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXTP301">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTP314RE02</sps>
+                     <inst ID="A">TP3P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TP3P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXBJ101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXBJ115RE02</sps>
+                     <inst ID="A">BJ1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">BJ1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXBJ201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXBJ215RE02</sps>
+                     <inst ID="A">BJ2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">BJ2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSH101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSH116RE02</sps>
+                     <inst ID="A">SH1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SH1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSH201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSH216RE02</sps>
+                     <inst ID="A">SH2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SH2P-DDNCEFX01B-1</inst>
+                 </provider>
+             </label>
+<!-- -->
+<!-- ASIA_CORE_R_03 -->
+             <label ID="3703">
+                 <source>ASIA</source>
+                 <destination>REGIONAL</destination>
+                 <multTag>ASIA_CORE_R_03</multTag>
+                 <consumer>MASTER,DPOP</consumer>
+                 <provider NAME="EFXMB101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMB110RE03</sps>
+                     <inst ID="A">MB1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MB1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXMB201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMB210RE03</sps>
+                     <inst ID="A">MB2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MB2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSE101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSE112RE03</sps>
+                     <inst ID="A">SE1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SE1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSE201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSE212RE03</sps>
+                     <inst ID="A">SE2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SE2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXTP201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTP214RE03</sps>
+                     <inst ID="A">TP2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TP2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXTP301">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTP314RE03</sps>
+                     <inst ID="A">TP3P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TP3P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXBJ101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXBJ115RE03</sps>
+                     <inst ID="A">BJ1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">BJ1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXBJ201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXBJ215RE03</sps>
+                     <inst ID="A">BJ2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">BJ2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSH101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSH116RE03</sps>
+                     <inst ID="A">SH1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SH1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSH201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSH216RE03</sps>
+                     <inst ID="A">SH2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SH2P-DDNCEFX01B-1</inst>
+                 </provider>
+             </label>
+<!-- -->
+<!-- ASIA_CORE_R_04 -->
+             <label ID="3704">
+                 <source>ASIA</source>
+                 <destination>REGIONAL</destination>
+                 <multTag>ASIA_CORE_R_04</multTag>
+                 <consumer>MASTER,DPOP</consumer>
+                 <provider NAME="EFXMB101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMB110RE04</sps>
+                     <inst ID="A">MB1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MB1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXMB201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMB210RE04</sps>
+                     <inst ID="A">MB2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MB2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSE101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSE112RE04</sps>
+                     <inst ID="A">SE1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SE1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSE201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSE212RE04</sps>
+                     <inst ID="A">SE2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SE2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXTP201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTP214RE04</sps>
+                     <inst ID="A">TP2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TP2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXTP301">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTP314RE04</sps>
+                     <inst ID="A">TP3P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TP3P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXBJ101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXBJ115RE04</sps>
+                     <inst ID="A">BJ1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">BJ1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXBJ201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXBJ215RE04</sps>
+                     <inst ID="A">BJ2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">BJ2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSH101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSH116RE04</sps>
+                     <inst ID="A">SH1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SH1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSH201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSH216RE04</sps>
+                     <inst ID="A">SH2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SH2P-DDNCEFX01B-1</inst>
+                 </provider>
+             </label>
+<!-- -->
+<!-- ASIA_CORE_R_05 -->
+             <label ID="3705">
+                 <source>ASIA</source>
+                 <destination>REGIONAL</destination>
+                 <multTag>ASIA_CORE_R_05</multTag>
+                 <consumer>MASTER,DPOP</consumer>
+                 <provider NAME="EFXMB101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMB110RE05</sps>
+                     <inst ID="A">MB1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MB1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXMB201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMB210RE05</sps>
+                     <inst ID="A">MB2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MB2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSE101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSE112RE05</sps>
+                     <inst ID="A">SE1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SE1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSE201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSE212RE05</sps>
+                     <inst ID="A">SE2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SE2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXTP201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTP214RE05</sps>
+                     <inst ID="A">TP2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TP2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXTP301">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTP314RE05</sps>
+                     <inst ID="A">TP3P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TP3P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXBJ101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXBJ115RE05</sps>
+                     <inst ID="A">BJ1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">BJ1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXBJ201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXBJ215RE05</sps>
+                     <inst ID="A">BJ2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">BJ2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSH101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSH116RE05</sps>
+                     <inst ID="A">SH1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SH1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSH201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSH216RE05</sps>
+                     <inst ID="A">SH2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SH2P-DDNCEFX01B-1</inst>
+                 </provider>
+             </label>
+<!-- -->
+<!-- ASIA_CORE_R_06 -->
+             <label ID="3706">
+                 <source>ASIA</source>
+                 <destination>REGIONAL</destination>
+                 <multTag>ASIA_CORE_R_06</multTag>
+                 <consumer>MASTER,DPOP</consumer>
+                 <provider NAME="EFXMB101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMB110RE06</sps>
+                     <inst ID="A">MB1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MB1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXMB201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMB210RE06</sps>
+                     <inst ID="A">MB2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MB2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSE101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSE112RE06</sps>
+                     <inst ID="A">SE1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SE1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSE201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSE212RE06</sps>
+                     <inst ID="A">SE2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SE2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXTP201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTP214RE06</sps>
+                     <inst ID="A">TP2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TP2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXTP301">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTP314RE06</sps>
+                     <inst ID="A">TP3P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TP3P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXBJ101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXBJ115RE06</sps>
+                     <inst ID="A">BJ1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">BJ1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXBJ201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXBJ215RE06</sps>
+                     <inst ID="A">BJ2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">BJ2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSH101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSH116RE06</sps>
+                     <inst ID="A">SH1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SH1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSH201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSH216RE06</sps>
+                     <inst ID="A">SH2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SH2P-DDNCEFX01B-1</inst>
+                 </provider>
+             </label>
+<!-- -->
+<!-- ASIA_CORE_R_07 -->
+             <label ID="3707">
+                 <source>ASIA</source>
+                 <destination>REGIONAL</destination>
+                 <multTag>ASIA_CORE_R_07</multTag>
+                 <consumer>MASTER,DPOP</consumer>
+                 <provider NAME="EFXMB101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMB110RE07</sps>
+                     <inst ID="A">MB1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MB1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXMB201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMB210RE07</sps>
+                     <inst ID="A">MB2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MB2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSE101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSE112RE07</sps>
+                     <inst ID="A">SE1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SE1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSE201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSE212RE07</sps>
+                     <inst ID="A">SE2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SE2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXTP201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTP214RE07</sps>
+                     <inst ID="A">TP2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TP2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXTP301">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTP314RE07</sps>
+                     <inst ID="A">TP3P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TP3P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXBJ101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXBJ115RE07</sps>
+                     <inst ID="A">BJ1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">BJ1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXBJ201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXBJ215RE07</sps>
+                     <inst ID="A">BJ2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">BJ2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSH101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSH116RE07</sps>
+                     <inst ID="A">SH1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SH1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSH201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSH216RE07</sps>
+                     <inst ID="A">SH2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SH2P-DDNCEFX01B-1</inst>
+                 </provider>
+             </label>
+<!-- -->
+<!-- ASIA_CORE_R_08 -->
+             <label ID="3708">
+                 <source>ASIA</source>
+                 <destination>REGIONAL</destination>
+                 <multTag>ASIA_CORE_R_08</multTag>
+                 <consumer>MASTER,DPOP</consumer>
+                 <provider NAME="EFXMB101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMB110RE08</sps>
+                     <inst ID="A">MB1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MB1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXMB201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXMB210RE08</sps>
+                     <inst ID="A">MB2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">MB2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSE101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSE112RE08</sps>
+                     <inst ID="A">SE1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SE1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSE201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSE212RE08</sps>
+                     <inst ID="A">SE2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SE2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXTP201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTP290RE08</sps>
+                     <inst ID="A">TP2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TP2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXTP301">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXTP390RE08</sps>
+                     <inst ID="A">TP3P-DDNCEFX01A-1</inst>
+                     <inst ID="B">TP3P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXBJ101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXBJ192RE08</sps>
+                     <inst ID="A">BJ1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">BJ1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXBJ201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXBJ292RE08</sps>
+                     <inst ID="A">BJ2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">BJ2P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSH101">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSH194RE08</sps>
+                     <inst ID="A">SH1P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SH1P-DDNCEFX01B-1</inst>
+                 </provider>
+                 <provider NAME="EFXSH201">
+                     <type>FUN</type>
+                     <SrcID>-</SrcID>
+                     <constituents>-</constituents>
+                     <sps>.[SPSEFXSH294RE08</sps>
+                     <inst ID="A">SH2P-DDNCEFX01A-1</inst>
+                     <inst ID="B">SH2P-DDNCEFX01B-1</inst>
+                 </provider>
+             </label>
+        </labelTable>
+</ddn>

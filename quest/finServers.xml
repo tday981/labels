@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<ddn>
+        <version TEXT="2.29">
+                <major>2</major>
+                <minor>29.02</minor>
+        </version>
+        <date>10/08/2015</date>
+
+        <!-- Available Resources. Each server with DDN addresses -->
+        <servers>
+        </servers>
+</ddn>

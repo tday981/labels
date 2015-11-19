@@ -1,0 +1,1012 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<ddn>
+        <version TEXT="2.29">
+                <major>2</major>
+                <minor>29.02</minor>
+        </version>
+        <date>10/08/2015</date>
+
+        <!-- Available Resources. Each server with DDN addresses -->
+        <servers>
+<!--  -->
+<!-- STL - OCX (Chicago One) on CHE01A/B, NL2 on 03A/B  -->
+             <server NAME="SL1I-DDNCCHE01A-1" DDN1="159.44.2.11" DDN2="159.44.18.11"></server>
+             <server NAME="SL1I-DDNCCHE01B-1" DDN1="159.44.2.12" DDN2="159.44.18.12"></server>
+             <server NAME="SL1I-DDNCCHE03A-1" DDN1="159.44.2.15" DDN2="159.44.18.15"></server>
+             <server NAME="SL1I-DDNCCHE03B-1" DDN1="159.44.2.16" DDN2="159.44.18.16"></server>
+<!--  -->
+<!-- STL - Totalview ITCH Thunderdome -->
+             <server NAME="SL1I-DDNCCHE02A-1" DDN1="159.44.2.13" DDN2="159.44.18.13"></server>
+             <server NAME="SL1I-DDNCCHE02B-1" DDN1="159.44.2.14" DDN2="159.44.18.14"></server>
+             <server NAME="SL1I-DDNCCHE17A-1" DDN1="159.44.2.43" DDN2="159.44.18.43"></server>
+             <server NAME="SL1I-DDNCCHE17B-1" DDN1="159.44.2.44" DDN2="159.44.18.44"></server>
+<!--  -->
+<!-- STL - NYSE Alerts, NYSE Imbalance, NASDAQ Basic L1 -->
+             <server NAME="SL1I-DDNCCHE04A-1" DDN1="159.44.3.153" DDN2="159.44.19.153"></server>
+             <server NAME="SLCI-DDNCHE04B-1" DDN1="159.44.3.154" DDN2="159.44.19.154"></server>
+<!--  -->
+<!-- STL - AMEX Alerts and AMEX Imbalance -->
+             <server NAME="SL1I-DDNCCHE05A-1" DDN1="159.44.3.157" DDN2="159.44.19.157"></server>
+             <server NAME="SL1I-DDNCCHE05B-1" DDN1="159.44.3.158" DDN2="159.44.19.158"></server>
+<!--  -->
+<!-- STL - NASDAQ expansion to G8 v2 -->
+             <server NAME="SL1I-DDNCCHE06A-1" DDN1="159.44.2.21" DDN2="159.44.18.21"></server>
+             <server NAME="SL1I-DDNCCHE06B-1" DDN1="159.44.2.22" DDN2="159.44.18.22"></server>
+<!--  -->
+<!-- STL - ITCH -->
+             <server NAME="SLCI-DDNCHE07A-1" DDN1="159.44.3.103" DDN2="159.44.19.103"></server>
+             <server NAME="SLCI-DDNCHE07B-1" DDN1="159.44.3.104" DDN2="159.44.19.104"></server>
+             <server NAME="SLCI-DDNCHE08A-1" DDN1="159.44.3.105" DDN2="159.44.19.105"></server>
+             <server NAME="SLCI-DDNCHE08B-1" DDN1="159.44.3.106" DDN2="159.44.19.106"></server>
+<!--  -->
+<!-- STL - OPRA - to be reused for new OPRA and other projects -->
+             <server NAME="SLCI-DDNCHE09A-1" DDN1="159.44.3.60" DDN2="159.44.19.60"></server>
+             <server NAME="SLCI-DDNCHE09B-1" DDN1="159.44.3.90" DDN2="159.44.19.90"></server>
+             <server NAME="SL1I-DDNCCHE10A-1" DDN1="159.44.3.61" DDN2="159.44.19.61"></server>
+             <server NAME="SL1I-DDNCCHE10B-1" DDN1="159.44.3.150" DDN2="159.44.19.150"></server>
+             <server NAME="SL1I-DDNCCHE11A-1" DDN1="159.44.3.62" DDN2="159.44.19.62"></server>
+             <server NAME="SL1I-DDNCCHE11B-1" DDN1="159.44.3.32" DDN2="159.44.19.32"></server>
+<!--  -->
+<!-- STl - Direct Edge X -->
+             <server NAME="SL1I-DDNCCHE12A-1" DDN1="159.44.2.33" DDN2="159.44.18.33"></server>
+             <server NAME="SL1I-DDNCCHE12B-1" DDN1="159.44.2.34" DDN2="159.44.18.34"></server>
+             <server NAME="SL1I-DDNCCHE13A-1" DDN1="159.44.3.64" DDN2="159.44.19.64"></server>
+             <server NAME="SL1I-DDNCCHE13B-1" DDN1="159.44.3.93" DDN2="159.44.19.93"></server>
+<!--  -->
+<!-- STL - CME L1 -->
+             <server NAME="SL1I-DDNCCHE14A-1" DDN1="159.44.2.37" DDN2="159.44.18.37"></server>
+             <server NAME="SL1I-DDNCCHE14B-1" DDN1="159.44.2.38" DDN2="159.44.18.38"></server>
+             <server NAME="SL1I-DDNCCHE15A-1" DDN1="159.44.3.70" DDN2="159.44.19.70"></server>
+             <server NAME="SL1I-DDNCCHE16A-1" DDN1="159.44.3.71" DDN2="159.44.19.71"></server>
+<!--  -->
+<!-- STL - FINRA -->
+             <server NAME="SL1I-DDNCCHE18A-1" DDN1="159.44.2.45" DDN2="159.44.18.45"></server>
+             <server NAME="SL1I-DDNCCHE18B-1" DDN1="159.44.2.46" DDN2="159.44.18.46"></server>
+<!--  -->
+<!-- STL - TSX/TSXV -->
+             <server NAME="SLCI-DDNCHE19A-1" DDN1="159.44.3.4" DDN2="159.44.19.4"></server>
+             <server NAME="SLCI-DDNCHE19B-1" DDN1="159.44.3.5" DDN2="159.44.19.5"></server>
+<!--  -->
+<!-- STL - CME L2 -->
+             <server NAME="SLCI-DDNCHE20A-1" DDN1="159.44.3.6" DDN2="159.44.19.6"></server>
+             <server NAME="SL1I-DDNCCHE20B-1" DDN1="159.44.3.7" DDN2="159.44.19.7"></server>
+<!--  -->
+<!-- STL - Bovespa -->
+             <server NAME="SL1I-DDNCCHE21A-1" DDN1="159.44.2.51" DDN2="159.44.18.51"></server>
+             <server NAME="SL1I-DDNCCHE21B-1" DDN1="159.44.2.52" DDN2="159.44.18.52"></server>
+<!--  -->
+<!-- STL - UCDP & MRN -->
+             <server NAME="SL1I-DDNCCHE22A-1" DDN1="159.44.2.53" DDN2="159.44.18.53"></server>
+<!--  -->
+<!-- STL - Temporary for JSDA -->
+             <server NAME="SL1I-DDNCCHE22B-1" DDN1="159.44.2.54" DDN2="159.44.18.54"></server>
+<!--  -->
+<!-- STL - CBOE, Chicago ONE -->
+             <server NAME="SL1I-DDNCCHE23A-1" DDN1="159.44.3.12" DDN2="159.44.19.12"></server>
+             <server NAME="SL1I-DDNCCHE23B-1" DDN1="159.44.3.14" DDN2="159.44.19.14"></server>
+<!--  -->
+<!-- STL - CBOT G8 move -->
+             <server NAME="SL1I-DDNCCHE24A-1" DDN1="159.44.2.57" DDN2="159.44.18.57"></server>
+             <server NAME="SL1I-DDNCCHE24B-1" DDN1="159.44.2.58" DDN2="159.44.18.58"></server>
+<!--  -->
+<!-- STL -  KCBOT/MGE -->
+             <server NAME="SLCI-DDNCHE25A-1" DDN1="159.44.3.18" DDN2="159.44.19.18"></server>
+             <server NAME="SL1I-DDNCCHE25B-1" DDN1="159.44.3.19" DDN2="159.44.19.19"></server>
+<!--  -->
+<!-- STL - BATS BZX -->
+             <server NAME="SL1I-DDNCCHE27A-1" DDN1="159.44.3.20" DDN2="159.44.19.20"></server>
+             <server NAME="SL1I-DDNCCHE27B-1" DDN1="159.44.3.21" DDN2="159.44.19.21"></server>
+<!--  -->
+<!-- STL - BATS BYX -->
+             <server NAME="SL1I-DDNCCHE28A-1" DDN1="159.44.3.22" DDN2="159.44.19.22"></server>
+             <server NAME="SL1I-DDNCCHE28B-1" DDN1="159.44.3.23" DDN2="159.44.19.23"></server>
+<!--  -->
+<!-- STL - Playback PPDS -->
+             <server NAME="SL1I-DDNCCHE29B-1" DDN1="159.44.3.116" DDN2="159.44.19.116"></server>
+<!--  -->
+<!-- STL - SIAC Expansion -->
+             <server NAME="SL1I-DDNCCHE33A-1" DDN1="159.44.3.238" DDN2="159.44.19.238"></server>
+             <server NAME="SL1I-DDNCCHE33B-1" DDN1="159.44.3.239" DDN2="159.44.19.239"></server>
+             <server NAME="SL1I-DDNCCHE34A-1" DDN1="159.44.3.240" DDN2="159.44.19.240"></server>
+             <server NAME="SL1I-DDNCCHE34B-1" DDN1="159.44.3.241" DDN2="159.44.19.241"></server>
+             <server NAME="SL1I-DDNCCHE35A-1" DDN1="159.44.3.242" DDN2="159.44.19.242"></server>
+             <server NAME="SL1I-DDNCCHE35B-1" DDN1="159.44.3.243" DDN2="159.44.19.243"></server>
+             <server NAME="SL1I-DDNCCHE36A-1" DDN1="159.44.3.244" DDN2="159.44.19.244"></server>
+             <server NAME="SL1I-DDNCCHE36B-1" DDN1="159.44.3.245" DDN2="159.44.19.245"></server>
+<!--  -->
+<!-- STL - ICE -->
+             <server NAME="SL1I-DDNCCHE37A-1" DDN1="159.44.2.83" DDN2="159.44.18.83"></server>
+             <server NAME="SL1I-DDNCCHE37B-1" DDN1="159.44.2.84" DDN2="159.44.18.84"></server>
+<!--  -->
+<!-- STL - XRE -->
+             <server NAME="SL1I-DDNCCHE38A-1" DDN1="159.44.2.85" DDN2="159.44.18.85"></server>
+             <server NAME="SL1I-DDNCCHE38B-1" DDN1="159.44.2.86" DDN2="159.44.18.86"></server>
+<!--  -->
+<!-- STL - Direct Edge A -->
+             <server NAME="SL1I-DDNCCHE39A-1" DDN1="159.44.2.87" DDN2="159.44.18.87"></server>
+             <server NAME="SL1I-DDNCCHE39B-1" DDN1="159.44.2.88" DDN2="159.44.18.88"></server>
+<!--  -->
+<!-- STL OPRA expansion - first 4 are pairs, remaining ones are singles -->
+             <server NAME="SL1I-DDNCCHE40A-1" DDN1="159.44.2.141" DDN2="159.44.18.141"></server>
+             <server NAME="SL1I-DDNCCHE40B-1" DDN1="159.44.2.142" DDN2="159.44.18.142"></server>
+             <server NAME="SL1I-DDNCCHE41A-1" DDN1="159.44.2.143" DDN2="159.44.18.143"></server>
+             <server NAME="SL1I-DDNCCHE41B-1" DDN1="159.44.2.144" DDN2="159.44.18.144"></server>
+             <server NAME="SL1I-DDNCCHE42A-1" DDN1="159.44.2.93" DDN2="159.44.18.93"></server>
+             <server NAME="SL1I-DDNCCHE42B-1" DDN1="159.44.2.94" DDN2="159.44.18.94"></server>
+             <server NAME="SL1I-DDNCCHE43A-1" DDN1="159.44.2.95" DDN2="159.44.18.95"></server>
+             <server NAME="SL1I-DDNCCHE43B-1" DDN1="159.44.2.96" DDN2="159.44.18.96"></server>
+             <server NAME="SL1I-DDNCCHE44A-1" DDN1="159.44.2.97" DDN2="159.44.18.97"></server>
+             <server NAME="SL1I-DDNCCHE44B-1" DDN1="159.44.2.98" DDN2="159.44.18.98"></server>
+             <server NAME="SL1I-DDNCCHE45A-1" DDN1="159.44.2.99" DDN2="159.44.18.99"></server>
+             <server NAME="SL1I-DDNCCHE45B-1" DDN1="159.44.2.100" DDN2="159.44.18.100"></server>
+<!--  -->
+<!-- STL - NASDAQ MFDS -->
+             <server NAME="SL1I-DDNCCHE46A-1" DDN1="159.44.2.101" DDN2="159.44.18.101"></server>
+             <server NAME="SL1I-DDNCCHE46B-1" DDN1="159.44.2.102" DDN2="159.44.18.102"></server>
+<!--  -->
+<!-- STL - NASDAQ GIDS -->
+             <server NAME="SL1I-DDNCCHE49A-1" DDN1="159.44.2.107" DDN2="159.44.18.107"></server>
+             <server NAME="SL1I-DDNCCHE49B-1" DDN1="159.44.2.108" DDN2="159.44.18.108"></server>
+<!--  -->
+<!-- STL - iCHE - MarketAxess -->
+             <server NAME="SL1I-DDNCCHP01A-1" DDN1="159.44.2.139" DDN2="159.44.18.139"></server>
+             <server NAME="SL1I-DDNCCHP01B-1" DDN1="159.44.2.140" DDN2="159.44.18.140"></server>
+<!--  -->
+<!-- STL - iCHE - MSRB -->
+             <server NAME="SL1I-DDNCCHP02A-1" DDN1="159.44.2.89" DDN2="159.44.18.89"></server>
+             <server NAME="SL1I-DDNCCHP02B-1" DDN1="159.44.2.90" DDN2="159.44.18.90"></server>
+<!--  -->
+<!-- STL - UPA CHE DELPHX -->
+             <server NAME="SL1I-DDNCCHP03A-1" DDN1="159.44.2.91" DDN2="159.44.18.91"></server>
+             <server NAME="SL1I-DDNCCHP03B-1" DDN1="159.44.2.92" DDN2="159.44.18.92"></server>
+<!--  -->
+<!-- STL - iCHE CBID -->
+             <server NAME="SL1I-DDNCCHP04A-1" DDN1="159.44.2.145" DDN2="159.44.18.145"></server>
+             <server NAME="SL1I-DDNCCHP04B-1" DDN1="159.44.2.146" DDN2="159.44.18.146"></server>
+<!--  -->
+<!-- STL - Internal feeds -->
+             <server NAME="SLVI-DDNCHE01A-1" DDN1="159.44.3.189" DDN2="159.44.19.189"></server>
+             <server NAME="SLVI-DDNCHE01B-1" DDN1="159.44.3.194" DDN2="159.44.19.194"></server>
+<!--  -->
+<!-- STL - Temp for CHI-X Japan -->
+             <server NAME="SLVI-DDNCHE02A-1" DDN1="159.44.3.182" DDN2="159.44.19.182"></server>
+             <server NAME="SLVI-DDNCHE02B-1" DDN1="159.44.3.198" DDN2="159.44.19.198"></server>
+<!--  -->
+<!-- STL - EMEA -->
+             <server NAME="SLVI-DDNCHE03B-1" DDN1="159.44.3.200" DDN2="159.44.19.200"></server>
+<!--  -->
+<!-- STL - CVAs -->
+             <server NAME="SLVI-DDNCVA01A-1" DDN1="159.44.3.187" DDN2="159.44.19.187"></server>
+             <server NAME="SLVI-DDNCVA01B-1" DDN1="159.44.3.192" DDN2="159.44.19.192"></server>
+             <server NAME="SLVI-DDNCVA02A-1" DDN1="159.44.3.188" DDN2="159.44.19.188"></server>
+             <server NAME="SLVI-DDNCVA02B-1" DDN1="159.44.3.193" DDN2="159.44.19.193"></server>
+             <server NAME="SLVI-DDNCVA03A-1" DDN1="159.44.3.39" DDN2="159.44.19.39"></server>
+             <server NAME="SLVI-DDNCVA03B-1" DDN1="159.44.3.40" DDN2="159.44.19.40"></server>
+             <server NAME="SL1I-DDNMCVA04A-1" DDN1="159.44.2.193" DDN2="159.44.18.193"></server>
+             <server NAME="SL1I-DDNMCVA04B-1" DDN1="159.44.2.194" DDN2="159.44.18.194"></server>
+             <server NAME="SLVI-DDNCVA05A-1" DDN1="159.44.3.36" DDN2="159.44.19.36"></server>
+             <server NAME="SLVI-DDNCVA05B-1" DDN1="159.44.3.37" DDN2="159.44.19.37"></server>
+             <server NAME="SL1I-DDNMCVA06A-1" DDN1="159.44.3.207" DDN2="159.44.19.207"></server>
+             <server NAME="SL1I-DDNMCVA06B-1" DDN1="159.44.3.208" DDN2="159.44.19.208"></server>
+             <server NAME="SL1I-DDNMCVA07A-1" DDN1="159.44.3.212" DDN2="159.44.19.212"></server>
+             <server NAME="SL1I-DDNMCVA07B-1" DDN1="159.44.2.200" DDN2="159.44.18.200"></server>
+             <server NAME="SL1I-DDNMCVA08A-1" DDN1="159.44.3.109" DDN2="159.44.19.109"></server>
+             <server NAME="SL1I-DDNMCVA08B-1" DDN1="159.44.2.202" DDN2="159.44.18.202"></server>
+             <server NAME="SL1I-DDNMCVA09A-1" DDN1="159.44.2.209" DDN2="159.44.18.209"></server>
+             <server NAME="SL1I-DDNMCVA09B-1" DDN1="159.44.2.210" DDN2="159.44.18.210"></server>
+             <server NAME="SL1I-DDNMCVA10A-1" DDN1="159.44.2.211" DDN2="159.44.18.211"></server>
+             <server NAME="SL1I-DDNMCVA10B-1" DDN1="159.44.2.212" DDN2="159.44.18.212"></server>
+<!--  -->
+<!-- STL - IDN Data Sources (AMER ITDG) -->
+             <server NAME="SLMI-DDNITDG01A-1" DDN1="159.44.3.165" DDN2="159.44.19.165"></server>
+             <server NAME="SLMI-DDNITDG01B-1" DDN1="159.44.3.175" DDN2="159.44.19.175"></server>
+             <server NAME="SLMI-DDNITDG02A-1" DDN1="159.44.3.166" DDN2="159.44.19.166"></server>
+             <server NAME="SLMI-DDNITDG02B-1" DDN1="159.44.3.176" DDN2="159.44.19.176"></server>
+             <server NAME="SLMI-DDNITDG03A-1" DDN1="159.44.3.167" DDN2="159.44.19.167"></server>
+             <server NAME="SLMI-DDNITDG03B-1" DDN1="159.44.3.177" DDN2="159.44.19.177"></server>
+             <server NAME="SL1I-DDNIIDG04A-1" DDN1="159.44.2.243" DDN2="159.44.18.243"></server>
+             <server NAME="SL1I-DDNIIDG04B-1" DDN1="159.44.2.244" DDN2="159.44.18.244"></server>
+             <server NAME="SL1I-DDNIIDG05A-1" DDN1="159.44.2.245" DDN2="159.44.18.245"></server>
+             <server NAME="SL1I-DDNIIDG05B-1" DDN1="159.44.2.246" DDN2="159.44.18.246"></server>
+             <server NAME="SL1I-DDNIIDG06A-1" DDN1="159.44.2.247" DDN2="159.44.18.247"></server>
+             <server NAME="SL1I-DDNIIDG06B-1" DDN1="159.44.2.248" DDN2="159.44.18.248"></server>
+<!--  -->
+<!-- STL - MTC MC-RS -->
+             <server NAME="SL1I-DDNMMCR01A-1" DDN1="159.44.3.173" DDN2="159.44.19.173"></server>
+             <server NAME="SL1I-DDNMMCR01B-1" DDN1="159.44.3.174" DDN2="159.44.19.174"></server>
+<!--  -->
+<!-- STL- Funnel -->
+             <server NAME="SL1I-DDNCEFX01A-1" DDN1="159.44.3.66" DDN2="159.44.19.66"></server>
+             <server NAME="SL1I-DDNCEFX01B-1" DDN1="159.44.3.67" DDN2="159.44.19.67"></server>
+             <server NAME="SL1I-DDNCEFX02A-1" DDN1="159.44.3.68" DDN2="159.44.19.68"></server>
+             <server NAME="SL1I-DDNCEFX02B-1" DDN1="159.44.3.69" DDN2="159.44.19.69"></server>
+             <server NAME="SL1I-DDNCEFX03A-1" DDN1="159.44.3.82" DDN2="159.44.19.82"></server>
+             <server NAME="SL1I-DDNCEFX03B-1" DDN1="159.44.3.58" DDN2="159.44.19.58"></server>
+             <server NAME="SL1I-DDNCEFX04A-1" DDN1="159.44.3.83" DDN2="159.44.19.83"></server>
+             <server NAME="SL1I-DDNCEFX04B-1" DDN1="159.44.3.59" DDN2="159.44.19.59"></server>
+             <server NAME="SL1I-DDNCEFX05A-1" DDN1="159.44.3.96" DDN2="159.44.19.96"></server>
+             <server NAME="SL1I-DDNCEFX05B-1" DDN1="159.44.3.97" DDN2="159.44.19.97"></server>
+             <server NAME="SL1I-DDNCEFX06A-1" DDN1="159.44.3.98" DDN2="159.44.19.98"></server>
+             <server NAME="SL1I-DDNCEFX06B-1" DDN1="159.44.3.99" DDN2="159.44.19.99"></server>
+             <server NAME="SL1I-DDNCEFX07A-1" DDN1="159.44.2.249" DDN2="159.44.18.249"></server>
+             <server NAME="SL1I-DDNCEFX07B-1" DDN1="159.44.2.250" DDN2="159.44.18.250"></server>
+             <server NAME="SL1I-DDNCEFX08A-1" DDN1="159.44.2.251" DDN2="159.44.18.251"></server>
+             <server NAME="SL1I-DDNCEFX08B-1" DDN1="159.44.2.252" DDN2="159.44.18.252"></server>
+             <server NAME="SL1I-DDNCEFX09A-1" DDN1="159.44.2.253" DDN2="159.44.18.253"></server>
+             <server NAME="SL1I-DDNCEFX09B-1" DDN1="159.44.2.254" DDN2="159.44.18.254"></server>
+<!--  -->
+<!-- STL- Funnel MTC -->
+             <server NAME="SL1I-DDNMEFX01A-1" DDN1="159.44.3.78" DDN2="159.44.19.78"></server>
+             <server NAME="SL1I-DDNMEFX01B-1" DDN1="159.44.3.79" DDN2="159.44.19.79"></server>
+<!--  -->
+<!-- STL - IA TMS -->
+             <server NAME="SL1I-DDNCTMS01A-1" DDN1="159.44.3.210" DDN2="159.44.19.210"></server>
+             <server NAME="SL1I-DDNCTMS01B-1" DDN1="159.44.3.211" DDN2="159.44.19.211"></server>
+             <server NAME="SL1I-DDNCTMS02A-1" DDN1="159.44.3.214" DDN2="159.44.19.214"></server>
+             <server NAME="SL1I-DDNCTMS02B-1" DDN1="159.44.3.215" DDN2="159.44.19.215"></server>
+             <server NAME="SL1I-DDNCTMS03A-1" DDN1="159.44.3.216" DDN2="159.44.19.216"></server>
+             <server NAME="SL1I-DDNCTMS03B-1" DDN1="159.44.3.217" DDN2="159.44.19.217"></server>
+             <server NAME="SL1I-DDNCTMS04A-1" DDN1="159.44.3.218" DDN2="159.44.19.218"></server>
+             <server NAME="SL1I-DDNCTMS04B-1" DDN1="159.44.3.219" DDN2="159.44.19.219"></server>
+             <server NAME="SL1I-DDNCTMS05A-1" DDN1="159.44.3.220" DDN2="159.44.19.220"></server>
+             <server NAME="SL1I-DDNCTMS05B-1" DDN1="159.44.3.221" DDN2="159.44.19.221"></server>
+             <server NAME="SL1I-DDNCTMS06A-1" DDN1="159.44.3.226" DDN2="159.44.19.226"></server>
+             <server NAME="SL1I-DDNCTMS06B-1" DDN1="159.44.3.227" DDN2="159.44.19.227"></server>
+<!--  -->
+<!-- EVAI - 01 for OPRA,02, 03 for MarketAxess, 04 for FINRA, 05 for CBID, 
+             <server NAME="SL1I-DDNMVAH01A-1" DDN1="159.44.3.139" DDN2="159.44.19.139"></server>
+             <server NAME="SL1I-DDNMVAH01B-1" DDN1="159.44.3.140" DDN2="159.44.19.140"></server>
+             <server NAME="SL1I-DDNMVAH02A-1" DDN1="159.44.3.141" DDN2="159.44.19.141"></server>
+             <server NAME="SL1I-DDNMVAH02B-1" DDN1="159.44.3.142" DDN2="159.44.19.142"></server>
+             <server NAME="SL1I-DDNMVAH03A-1" DDN1="159.44.3.143" DDN2="159.44.19.143"></server>
+             <server NAME="SL1I-DDNMVAH03B-1" DDN1="159.44.3.144" DDN2="159.44.19.144"></server>
+             <server NAME="SL1I-DDNMVAH04A-1" DDN1="159.44.2.157" DDN2="159.44.18.157"></server>
+             <server NAME="SL1I-DDNMVAH04B-1" DDN1="159.44.2.158" DDN2="159.44.18.158"></server>
+             <server NAME="SL1I-DDNMVAH05A-1" DDN1="159.44.2.159" DDN2="159.44.18.159"></server>
+             <server NAME="SL1I-DDNMVAH05B-1" DDN1="159.44.2.160" DDN2="159.44.18.160"></server>
+             <server NAME="SL1I-DDNMVAH06A-1" DDN1="159.44.2.161" DDN2="159.44.18.161"></server>
+             <server NAME="SL1I-DDNMVAH06B-1" DDN1="159.44.2.162" DDN2="159.44.18.162"></server>
+             <server NAME="SL1I-DDNMVAH07A-1" DDN1="159.44.3.246" DDN2="159.44.19.246"></server>
+             <server NAME="SL1I-DDNMVAH07B-1" DDN1="159.44.3.247" DDN2="159.44.19.247"></server>
+             <server NAME="SL1I-DDNMVAH08A-1" DDN1="159.44.3.248" DDN2="159.44.19.248"></server>
+             <server NAME="SL1I-DDNMVAH08B-1" DDN1="159.44.3.249" DDN2="159.44.19.249"></server>
+             <server NAME="SL1I-DDNMVAH09A-1" DDN1="159.44.3.250" DDN2="159.44.19.250"></server>
+             <server NAME="SL1I-DDNMVAH09B-1" DDN1="159.44.3.251" DDN2="159.44.19.251"></server>
+             <server NAME="SL1I-DDNMVAH10A-1" DDN1="159.44.3.252" DDN2="159.44.19.252"></server>
+             <server NAME="SL1I-DDNMVAH10B-1" DDN1="159.44.3.253" DDN2="159.44.19.253"></server>
+<!--  -->
+<!-- STL - CDS -->
+             <server NAME="SL1I-DDNMCDS01A-1" DDN1="159.44.2.225" DDN2="159.44.18.225"></server>
+             <server NAME="SL1I-DDNMCDS01B-1" DDN1="159.44.2.226" DDN2="159.44.18.226"></server>
+             <server NAME="SL1I-DDNMCDS02A-1" DDN1="159.44.2.227" DDN2="159.44.18.227"></server>
+             <server NAME="SL1I-DDNMCDS02B-1" DDN1="159.44.2.228" DDN2="159.44.18.228"></server>
+             <server NAME="SL1I-DDNMCDS03A-1" DDN1="159.44.2.229" DDN2="159.44.18.229"></server>
+             <server NAME="SL1I-DDNMCDS03B-1" DDN1="159.44.2.230" DDN2="159.44.18.230"></server>
+<!--  -->
+<!-- STL - SIR -->
+             <server NAME="SLDI-DDNSIR01A-1" DDN1="159.44.2.215" DDN2="Not Found"></server>
+             <server NAME="SLDI-DDNSIR01B-1" DDN1="159.44.2.216" DDN2="Not Found"></server>
+             <server NAME="SL1I-DDNMSIR01A-1" DDN1="159.44.2.219" DDN2="Not Found"></server>
+<!--  -->
+<!-- STL - Cascaded POP - CHI-X Canada, CX-2, Pure, Alpha -->
+             <server NAME="SL3I-DDNCCHE01A-1" DDN1="159.44.21.10" DDN2="159.44.31.10"></server>
+             <server NAME="SL3I-DDNCCHE01B-1" DDN1="159.44.21.11" DDN2="159.44.31.11"></server>
+<!--  -->
+<!-- STL - Cascaded POP - TSX/TSXV -->
+             <server NAME="SL3I-DDNCCHE02A-1" DDN1="159.44.21.12" DDN2="159.44.31.12"></server>
+             <server NAME="SL3I-DDNCCHE02B-1" DDN1="159.44.21.13" DDN2="159.44.31.13"></server>
+<!--  -->
+<!-- STL - Cascaded POP - Montreal -->
+             <server NAME="SL3I-DDNCCHE03A-1" DDN1="159.44.21.22" DDN2="159.44.31.22"></server>
+             <server NAME="SL3I-DDNCCHE03B-1" DDN1="159.44.21.23" DDN2="159.44.31.23"></server>
+<!--  -->
+<!-- STL - Aequitas -->
+             <server NAME="SL3I-DDNCCHE04A-1" DDN1="159.44.21.28" DDN2="159.44.31.28"></server>
+             <server NAME="SL3I-DDNCCHE04B-1" DDN1="159.44.21.29" DDN2="159.44.31.29"></server>
+<!--  -->
+<!-- STL - Cascaded POP CVA - CHI-X Canada, Montreal -->
+             <server NAME="SL3I-DDNCCVA01A-1" DDN1="159.44.21.16" DDN2="159.44.31.16"></server>
+             <server NAME="SL3I-DDNCCVA01B-1" DDN1="159.44.21.17" DDN2="159.44.31.17"></server>
+<!--  -->
+<!-- STL - Cascaded POP CVA - Pure, Alpha, TSX/TSXV -->
+             <server NAME="SL3I-DDNCCVA02A-1" DDN1="159.44.21.24" DDN2="159.44.31.24"></server>
+             <server NAME="SL3I-DDNCCVA02B-1" DDN1="159.44.21.25" DDN2="159.44.31.25"></server>
+<!--  -->
+<!-- STL - Cascaded POP EFX -->
+             <server NAME="SL3I-DDNCEFX01A-1" DDN1="159.44.21.14" DDN2="159.44.31.14"></server>
+             <server NAME="SL3I-DDNCEFX01B-1" DDN1="159.44.21.15" DDN2="159.44.31.15"></server>
+<!--  -->
+<!-- STL - Cascasded SIR -->
+             <server NAME="SL3I-DDNDEED01A-1" DDN1="159.44.21.26" DDN2="Not Found"></server>
+<!--  -->
+<!-- Dummy addresses added so DAS can interpret TMS Staging LAN messages  -
+             <server NAME="MH2I-DDNDTMS01A-1" DDN1="10.110.23.1" DDN2="10.110.23.1"></server>
+             <server NAME="MH2I-DDNDTMS01B-1" DDN1="10.110.23.7" DDN2="10.110.23.7"></server>
+             <server NAME="MH2I-DDNDTMS02A-1" DDN1="10.110.23.2" DDN2="10.110.23.2"></server>
+             <server NAME="MH2I-DDNDTMS02B-1" DDN1="10.110.23.8" DDN2="10.110.23.8"></server>
+             <server NAME="MH2I-DDNDTMS03A-1" DDN1="10.110.23.3" DDN2="10.110.23.3"></server>
+             <server NAME="MH2I-DDNDTMS03B-1" DDN1="10.110.23.9" DDN2="10.110.23.9"></server>
+             <server NAME="MH2I-DDNDTMS04A-1" DDN1="10.110.23.4" DDN2="10.110.23.4"></server>
+             <server NAME="MH2I-DDNDTMS04B-1" DDN1="10.110.23.10" DDN2="10.110.23.10"></server>
+             <server NAME="MH2I-DDNDTMS05A-1" DDN1="10.110.23.5" DDN2="10.110.23.5"></server>
+             <server NAME="MH2I-DDNDTMS05B-1" DDN1="10.110.23.11" DDN2="10.110.23.11"></server>
+             <server NAME="MH2I-DDNDTMS06A-1" DDN1="10.110.23.6" DDN2="10.110.23.6"></server>
+             <server NAME="MH2I-DDNDTMS06B-1" DDN1="10.110.23.12" DDN2="10.110.23.12"></server>
+             <server NAME="LMHI-DDNMTMS10A-1" DDN1="10.110.31.1" DDN2="10.110.31.1"></server>
+             <server NAME="LMHI-DDNMTMS10B-1" DDN1="10.110.31.2" DDN2="10.110.31.2"></server>
+             <server NAME="LMHI-DDNMTMS11A-1" DDN1="10.110.31.3" DDN2="10.110.31.3"></server>
+             <server NAME="LMHI-DDNMTMS11B-1" DDN1="10.110.31.4" DDN2="10.110.31.4"></server>
+             <server NAME="LMHI-DDNMTMS12A-1" DDN1="10.110.31.5" DDN2="10.110.31.5"></server>
+             <server NAME="LMHI-DDNMTMS12B-1" DDN1="10.110.31.6" DDN2="10.110.31.6"></server>
+             <server NAME="LMHI-DDNMTMS13A-1" DDN1="10.110.31.7" DDN2="10.110.31.7"></server>
+             <server NAME="LMHI-DDNMTMS13B-1" DDN1="10.110.31.8" DDN2="10.110.31.8"></server>
+             <server NAME="LMHI-DDNMTMS14A-1" DDN1="10.110.31.9" DDN2="10.110.31.9"></server>
+             <server NAME="LMHI-DDNMTMS14B-1" DDN1="10.110.31.10" DDN2="10.110.31.10"></server>
+             <server NAME="LMHI-DDNMTMS15A-1" DDN1="10.110.31.11" DDN2="10.110.31.11"></server>
+             <server NAME="LMHI-DDNMTMS15B-1" DDN1="10.110.31.12" DDN2="10.110.31.12"></server>
+<!--  -->
+<!-- LMH MTC -->
+             <server NAME="LMHI-DDNMMCR01A-1" DDN1="159.44.67.17" DDN2="159.44.83.17"></server>
+             <server NAME="LMHI-DDNMMCR01B-1" DDN1="159.44.67.18" DDN2="159.44.83.18"></server>
+             <server NAME="NTCP-DDNMMCR01A-1" DDN1="159.44.0.77" DDN2="159.44.16.77"></server>
+             <server NAME="NTCP-DDNMMCR01B-1" DDN1="159.44.0.78" DDN2="159.44.16.78"></server>
+             <server NAME="SG1P-DDNMMCR01A-1" DDN1="159.44.128.17" DDN2="159.44.144.17"></server>
+             <server NAME="SG1P-DDNMMCR01B-1" DDN1="159.44.128.18" DDN2="159.44.144.18"></server>
+             <server NAME="LMHI-DDNMCVA01A-1" DDN1="159.44.67.37" DDN2="159.44.83.37"></server>
+             <server NAME="LMHI-DDNMCVA01B-1" DDN1="159.44.67.38" DDN2="159.44.83.38"></server>
+             <server NAME="LMHI-DDNMCVA02A-1" DDN1="159.44.67.39" DDN2="159.44.83.39"></server>
+             <server NAME="LMHI-DDNMCVA02B-1" DDN1="159.44.67.40" DDN2="159.44.83.40"></server>
+             <server NAME="LMHI-DDNMCVA03A-1" DDN1="159.44.67.41" DDN2="159.44.83.41"></server>
+             <server NAME="LMHI-DDNMCVA03B-1" DDN1="159.44.67.42" DDN2="159.44.83.42"></server>
+             <server NAME="LMHI-DDNMCVA04A-1" DDN1="159.44.67.43" DDN2="159.44.83.43"></server>
+             <server NAME="LMHI-DDNMCVA04B-1" DDN1="159.44.67.44" DDN2="159.44.83.44"></server>
+             <server NAME="LMHI-DDNMCVA05A-1" DDN1="159.44.67.45" DDN2="159.44.83.45"></server>
+             <server NAME="LMHI-DDNMCVA05B-1" DDN1="159.44.67.46" DDN2="159.44.83.46"></server>
+             <server NAME="LMHI-DDNMCVA06A-1" DDN1="159.44.67.47" DDN2="159.44.83.47"></server>
+             <server NAME="LMHI-DDNMCVA06B-1" DDN1="159.44.67.48" DDN2="159.44.83.48"></server>
+             <server NAME="LMHI-DDNMCVA07A-1" DDN1="159.44.67.49" DDN2="159.44.83.49"></server>
+             <server NAME="LMHI-DDNMCVA07B-1" DDN1="159.44.67.50" DDN2="159.44.83.50"></server>
+             <server NAME="LMHI-DDNMCVA09A-1" DDN1="159.44.67.53" DDN2="159.44.83.53"></server>
+             <server NAME="LMHI-DDNMCVA09B-1" DDN1="159.44.67.58" DDN2="159.44.83.58"></server>
+             <server NAME="LMHI-DDNMCVA10A-1" DDN1="159.44.67.55" DDN2="159.44.83.55"></server>
+             <server NAME="LMHI-DDNMCVA10B-1" DDN1="159.44.67.60" DDN2="159.44.83.60"></server>
+             <server NAME="LMHI-DDNMCVA11A-1" DDN1="159.44.67.143" DDN2="159.44.83.141"></server>
+             <server NAME="LMHI-DDNMCVA11B-1" DDN1="159.44.67.144" DDN2="159.44.83.142"></server>
+             <server NAME="LMHI-DDNMCVA19A-1" DDN1="159.44.67.242" DDN2="159.44.83.238"></server>
+             <server NAME="LMHI-DDNMCVA19B-1" DDN1="159.44.67.243" DDN2="159.44.83.239"></server>
+             <server NAME="LMHI-DDNMCVA21A-1" DDN1="159.44.67.244" DDN2="159.44.83.240"></server>
+             <server NAME="LMHI-DDNMCVA21B-1" DDN1="159.44.67.245" DDN2="159.44.83.241"></server>
+             <server NAME="LMHI-DDNMCVX01A-1" DDN1="159.44.1.6" DDN2="159.2.1.6"></server>
+             <server NAME="LMHI-DDNMCVX01B-1" DDN1="159.44.1.7" DDN2="159.2.1.7"></server>
+             <server NAME="LMHI-DDNMCVX02A-1" DDN1="159.44.1.12" DDN2="159.44.2.12"></server>
+             <server NAME="LMHI-DDNMCVX02B-1" DDN1="159.44.1.16" DDN2="159.44.2.16"></server>
+             <server NAME="LMHI-DDNMCVX03A-1" DDN1="159.44.1.17" DDN2="159.44.2.17"></server>
+             <server NAME="LMHI-DDNMCVX03B-1" DDN1="159.44.1.15" DDN2="159.44.2.15"></server>
+             <server NAME="LMHI-DDNMCVX04A-1" DDN1="159.44.1.8" DDN2="159.44.2.10"></server>
+             <server NAME="LMHI-DDNMCVX04B-1" DDN1="159.44.1.9" DDN2="159.44.2.11"></server>
+             <server NAME="LMHI-DDNMNTS02-1" DDN1="159.44.67.51" DDN2="159.44.83.51"></server>
+             <server NAME="LMHI-DDNMNTS01A-1" DDN1="159.44.67.52" DDN2="159.44.83.52"></server>
+             <server NAME="LMHI-DDNMCHE15A-1" DDN1="159.44.75.9" DDN2="159.44.91.9"></server>
+             <server NAME="LMHI-DDNMCHE15Y-1" DDN1="159.44.1.3" DDN2="159.44.2.3"></server>
+             <server NAME="LMHI-DDNMCHE15X-1" DDN1="159.44.1.2" DDN2="159.44.2.2"></server>
+             <server NAME="LMHI-DDNMCHE15B-1" DDN1="159.44.67.72" DDN2="159.44.83.72"></server>
+             <server NAME="LMHI-DDNCCHP01A-1" DDN1="159.44.75.10" DDN2="159.44.91.10"></server>
+             <server NAME="LMHI-DDNCCHX01B-1" DDN1="159.44.1.19" DDN2="159.44.2.19"></server>
+             <server NAME="LMHI-DDNCCHX02A-1" DDN1="159.44.1.18" DDN2="159.44.2.18"></server>
+             <server NAME="LMHI-DDNCCHP02B-1" DDN1="159.44.75.11" DDN2="159.44.91.11"></server>
+             <server NAME="LMHI-DDNCCHP03A-1" DDN1="159.44.75.12" DDN2="159.44.91.12"></server>
+             <server NAME="LMHI-DDNCCHX03B-1" DDN1="159.44.1.22" DDN2="159.44.2.22"></server>
+             <server NAME="LMHI-DDNCCHX04A-1" DDN1="159.44.1.21" DDN2="159.44.2.21"></server>
+             <server NAME="LMHI-DDNCCHP04B-1" DDN1="159.44.75.17" DDN2="159.44.91.17"></server>
+             <server NAME="LMHI-DDNCCHE04A-1" DDN1="159.44.67.99" DDN2="159.44.83.99"></server>
+             <server NAME="LMHI-DDNCCHE04B-1" DDN1="159.44.67.100" DDN2="159.44.83.100"></server>
+             <server NAME="LMHI-DDNMVAH01A-1" DDN1="159.44.67.75" DDN2="159.44.83.75"></server>
+             <server NAME="LMHI-DDNMVAH01B-1" DDN1="159.44.67.76" DDN2="159.44.83.76"></server>
+             <server NAME="LMHI-DDNMVAH02A-1" DDN1="159.44.67.77" DDN2="159.44.83.77"></server>
+             <server NAME="LMHI-DDNMVAH02B-1" DDN1="159.44.67.78" DDN2="159.44.83.78"></server>
+             <server NAME="LMHI-DDNMVAH03A-1" DDN1="159.44.67.79" DDN2="159.44.83.79"></server>
+             <server NAME="LMHI-DDNMVAH03B-1" DDN1="159.44.67.80" DDN2="159.44.83.80"></server>
+             <server NAME="LMHI-DDNMVAH04A-1" DDN1="159.44.67.81" DDN2="159.44.83.81"></server>
+             <server NAME="LMHI-DDNMVAH04B-1" DDN1="159.44.67.82" DDN2="159.44.83.82"></server>
+             <server NAME="LMHI-DDNMVAH05A-1" DDN1="159.44.67.83" DDN2="159.44.83.83"></server>
+             <server NAME="LMHI-DDNMVAH05B-1" DDN1="159.44.67.84" DDN2="159.44.83.84"></server>
+             <server NAME="LMHI-DDNMVAH06A-1" DDN1="159.44.67.133" DDN2="159.44.83.131"></server>
+             <server NAME="LMHI-DDNMVAH06B-1" DDN1="159.44.67.134" DDN2="159.44.83.132"></server>
+             <server NAME="LMHI-DDNMVAH07A-1" DDN1="159.44.67.135" DDN2="159.44.83.133"></server>
+             <server NAME="LMHI-DDNMVAH07B-1" DDN1="159.44.67.136" DDN2="159.44.83.134"></server>
+             <server NAME="LMHI-DDNMVAH08A-1" DDN1="159.44.67.137" DDN2="159.44.83.135"></server>
+             <server NAME="LMHI-DDNMVAH08B-1" DDN1="159.44.67.138" DDN2="159.44.83.136"></server>
+             <server NAME="LMHI-DDNMVAH09A-1" DDN1="159.44.67.139" DDN2="159.44.83.137"></server>
+             <server NAME="LMHI-DDNMVAH09B-1" DDN1="159.44.67.140" DDN2="159.44.83.138"></server>
+             <server NAME="LMHI-DDNMVAH10A-1" DDN1="159.44.67.141" DDN2="159.44.83.139"></server>
+             <server NAME="LMHI-DDNMVAH10B-1" DDN1="159.44.67.142" DDN2="159.44.83.140"></server>
+             <server NAME="LMHI-DDNMVAH11A-1" DDN1="159.44.67.165" DDN2="159.44.83.163"></server>
+             <server NAME="LMHI-DDNMVAH11B-1" DDN1="159.44.67.166" DDN2="159.44.83.164"></server>
+             <server NAME="LMHI-DDNMVAH12A-1" DDN1="159.44.67.167" DDN2="159.44.83.165"></server>
+             <server NAME="LMHI-DDNMVAH12B-1" DDN1="159.44.67.168" DDN2="159.44.83.166"></server>
+             <server NAME="LMHI-DDNMVAH13A-1" DDN1="159.44.67.169" DDN2="159.44.83.167"></server>
+             <server NAME="LMHI-DDNMVAH13B-1" DDN1="159.44.67.170" DDN2="159.44.83.168"></server>
+             <server NAME="LMHI-DDNMVAH14A-1" DDN1="159.44.67.171" DDN2="159.44.83.169"></server>
+             <server NAME="LMHI-DDNMVAH14B-1" DDN1="159.44.67.172" DDN2="159.44.83.170"></server>
+             <server NAME="LMHI-DDNMVAH15A-1" DDN1="159.44.67.173" DDN2="159.44.83.171"></server>
+             <server NAME="LMHI-DDNMVAH15B-1" DDN1="159.44.67.174" DDN2="159.44.83.172"></server>
+             <server NAME="LMHI-DDNMVAH16A-1" DDN1="159.44.67.175" DDN2="159.44.83.173"></server>
+             <server NAME="LMHI-DDNMVAH16B-1" DDN1="159.44.67.176" DDN2="159.44.83.174"></server>
+             <server NAME="LMHI-DDNMVAH17A-1" DDN1="159.44.67.177" DDN2="159.44.83.175"></server>
+             <server NAME="LMHI-DDNMVAH17B-1" DDN1="159.44.67.178" DDN2="159.44.83.176"></server>
+             <server NAME="LMHI-DDNMVAH26A-1" DDN1="159.44.67.181" DDN2="159.44.83.179"></server>
+             <server NAME="LMHI-DDNMVAH26B-1" DDN1="159.44.67.191" DDN2="159.44.83.189"></server>
+             <server NAME="LMHI-DDNMVAH27A-1" DDN1="159.44.67.182" DDN2="159.44.83.180"></server>
+             <server NAME="LMHI-DDNMVAH27B-1" DDN1="159.44.67.192" DDN2="159.44.83.190"></server>
+             <server NAME="LMHI-DDNMVAH28A-1" DDN1="159.44.67.183" DDN2="159.44.83.181"></server>
+             <server NAME="LMHI-DDNMVAH28B-1" DDN1="159.44.67.193" DDN2="159.44.83.191"></server>
+             <server NAME="LMHI-DDNMVAH29A-1" DDN1="159.44.67.184" DDN2="159.44.83.182"></server>
+             <server NAME="LMHI-DDNMVAH29B-1" DDN1="159.44.67.194" DDN2="159.44.83.192"></server>
+             <server NAME="LMHI-DDNMVAH30A-1" DDN1="159.44.67.185" DDN2="159.44.83.183"></server>
+             <server NAME="LMHI-DDNMVAH30B-1" DDN1="159.44.67.195" DDN2="159.44.83.193"></server>
+             <server NAME="LMHI-DDNMVAH31A-1" DDN1="159.44.67.186" DDN2="159.44.83.184"></server>
+             <server NAME="LMHI-DDNMVAH31B-1" DDN1="159.44.67.196" DDN2="159.44.83.194"></server>
+             <server NAME="LMHI-DDNMVAH35A-1" DDN1="159.44.67.199" DDN2="159.44.83.197"></server>
+             <server NAME="LMHI-DDNMVAH35B-1" DDN1="159.44.67.208" DDN2="159.44.83.206"></server>
+             <server NAME="LMHI-DDNMVAH36A-1" DDN1="159.44.67.200" DDN2="159.44.83.198"></server>
+             <server NAME="LMHI-DDNMVAH36B-1" DDN1="159.44.67.209" DDN2="159.44.83.207"></server>
+             <server NAME="LMHI-DDNMVAH37A-1" DDN1="159.44.67.201" DDN2="159.44.83.199"></server>
+             <server NAME="LMHI-DDNMVAH37B-1" DDN1="159.44.67.210" DDN2="159.44.83.208"></server>
+             <server NAME="LMHI-DDNMVAH38A-1" DDN1="159.44.67.202" DDN2="159.44.83.200"></server>
+             <server NAME="LMHI-DDNMVAH38B-1" DDN1="159.44.67.211" DDN2="159.44.83.209"></server>
+             <server NAME="LMHI-DDNMVAH39A-1" DDN1="159.44.67.203" DDN2="159.44.83.201"></server>
+             <server NAME="LMHI-DDNMVAH39B-1" DDN1="159.44.67.212" DDN2="159.44.83.210"></server>
+             <server NAME="LMHI-DDNMVAH40A-1" DDN1="159.44.67.204" DDN2="159.44.83.202"></server>
+             <server NAME="LMHI-DDNMVAH40B-1" DDN1="159.44.67.213" DDN2="159.44.83.211"></server>
+             <server NAME="LMHI-DDNMVAH41A-1" DDN1="159.44.67.205" DDN2="159.44.83.203"></server>
+             <server NAME="LMHI-DDNMVAH41B-1" DDN1="159.44.67.214" DDN2="159.44.83.212"></server>
+             <server NAME="LMHI-DDNMVAH45A-1" DDN1="159.44.67.217" DDN2="159.44.83.215"></server>
+             <server NAME="LMHI-DDNMVAH45B-1" DDN1="159.44.67.223" DDN2="159.44.83.221"></server>
+             <server NAME="LMHI-DDNMVAH48A-1" DDN1="159.44.67.220" DDN2="159.44.83.218"></server>
+             <server NAME="LMHI-DDNMVAH48B-1" DDN1="159.44.67.226" DDN2="159.44.83.224"></server>
+             <server NAME="LMHI-DDNMVAH49A-1" DDN1="159.44.67.221" DDN2="159.44.83.219"></server>
+             <server NAME="LMHI-DDNMVAH49B-1" DDN1="159.44.67.227" DDN2="159.44.83.225"></server>
+             <server NAME="LMHI-DDNMVAH55A-1" DDN1="159.44.67.229" DDN2="159.44.83.227"></server>
+             <server NAME="LMHI-DDNMVAH55B-1" DDN1="159.44.67.233" DDN2="159.44.83.231"></server>
+             <server NAME="LMHI-DDNMVAH56A-1" DDN1="159.44.67.230" DDN2="159.44.83.228"></server>
+             <server NAME="LMHI-DDNMVAH56B-1" DDN1="159.44.67.234" DDN2="159.44.83.232"></server>
+             <server NAME="LMHI-DDNMVAH57A-1" DDN1="159.44.67.231" DDN2="159.44.83.229"></server>
+             <server NAME="LMHI-DDNMVAH57B-1" DDN1="159.44.67.235" DDN2="159.44.83.233"></server>
+             <server NAME="LMHI-DDNMVAH58A-1" DDN1="159.44.67.232" DDN2="159.44.83.230"></server>
+             <server NAME="LMHI-DDNMVAH58B-1" DDN1="159.44.67.236" DDN2="159.44.83.234"></server>
+             <server NAME="LMHI-DDNMVAX01A-1" DDN1="159.44.1.30" DDN2="159.44.2.23"></server>
+             <server NAME="LMHI-DDNMVAX02A-1" DDN1="159.44.1.31" DDN2="159.44.2.24"></server>
+             <server NAME="LMHI-DDNMVAX03A-1" DDN1="159.44.1.32" DDN2="159.44.2.25"></server>
+             <server NAME="LMHI-DDNMVAX04A-1" DDN1="159.44.1.33" DDN2="159.44.2.26"></server>
+             <server NAME="LMHI-DDNMCIB01A-1" DDN1="159.44.67.145" DDN2="159.44.83.143"></server>
+             <server NAME="LMHI-DDNMCIB01B-1" DDN1="159.44.67.146" DDN2="159.44.83.144"></server>
+             <server NAME="LMHI-DDNCEFX01A-1" DDN1="159.44.67.114" DDN2="159.44.83.113"></server>
+             <server NAME="LMHI-DDNCEFX01B-1" DDN1="159.44.67.116" DDN2="159.44.83.114"></server>
+             <server NAME="LMHI-DDNMPPD01A-1" DDN1="159.44.67.85" DDN2="159.44.83.85"></server>
+             <server NAME="LMHI-DDNMPPD01B-1" DDN1="159.44.67.86" DDN2="159.44.83.86"></server>
+             <server NAME="LMHI-DDNCTMS01A-1" DDN1="159.44.67.121" DDN2="159.44.83.119"></server>
+             <server NAME="LMHI-DDNCTMS01B-1" DDN1="159.44.67.122" DDN2="159.44.83.120"></server>
+             <server NAME="LMHI-DDNCTMS02A-1" DDN1="159.44.67.123" DDN2="159.44.83.121"></server>
+             <server NAME="LMHI-DDNCTMS02B-1" DDN1="159.44.67.124" DDN2="159.44.83.122"></server>
+             <server NAME="LMHI-DDNCTMS03A-1" DDN1="159.44.67.125" DDN2="159.44.83.123"></server>
+             <server NAME="LMHI-DDNCTMS03B-1" DDN1="159.44.67.126" DDN2="159.44.83.124"></server>
+             <server NAME="LMHI-DDNCTMS04A-1" DDN1="159.44.67.127" DDN2="159.44.83.125"></server>
+             <server NAME="LMHI-DDNCTMS04B-1" DDN1="159.44.67.128" DDN2="159.44.83.126"></server>
+             <server NAME="LMHI-DDNCTMS05A-1" DDN1="159.44.67.129" DDN2="159.44.83.127"></server>
+             <server NAME="LMHI-DDNCTMS05B-1" DDN1="159.44.67.130" DDN2="159.44.83.128"></server>
+             <server NAME="LMHI-DDNCTMS06A-1" DDN1="159.44.67.131" DDN2="159.44.83.129"></server>
+             <server NAME="LMHI-DDNCTMS06B-1" DDN1="159.44.67.132" DDN2="159.44.83.130"></server>
+             <server NAME="LMHI-DDNCCSG01A-1" DDN1="159.44.67.117" DDN2="159.44.83.115"></server>
+             <server NAME="LMHI-DDNCCSG01B-1" DDN1="159.44.67.118" DDN2="159.44.83.116"></server>
+             <server NAME="LMHI-DDNCCSG02A-1" DDN1="159.44.67.119" DDN2="159.44.83.117"></server>
+             <server NAME="LMHI-DDNCCSG02B-1" DDN1="159.44.67.120" DDN2="159.44.83.118"></server>
+             <server NAME="LMHI-DDNCCSG03A-1" DDN1="159.44.67.239" DDN2="159.44.83.235"></server>
+             <server NAME="LMHI-DDNCCSG03B-1" DDN1="159.44.67.240" DDN2="159.44.83.236"></server>
+             <server NAME="LMHI-DDNCCSG04A-1" DDN1="159.44.67.241" DDN2="159.44.83.237"></server>
+             <server NAME="LMHI-DDNCCSX04B-1" DDN1="159.44.1.20" DDN2="159.44.2.20"></server>
+             <server NAME="LMHI-DDNCCCD01A-1" DDN1="159.44.67.87" DDN2="159.44.83.87"></server>
+             <server NAME="LMHI-DDNCCCD01B-1" DDN1="159.44.67.88" DDN2="159.44.83.88"></server>
+             <server NAME="LMHI-DDNCCCD02A-1" DDN1="159.44.67.89" DDN2="159.44.83.89"></server>
+             <server NAME="LMHI-DDNCCCD02B-1" DDN1="159.44.67.90" DDN2="159.44.83.90"></server>
+             <server NAME="NTCP-DDNCCCD01A-1" DDN1="159.44.0.134" DDN2="159.44.16.134"></server>
+             <server NAME="NTCP-DDNCCCD01B-1" DDN1="159.44.0.135" DDN2="159.44.16.135"></server>
+             <server NAME="NTCP-DDNCCCD02A-1" DDN1="159.44.0.136" DDN2="159.44.16.136"></server>
+             <server NAME="NTCP-DDNCCCD02B-1" DDN1="159.44.0.137" DDN2="159.44.16.137"></server>
+             <server NAME="NTCP-DDNCCSG01A-1" DDN1="159.44.0.164" DDN2="159.44.16.162"></server>
+             <server NAME="NTCP-DDNCCSG01B-1" DDN1="159.44.0.165" DDN2="159.44.16.163"></server>
+             <server NAME="NTCP-DDNCCSG02A-1" DDN1="159.44.0.166" DDN2="159.44.16.164"></server>
+             <server NAME="NTCP-DDNCCSG02B-1" DDN1="159.44.0.167" DDN2="159.44.16.165"></server>
+             <server NAME="SG1P-DDNCCCD01A-1" DDN1="159.44.128.99" DDN2="159.44.144.99"></server>
+             <server NAME="SG1P-DDNCCCD01B-1" DDN1="159.44.128.100" DDN2="159.44.144.100"></server>
+             <server NAME="SG1P-DDNCCCD02A-1" DDN1="159.44.128.101" DDN2="159.44.144.101"></server>
+             <server NAME="SG1P-DDNCCCD02B-1" DDN1="159.44.128.102" DDN2="159.44.144.102"></server>
+             <server NAME="SG1P-DDNCCSG01A-1" DDN1="159.44.128.129" DDN2="159.44.144.127"></server>
+             <server NAME="SG1P-DDNCCSG01B-1" DDN1="159.44.128.130" DDN2="159.44.144.128"></server>
+             <server NAME="SG1P-DDNCCSG02A-1" DDN1="159.44.128.131" DDN2="159.44.144.129"></server>
+             <server NAME="SG1P-DDNCCSG02B-1" DDN1="159.44.128.132" DDN2="159.44.144.130"></server>
+             <server NAME="LMHI-DDNIIDG01A-1" DDN1="159.44.67.21" DDN2="159.44.83.21"></server>
+             <server NAME="LMHI-DDNIIDG01B-1" DDN1="159.44.67.22" DDN2="159.44.83.22"></server>
+             <server NAME="LMHI-DDNIIDG02A-1" DDN1="159.44.67.23" DDN2="159.44.83.23"></server>
+             <server NAME="LMHI-DDNIIDG02B-1" DDN1="159.44.67.24" DDN2="159.44.83.24"></server>
+             <server NAME="LMHI-DDNIIDG03A-1" DDN1="159.44.67.25" DDN2="159.44.83.25"></server>
+             <server NAME="LMHI-DDNIIDG03B-1" DDN1="159.44.67.26" DDN2="159.44.83.26"></server>
+             <server NAME="LMHI-DDNIIDG04A-1" DDN1="159.44.67.27" DDN2="159.44.83.27"></server>
+             <server NAME="LMHI-DDNIIDG04B-1" DDN1="159.44.67.28" DDN2="159.44.83.28"></server>
+             <server NAME="LMHI-DDNIIDG05A-1" DDN1="159.44.67.29" DDN2="159.44.83.29"></server>
+             <server NAME="LMHI-DDNIIDG05B-1" DDN1="159.44.67.30" DDN2="159.44.83.30"></server>
+             <server NAME="LMHI-DDNIIDG06A-1" DDN1="159.44.67.31" DDN2="159.44.83.31"></server>
+             <server NAME="LMHI-DDNIIDG06B-1" DDN1="159.44.67.32" DDN2="159.44.83.32"></server>
+             <server NAME="LMHI-DDNMCDS01A-1" DDN1="159.44.67.159" DDN2="159.44.83.157"></server>
+             <server NAME="LMHI-DDNMCDS01B-1" DDN1="159.44.67.160" DDN2="159.44.83.158"></server>
+             <server NAME="LMHI-DDNMCDS02A-1" DDN1="159.44.67.161" DDN2="159.44.83.159"></server>
+             <server NAME="LMHI-DDNMCDS02B-1" DDN1="159.44.67.162" DDN2="159.44.83.160"></server>
+             <server NAME="LMHI-DDNMCDS03A-1" DDN1="159.44.67.163" DDN2="159.44.83.161"></server>
+             <server NAME="LMHI-DDNMCDS03B-1" DDN1="159.44.67.164" DDN2="159.44.83.162"></server>
+             <server NAME="LMHI-DDNMIRS01A-1" DDN1="159.44.67.237" DDN2="Not Used"></server>
+             <server NAME="LMHI-DDNMIRS01B-1" DDN1="159.44.67.238" DDN2="Not Used"></server>
+             <server NAME="LMHI-DDNMEED04A-1" DDN1="159.44.2.8" DDN2="Not Used"></server>
+             <server NAME="LMHI-DDNMEED04B-1" DDN1="159.44.2.9" DDN2="Not Used"></server>
+<!--  -->
+<!-- MH1 -->
+             <server NAME="MH1I-DDNCCHE01A-1" DDN1="159.44.73.1" DDN2="159.44.89.1"></server>
+             <server NAME="MH1I-DDNCCHE01B-1" DDN1="159.44.73.2" DDN2="159.44.89.2"></server>
+             <server NAME="MH1I-DDNCCHE02A-1" DDN1="159.44.73.3" DDN2="159.44.89.3"></server>
+             <server NAME="MH1I-DDNCCHE02B-1" DDN1="159.44.73.4" DDN2="159.44.89.4"></server>
+             <server NAME="MH1I-DDNCCHE03A-1" DDN1="159.44.73.5" DDN2="159.44.89.5"></server>
+             <server NAME="MH1I-DDNCCHE03B-1" DDN1="159.44.73.6" DDN2="159.44.89.6"></server>
+             <server NAME="MH1I-DDNCCHE04A-1" DDN1="159.44.73.7" DDN2="159.44.89.7"></server>
+             <server NAME="MH1I-DDNCCHE04B-1" DDN1="159.44.73.8" DDN2="159.44.89.8"></server>
+             <server NAME="MH1I-DDNCCHE05A-1" DDN1="159.44.73.9" DDN2="159.44.89.9"></server>
+             <server NAME="MH1I-DDNCCHE05B-1" DDN1="159.44.73.10" DDN2="159.44.89.10"></server>
+             <server NAME="MH1I-DDNCCHE06A-1" DDN1="159.44.73.11" DDN2="159.44.89.11"></server>
+             <server NAME="MH1I-DDNCCHE06B-1" DDN1="159.44.73.12" DDN2="159.44.89.12"></server>
+             <server NAME="MH1I-DDNCCHE07A-1" DDN1="159.44.73.13" DDN2="159.44.89.13"></server>
+             <server NAME="MH1I-DDNCCHE07B-1" DDN1="159.44.73.14" DDN2="159.44.89.14"></server>
+             <server NAME="MH1I-DDNCCHE08A-1" DDN1="159.44.73.15" DDN2="159.44.89.15"></server>
+             <server NAME="MH1I-DDNCCHE08B-1" DDN1="159.44.73.16" DDN2="159.44.89.16"></server>
+             <server NAME="MH1I-DDNCCHE09A-1" DDN1="159.44.73.17" DDN2="159.44.89.17"></server>
+             <server NAME="MH1I-DDNCCHE09B-1" DDN1="159.44.73.18" DDN2="159.44.89.18"></server>
+             <server NAME="MH1I-DDNCCHE10A-1" DDN1="159.44.73.19" DDN2="159.44.89.19"></server>
+             <server NAME="MH1I-DDNCCHE10B-1" DDN1="159.44.73.20" DDN2="159.44.89.20"></server>
+             <server NAME="MH1I-DDNCCHE11A-1" DDN1="159.44.73.21" DDN2="159.44.89.21"></server>
+             <server NAME="MH1I-DDNCCHE11B-1" DDN1="159.44.73.22" DDN2="159.44.89.22"></server>
+             <server NAME="MH1I-DDNCCHE12A-1" DDN1="159.44.73.23" DDN2="159.44.89.23"></server>
+             <server NAME="MH1I-DDNCCHE12B-1" DDN1="159.44.73.24" DDN2="159.44.89.24"></server>
+             <server NAME="MH1I-DDNCCHE13A-1" DDN1="159.44.73.25" DDN2="159.44.89.25"></server>
+             <server NAME="MH1I-DDNCCHE13B-1" DDN1="159.44.73.26" DDN2="159.44.89.26"></server>
+             <server NAME="MH1I-DDNCCHE14A-1" DDN1="159.44.73.27" DDN2="159.44.89.27"></server>
+             <server NAME="MH1I-DDNCCHE14B-1" DDN1="159.44.73.28" DDN2="159.44.89.28"></server>
+             <server NAME="MH1I-DDNCCHE15A-1" DDN1="159.44.73.29" DDN2="159.44.89.29"></server>
+             <server NAME="MH1I-DDNCCHE15B-1" DDN1="159.44.73.43" DDN2="159.44.89.43"></server>
+             <server NAME="MH1I-DDNCCHE16A-1" DDN1="159.44.73.30" DDN2="159.44.89.30"></server>
+             <server NAME="MH1I-DDNCCHE16B-1" DDN1="159.44.73.44" DDN2="159.44.89.44"></server>
+             <server NAME="MH1I-DDNCCHE17A-1" DDN1="159.44.73.31" DDN2="159.44.89.31"></server>
+             <server NAME="MH1I-DDNCCHE17B-1" DDN1="159.44.73.45" DDN2="159.44.89.45"></server>
+             <server NAME="MH1I-DDNCCHE18A-1" DDN1="159.44.73.32" DDN2="159.44.89.32"></server>
+             <server NAME="MH1I-DDNCCHE18B-1" DDN1="159.44.73.46" DDN2="159.44.89.46"></server>
+             <server NAME="MH1I-DDNCCHE19A-1" DDN1="159.44.73.33" DDN2="159.44.89.33"></server>
+             <server NAME="MH1I-DDNCCHE19B-1" DDN1="159.44.73.47" DDN2="159.44.89.47"></server>
+             <server NAME="MH1I-DDNCCHE20A-1" DDN1="159.44.73.34" DDN2="159.44.89.34"></server>
+             <server NAME="MH1I-DDNCCHE20B-1" DDN1="159.44.73.48" DDN2="159.44.89.48"></server>
+             <server NAME="MH1I-DDNCCHE21A-1" DDN1="159.44.73.35" DDN2="159.44.89.35"></server>
+             <server NAME="MH1I-DDNCCHE21B-1" DDN1="159.44.73.49" DDN2="159.44.89.49"></server>
+             <server NAME="MH1I-DDNCCHE22A-1" DDN1="159.44.73.36" DDN2="159.44.89.36"></server>
+             <server NAME="MH1I-DDNCCHE22B-1" DDN1="159.44.73.50" DDN2="159.44.89.50"></server>
+             <server NAME="MH1I-DDNCCHE23A-1" DDN1="159.44.73.37" DDN2="159.44.89.37"></server>
+             <server NAME="MH1I-DDNCCHE23B-1" DDN1="159.44.73.51" DDN2="159.44.89.51"></server>
+             <server NAME="MH1I-DDNCCHE24A-1" DDN1="159.44.73.38" DDN2="159.44.89.38"></server>
+             <server NAME="MH1I-DDNCCHE24B-1" DDN1="159.44.73.52" DDN2="159.44.89.52"></server>
+             <server NAME="MH1I-DDNCCHE25A-1" DDN1="159.44.73.39" DDN2="159.44.89.39"></server>
+             <server NAME="MH1I-DDNCCHE25B-1" DDN1="159.44.73.53" DDN2="159.44.89.53"></server>
+             <server NAME="MH1I-DDNCCHE26A-1" DDN1="159.44.73.40" DDN2="159.44.89.40"></server>
+             <server NAME="MH1I-DDNCCHE26B-1" DDN1="159.44.73.54" DDN2="159.44.89.54"></server>
+             <server NAME="MH1I-DDNCCHE27A-1" DDN1="159.44.73.41" DDN2="159.44.89.41"></server>
+             <server NAME="MH1I-DDNCCHE27B-1" DDN1="159.44.73.55" DDN2="159.44.89.55"></server>
+             <server NAME="MH1I-DDNCCHE28A-1" DDN1="159.44.73.42" DDN2="159.44.89.42"></server>
+             <server NAME="MH1I-DDNCCHE28B-1" DDN1="159.44.73.56" DDN2="159.44.89.56"></server>
+             <server NAME="MH1I-DDNCCHE29A-1" DDN1="159.44.73.90" DDN2="159.44.89.90"></server>
+             <server NAME="MH1I-DDNCCHE29B-1" DDN1="159.44.73.92" DDN2="159.44.89.92"></server>
+             <server NAME="MH1I-DDNCCHP01B-1" DDN1="159.44.73.91" DDN2="159.44.89.91"></server>
+             <server NAME="MH1I-DDNCCHP02B-1" DDN1="159.44.73.93" DDN2="159.44.89.93"></server>
+             <server NAME="MH1I-DDNCEFX01A-1" DDN1="159.44.73.98" DDN2="159.44.89.94"></server>
+             <server NAME="MH1I-DDNCEFX01B-1" DDN1="159.44.73.100" DDN2="159.44.89.96"></server>
+             <server NAME="MH1I-DDNCEFX02A-1" DDN1="159.44.73.99" DDN2="159.44.89.95"></server>
+             <server NAME="MH1I-DDNCEFX02B-1" DDN1="159.44.73.101" DDN2="159.44.89.97"></server>
+             <server NAME="MH1I-DDNDEED01A-1" DDN1="159.44.1.13" DDN2="Not Used"></server>
+             <server NAME="MH1I-DDNDEED01B-1" DDN1="159.44.1.14" DDN2="Not Used"></server>
+<!--  -->
+<!-- MH2 -->
+             <server NAME="MH2I-DDNCCHE01A-1" DDN1="159.44.73.129" DDN2="159.44.89.129"></server>
+             <server NAME="MH2I-DDNCCHE01B-1" DDN1="159.44.73.130" DDN2="159.44.89.130"></server>
+             <server NAME="MH2I-DDNCCHE02A-1" DDN1="159.44.73.131" DDN2="159.44.89.131"></server>
+             <server NAME="MH2I-DDNCCHE02B-1" DDN1="159.44.73.132" DDN2="159.44.89.132"></server>
+             <server NAME="MH2I-DDNCCHE03A-1" DDN1="159.44.73.133" DDN2="159.44.89.133"></server>
+             <server NAME="MH2I-DDNCCHE03B-1" DDN1="159.44.73.134" DDN2="159.44.89.134"></server>
+             <server NAME="MH2I-DDNCCHE04A-1" DDN1="159.44.73.135" DDN2="159.44.89.135"></server>
+             <server NAME="MH2I-DDNCCHE04B-1" DDN1="159.44.73.136" DDN2="159.44.89.136"></server>
+             <server NAME="MH2I-DDNCCHE05A-1" DDN1="159.44.73.137" DDN2="159.44.89.137"></server>
+             <server NAME="MH2I-DDNCCHE05B-1" DDN1="159.44.73.138" DDN2="159.44.89.138"></server>
+             <server NAME="MH2I-DDNCCHE06A-1" DDN1="159.44.73.139" DDN2="159.44.89.139"></server>
+             <server NAME="MH2I-DDNCCHE06B-1" DDN1="159.44.73.140" DDN2="159.44.89.140"></server>
+             <server NAME="MH2I-DDNCCHE07A-1" DDN1="159.44.73.141" DDN2="159.44.89.141"></server>
+             <server NAME="MH2I-DDNCCHE07B-1" DDN1="159.44.73.142" DDN2="159.44.89.142"></server>
+             <server NAME="MH2I-DDNCCHE08A-1" DDN1="159.44.73.143" DDN2="159.44.89.143"></server>
+             <server NAME="MH2I-DDNCCHE08B-1" DDN1="159.44.73.144" DDN2="159.44.89.144"></server>
+             <server NAME="MH2I-DDNCCHE09A-1" DDN1="159.44.73.145" DDN2="159.44.89.145"></server>
+             <server NAME="MH2I-DDNCCHE09B-1" DDN1="159.44.73.146" DDN2="159.44.89.146"></server>
+             <server NAME="MH2I-DDNCCHE10A-1" DDN1="159.44.73.147" DDN2="159.44.89.147"></server>
+             <server NAME="MH2I-DDNCCHE10B-1" DDN1="159.44.73.148" DDN2="159.44.89.148"></server>
+             <server NAME="MH2I-DDNCCHE11A-1" DDN1="159.44.73.149" DDN2="159.44.89.149"></server>
+             <server NAME="MH2I-DDNCCHE11B-1" DDN1="159.44.73.150" DDN2="159.44.89.150"></server>
+             <server NAME="MH2I-DDNCCHE12A-1" DDN1="159.44.73.151" DDN2="159.44.89.151"></server>
+             <server NAME="MH2I-DDNCCHE12B-1" DDN1="159.44.73.152" DDN2="159.44.89.152"></server>
+             <server NAME="MH2I-DDNCCHE13A-1" DDN1="159.44.73.153" DDN2="159.44.89.153"></server>
+             <server NAME="MH2I-DDNCCHE13B-1" DDN1="159.44.73.154" DDN2="159.44.89.154"></server>
+             <server NAME="MH2I-DDNCCHE14A-1" DDN1="159.44.73.155" DDN2="159.44.89.155"></server>
+             <server NAME="MH2I-DDNCCHE14B-1" DDN1="159.44.73.156" DDN2="159.44.89.156"></server>
+             <server NAME="MH2I-DDNCCHE15A-1" DDN1="159.44.73.157" DDN2="159.44.89.157"></server>
+             <server NAME="MH2I-DDNCCHE15B-1" DDN1="159.44.73.171" DDN2="159.44.89.171"></server>
+             <server NAME="MH2I-DDNCCHE16A-1" DDN1="159.44.73.158" DDN2="159.44.89.158"></server>
+             <server NAME="MH2I-DDNCCHE16B-1" DDN1="159.44.73.172" DDN2="159.44.89.172"></server>
+             <server NAME="MH2I-DDNCCHE17A-1" DDN1="159.44.73.159" DDN2="159.44.89.159"></server>
+             <server NAME="MH2I-DDNCCHE17B-1" DDN1="159.44.73.173" DDN2="159.44.89.173"></server>
+             <server NAME="MH2I-DDNCCHE18A-1" DDN1="159.44.73.160" DDN2="159.44.89.160"></server>
+             <server NAME="MH2I-DDNCCHE18B-1" DDN1="159.44.73.174" DDN2="159.44.89.174"></server>
+             <server NAME="MH2I-DDNCCHE19A-1" DDN1="159.44.73.161" DDN2="159.44.89.161"></server>
+             <server NAME="MH2I-DDNCCHE19B-1" DDN1="159.44.73.175" DDN2="159.44.89.175"></server>
+             <server NAME="MH2I-DDNCCHE20A-1" DDN1="159.44.73.162" DDN2="159.44.89.162"></server>
+             <server NAME="MH2I-DDNCCHE20B-1" DDN1="159.44.73.176" DDN2="159.44.89.176"></server>
+             <server NAME="MH2I-DDNCCHE21A-1" DDN1="159.44.73.163" DDN2="159.44.89.163"></server>
+             <server NAME="MH2I-DDNCCHE21B-1" DDN1="159.44.73.177" DDN2="159.44.89.177"></server>
+             <server NAME="MH2I-DDNCCHE22A-1" DDN1="159.44.73.164" DDN2="159.44.89.164"></server>
+             <server NAME="MH2I-DDNCCHE22B-1" DDN1="159.44.73.178" DDN2="159.44.89.178"></server>
+             <server NAME="MH2I-DDNCCHE23A-1" DDN1="159.44.73.165" DDN2="159.44.89.165"></server>
+             <server NAME="MH2I-DDNCCHE23B-1" DDN1="159.44.73.179" DDN2="159.44.89.179"></server>
+             <server NAME="MH2I-DDNCCHE24A-1" DDN1="159.44.73.166" DDN2="159.44.89.166"></server>
+             <server NAME="MH2I-DDNCCHE24B-1" DDN1="159.44.73.180" DDN2="159.44.89.180"></server>
+             <server NAME="MH2I-DDNCCHE25A-1" DDN1="159.44.73.167" DDN2="159.44.89.167"></server>
+             <server NAME="MH2I-DDNCCHE25B-1" DDN1="159.44.73.181" DDN2="159.44.89.181"></server>
+             <server NAME="MH2I-DDNCCHE26A-1" DDN1="159.44.73.168" DDN2="159.44.89.168"></server>
+             <server NAME="MH2I-DDNCCHE26B-1" DDN1="159.44.73.182" DDN2="159.44.89.182"></server>
+             <server NAME="MH2I-DDNCCHE27A-1" DDN1="159.44.73.169" DDN2="159.44.89.169"></server>
+             <server NAME="MH2I-DDNCCHE27B-1" DDN1="159.44.73.183" DDN2="159.44.89.183"></server>
+             <server NAME="MH2I-DDNCCHE28A-1" DDN1="159.44.73.170" DDN2="159.44.89.170"></server>
+             <server NAME="MH2I-DDNCCHE28B-1" DDN1="159.44.73.184" DDN2="159.44.89.184"></server>
+             <server NAME="MH2I-DDNCCHE29A-1" DDN1="159.44.73.218" DDN2="159.44.89.218"></server>
+             <server NAME="MH2I-DDNCCHE29B-1" DDN1="159.44.73.220" DDN2="159.44.89.220"></server>
+             <server NAME="MH2I-DDNCCHP01A-1" DDN1="159.44.73.221" DDN2="159.44.89.221"></server>
+             <server NAME="MH2I-DDNCCHP02A-1" DDN1="159.44.73.219" DDN2="159.44.89.219"></server>
+             <server NAME="MH2I-DDNCCHE31A-1" DDN1="159.44.98.129" DDN2="159.44.102.129"></server>
+             <server NAME="MH2I-DDNCCHE31B-1" DDN1="159.44.98.143" DDN2="159.44.102.143"></server>
+             <server NAME="MH2I-DDNCCHE32A-1" DDN1="159.44.98.130" DDN2="159.44.102.130"></server>
+             <server NAME="MH2I-DDNCCHE32B-1" DDN1="159.44.98.144" DDN2="159.44.102.144"></server>
+             <server NAME="MH2I-DDNCCHE33A-1" DDN1="159.44.98.131" DDN2="159.44.102.131"></server>
+             <server NAME="MH2I-DDNCCHE33B-1" DDN1="159.44.98.145" DDN2="159.44.102.145"></server>
+             <server NAME="MH2I-DDNCCHE34A-1" DDN1="159.44.98.132" DDN2="159.44.102.132"></server>
+             <server NAME="MH2I-DDNCCHE34B-1" DDN1="159.44.98.146" DDN2="159.44.102.146"></server>
+             <server NAME="MH2I-DDNCCHE35A-1" DDN1="159.44.98.133" DDN2="159.44.102.133"></server>
+             <server NAME="MH2I-DDNCCHE35B-1" DDN1="159.44.98.147" DDN2="159.44.102.147"></server>
+             <server NAME="MH2I-DDNCCHE36A-1" DDN1="159.44.98.134" DDN2="159.44.102.134"></server>
+             <server NAME="MH2I-DDNCCHE36B-1" DDN1="159.44.98.148" DDN2="159.44.102.148"></server>
+             <server NAME="MH2I-DDNCCHE37A-1" DDN1="159.44.98.135" DDN2="159.44.102.135"></server>
+             <server NAME="MH2I-DDNCCHE37B-1" DDN1="159.44.98.149" DDN2="159.44.102.149"></server>
+             <server NAME="MH2I-DDNCCHE38A-1" DDN1="159.44.98.136" DDN2="159.44.102.136"></server>
+             <server NAME="MH2I-DDNCCHE38B-1" DDN1="159.44.98.150" DDN2="159.44.102.150"></server>
+             <server NAME="MH2I-DDNCCHE39A-1" DDN1="159.44.98.137" DDN2="159.44.102.137"></server>
+             <server NAME="MH2I-DDNCCHE39B-1" DDN1="159.44.98.151" DDN2="159.44.102.151"></server>
+             <server NAME="MH2I-DDNCCHE40A-1" DDN1="159.44.98.138" DDN2="159.44.102.138"></server>
+             <server NAME="MH2I-DDNCCHE40B-1" DDN1="159.44.98.152" DDN2="159.44.102.152"></server>
+             <server NAME="MH2I-DDNCCHE41A-1" DDN1="159.44.98.139" DDN2="159.44.102.139"></server>
+             <server NAME="MH2I-DDNCCHE41B-1" DDN1="159.44.98.153" DDN2="159.44.102.153"></server>
+             <server NAME="MH2I-DDNCCHE42A-1" DDN1="159.44.98.140" DDN2="159.44.102.140"></server>
+             <server NAME="MH2I-DDNCCHE42B-1" DDN1="159.44.98.154" DDN2="159.44.102.154"></server>
+             <server NAME="MH2I-DDNCCHE58A-1" DDN1="159.44.98.177" DDN2="159.44.102.176"></server>
+             <server NAME="MH2I-DDNCCHE58B-1" DDN1="159.44.98.178" DDN2="159.44.102.177"></server>
+             <server NAME="MH2I-DDNCCHX01A-1" DDN1="159.44.1.4" DDN2="159.44.2.4"></server>
+             <server NAME="MH2I-DDNCCHX01B-1" DDN1="159.44.1.5" DDN2="159.44.2.5"></server>
+             <server NAME="MH2I-DDNCEFX01A-1" DDN1="159.44.73.223" DDN2="159.44.89.222"></server>
+             <server NAME="MH2I-DDNCEFX01B-1" DDN1="159.44.73.227" DDN2="159.44.89.224"></server>
+             <server NAME="MH2I-DDNCEFX02A-1" DDN1="159.44.73.225" DDN2="159.44.89.223"></server>
+             <server NAME="MH2I-DDNCEFX02B-1" DDN1="159.44.73.229" DDN2="159.44.89.225"></server>
+             <server NAME="MH2I-DDNDEED01A-1" DDN1="159.44.1.10" DDN2="Not Used"></server>
+             <server NAME="MH2I-DDNDEED01B-1" DDN1="159.44.1.11" DDN2="Not Used"></server>
+<!--  -->
+<!-- MH3 -->
+             <server NAME="MH3I-DDNCCHE01A-1" DDN1="159.44.99.197" DDN2="159.44.103.197"></server>
+             <server NAME="MH3I-DDNCCHE01B-1" DDN1="159.44.99.207" DDN2="159.44.103.205"></server>
+             <server NAME="MH3I-DDNCCHE02A-1" DDN1="159.44.99.198" DDN2="159.44.103.198"></server>
+             <server NAME="MH3I-DDNCCHE02B-1" DDN1="159.44.99.208" DDN2="159.44.103.206"></server>
+             <server NAME="MH3I-DDNCCHE03A-1" DDN1="159.44.99.199" DDN2="159.44.103.199"></server>
+             <server NAME="MH3I-DDNCCHE03B-1" DDN1="159.44.99.209" DDN2="159.44.103.207"></server>
+             <server NAME="MH3I-DDNCCHE04A-1" DDN1="159.44.99.200" DDN2="159.44.103.200"></server>
+             <server NAME="MH3I-DDNCCHE04B-1" DDN1="159.44.99.210" DDN2="159.44.103.208"></server>
+             <server NAME="MH3I-DDNCCHX01A-1" DDN1="1.0.1.3" DDN2="2.0.1.3"></server>
+             <server NAME="MH3I-DDNCCHX01B-1" DDN1="1.0.1.4" DDN2="2.0.1.4"></server>
+             <server NAME="MH3I-DDNCCVA01A-1" DDN1="159.44.99.201" DDN2="159.44.103.201"></server>
+             <server NAME="MH3I-DDNCCVA01B-1" DDN1="159.44.99.211" DDN2="159.44.103.209"></server>
+             <server NAME="MH3I-DDNCCVA02A-1" DDN1="159.44.99.202" DDN2="159.44.103.202"></server>
+             <server NAME="MH3I-DDNCCVA02B-1" DDN1="159.44.99.212" DDN2="159.44.103.210"></server>
+             <server NAME="MH3I-DDNCCVA03A-1" DDN1="159.44.99.217" DDN2="159.44.103.213"></server>
+             <server NAME="MH3I-DDNCCVA03B-1" DDN1="159.44.99.218" DDN2="159.44.103.214"></server>
+             <server NAME="MH3I-DDNCCVX01A-1" DDN1="1.0.1.1" DDN2="2.0.1.1"></server>
+             <server NAME="MH3I-DDNCCVX01B-1" DDN1="1.0.1.2" DDN2="2.0.1.2"></server>
+             <server NAME="MH3I-DDNCEFX01A-1" DDN1="159.44.99.204" DDN2="159.44.103.203"></server>
+             <server NAME="MH3I-DDNCEFX01B-1" DDN1="159.44.99.214" DDN2="159.44.103.211"></server>
+             <server NAME="MH3I-DDNDEED01A-1" DDN1="159.44.99.219" DDN2="Not Used"></server>
+             <server NAME="MH3I-DDNDEED01B-1" DDN1="159.44.99.220" DDN2="Not Used"></server>
+<!--  -->
+<!-- Singapore - TSE CHEs -->
+             <server NAME="SGPI-DDNCCHE01A-1" DDN1="159.44.131.1" DDN2="159.44.147.1"></server>
+             <server NAME="SGPI-DDNCCHE01B-1" DDN1="159.44.131.2" DDN2="159.44.147.2"></server>
+<!--  -->
+<!-- Singapore - HSI -->
+             <server NAME="SGPI-DDNCCHE02A-1" DDN1="159.44.131.3" DDN2="159.44.147.3"></server>
+             <server NAME="SGPI-DDNCCHE02B-1" DDN1="159.44.131.4" DDN2="159.44.147.4"></server>
+<!--  -->
+<!-- Singapore - Japan NextCHEs -->
+             <server NAME="SGPI-DDNCCHE03A-1" DDN1="159.44.131.5" DDN2="159.44.147.5"></server>
+             <server NAME="SGPI-DDNCCHE03B-1" DDN1="159.44.131.6" DDN2="159.44.147.6"></server>
+<!--  -->
+<!-- Singapore - TFX-FX CHEs - DEV  -->
+             <server NAME="SGPI-DDNCCHE04A-1" DDN1="159.44.131.7" DDN2="159.44.147.7"></server>
+             <server NAME="SGPI-DDNCCHE04B-1" DDN1="159.44.131.8" DDN2="159.44.147.8"></server>
+<!--  -->
+<!-- Singapore - CFETS ICAP, CFETS TBT CHEs -->
+             <server NAME="SGCI-DDNCHE05A-1" DDN1="159.44.131.9" DDN2="159.44.147.9"></server>
+             <server NAME="SGCI-DDNCHE05B-1" DDN1="159.44.131.10" DDN2="159.44.147.10"></server>
+<!--  -->
+<!-- Singapore - OSD CHEs -->
+             <server NAME="SGCI-DDNCHE06A-1" DDN1="159.44.131.83" DDN2="159.44.147.83"></server>
+             <server NAME="SGCI-DDNCHE06B-1" DDN1="159.44.131.84" DDN2="159.44.147.84"></server>
+<!--  -->
+<!-- Singapore - HKS -->
+             <server NAME="SGCI-DDNCHE07A-1" DDN1="159.44.131.13" DDN2="159.44.147.13"></server>
+             <server NAME="SGCI-DDNCHE07B-1" DDN1="159.44.131.14" DDN2="159.44.147.14"></server>
+<!--  -->
+<!-- Singapore TOCOM -->
+             <server NAME="SGPI-DDNCCHE08A-1" DDN1="159.44.131.15" DDN2="159.44.147.15"></server>
+             <server NAME="SGPI-DDNCCHE08B-1" DDN1="159.44.131.16" DDN2="159.44.147.16"></server>
+<!--  -->
+<!-- Singapore - TAIFEX -->
+             <server NAME="SGPI-DDNCCHE09A-1" DDN1="159.44.131.17" DDN2="159.44.147.17"></server>
+             <server NAME="SGPI-DDNCCHE09B-1" DDN1="159.44.131.18" DDN2="159.44.147.18"></server>
+<!--  -->
+<!-- Singapore - QUICK -->
+             <server NAME="SGPI-DDNCCHE10A-1" DDN1="159.44.131.19" DDN2="159.44.147.19"></server>
+             <server NAME="SGPI-DDNCCHE10B-1" DDN1="159.44.131.20" DDN2="159.44.147.20"></server>
+<!--  -->
+<!-- Singapore - CHI-X Japan -->
+             <server NAME="SGPI-DDNCCHE11A-1" DDN1="159.44.131.21" DDN2="159.44.147.21"></server>
+             <server NAME="SGPI-DDNCCHE11B-1" DDN1="159.44.131.22" DDN2="159.44.147.22"></server>
+<!--  -->
+<!-- Singapore - temporary for NSEI FT (CHI-X Australia) -->
+             <server NAME="SGPI-DDNCCHE12A-1" DDN1="159.44.131.23" DDN2="159.44.147.23"></server>
+             <server NAME="SGPI-DDNCCHE12B-1" DDN1="159.44.131.24" DDN2="159.44.147.24"></server>
+<!--  -->
+<!-- Singapore - TFX-FX  -->
+             <server NAME="SGPI-DDNCCHE13A-1" DDN1="159.44.131.25" DDN2="159.44.147.25"></server>
+             <server NAME="SGPI-DDNCCHE13B-1" DDN1="159.44.131.26" DDN2="159.44.147.26"></server>
+<!--  -->
+<!-- Singapore - NSEI LL -->
+             <server NAME="SGPI-DDNCCHE14A-1" DDN1="159.44.131.27" DDN2="159.44.147.27"></server>
+             <server NAME="SGPI-DDNCCHE14B-1" DDN1="159.44.131.28" DDN2="159.44.147.28"></server>
+<!--  -->
+<!-- Singapore - ASX -->
+             <server NAME="SGPI-DDNCCHE15A-1" DDN1="159.44.131.29" DDN2="159.44.147.29"></server>
+             <server NAME="SGPI-DDNCCHE15B-1" DDN1="159.44.131.30" DDN2="159.44.147.30"></server>
+<!--  -->
+<!-- Singapore - SMDF -->
+             <server NAME="SGPI-DDNCCHE16A-1" DDN1="159.44.131.65" DDN2="159.44.147.65"></server>
+             <server NAME="SGPI-DDNCCHE16B-1" DDN1="159.44.131.66" DDN2="159.44.147.66"></server>
+<!--  -->
+<!-- Singapore - SSE -->
+             <server NAME="SGPI-DDNCCHE17A-1" DDN1="159.44.131.172" DDN2="159.44.147.172"></server>
+             <server NAME="SGPI-DDNCCHE17B-1" DDN1="159.44.131.173" DDN2="159.44.147.173"></server>
+<!--  -->
+<!-- Singapore - TFX Derivatives -->
+             <server NAME="SGPI-DDNCCHE18A-1" DDN1="159.44.131.174" DDN2="159.44.147.174"></server>
+             <server NAME="SGPI-DDNCCHE18B-1" DDN1="159.44.131.175" DDN2="159.44.147.175"></server>
+<!--  -->
+<!-- Sinagpore - KOSPI, KRX Gold & KRX Carbon -->
+             <server NAME="SGPI-DDNCCHE19A-1" DDN1="159.44.131.176" DDN2="159.44.147.176"></server>
+             <server NAME="SGPI-DDNCCHE19B-1" DDN1="159.44.131.177" DDN2="159.44.147.177"></server>
+<!--  -->
+<!-- Singapore - HKF OMD-D -->
+             <server NAME="SGPI-DDNCCHE20A-1" DDN1="159.44.131.178" DDN2="159.44.147.178"></server>
+             <server NAME="SGPI-DDNCCHE20B-1" DDN1="159.44.131.179" DDN2="159.44.147.179"></server>
+<!--  -->
+<!-- Singapore - KOSPI 200 -->
+             <server NAME="SGPI-DDNCCHE21A-1" DDN1="159.44.131.117" DDN2="159.44.147.117"></server>
+             <server NAME="SGPI-DDNCCHE21B-1" DDN1="159.44.131.118" DDN2="159.44.147.118"></server>
+<!--  -->
+<!-- Singapore - AFEX -->
+             <server NAME="SGPI-DDNCCHE22A-1" DDN1="159.44.131.119" DDN2="159.44.147.119"></server>
+             <server NAME="SGPI-DDNCCHE22B-1" DDN1="159.44.131.120" DDN2="159.44.147.120"></server>
+<!--  -->
+<!-- Singapore - CHI-X Australia -->
+             <server NAME="SGPI-DDNCCHE23A-1" DDN1="159.44.131.121" DDN2="159.44.147.121"></server>
+             <server NAME="SGPI-DDNCCHE23B-1" DDN1="159.44.131.122" DDN2="159.44.147.122"></server>
+<!--  -->
+<!-- Singapore - ASX24 -->
+             <server NAME="SGPI-DDNCCHE24A-1" DDN1="159.44.131.123" DDN2="159.44.147.123"></server>
+             <server NAME="SGPI-DDNCCHE24B-1" DDN1="159.44.131.124" DDN2="159.44.147.124"></server>
+<!--  -->
+<!-- Singapore - PSE -->
+             <server NAME="SGPI-DDNCCHE25A-1" DDN1="159.44.131.125" DDN2="159.44.147.125"></server>
+             <server NAME="SGPI-DDNCCHE25B-1" DDN1="159.44.131.126" DDN2="159.44.147.126"></server>
+<!--  -->
+<!-- Singapore - DMDF -->
+             <server NAME="SGPI-DDNCCHE26A-1" DDN1="159.44.131.127" DDN2="159.44.147.127"></server>
+             <server NAME="SGPI-DDNCCHE26B-1" DDN1="159.44.131.128" DDN2="159.44.147.128"></server>
+             <server NAME="SGPI-DDNMCVA09A-1" DDN1="159.44.131.49" DDN2="159.44.147.49"></server>
+             <server NAME="SGPI-DDNMCVA09B-1" DDN1="159.44.131.50" DDN2="159.44.147.50"></server>
+             <server NAME="SGPI-DDNMCVA10A-1" DDN1="159.44.131.51" DDN2="159.44.147.51"></server>
+             <server NAME="SGPI-DDNMCVA10B-1" DDN1="159.44.131.52" DDN2="159.44.147.52"></server>
+<!--  -->
+<!-- Singapore - TFF -->
+             <server NAME="SGPI-DDNCCHE27A-1" DDN1="159.44.131.129" DDN2="159.44.147.129"></server>
+             <server NAME="SGPI-DDNCCHE27B-1" DDN1="159.44.131.130" DDN2="159.44.147.130"></server>
+<!--  -->
+<!-- Singapore - TSE TT1 - TT3 -->
+             <server NAME="SGPI-DDNCCHE28A-1" DDN1="159.44.131.131" DDN2="159.44.147.131"></server>
+             <server NAME="SGPI-DDNCCHE28B-1" DDN1="159.44.131.132" DDN2="159.44.147.132"></server>
+<!--  -->
+<!-- Singapore - VA-CHE -->
+             <server NAME="SGPI-DDNVCHE01A-1" DDN1="159.44.131.31" DDN2="159.44.147.31"></server>
+             <server NAME="SGPI-DDNVCHE01B-1" DDN1="159.44.131.32" DDN2="159.44.147.32"></server>
+<!--  -->
+<!-- Singapore - CVAs CHI-X Japan, Japan Next, Quick, TOCOM, CHI-X Australi
+             <server NAME="SGPI-DDNVCVA02A-1" DDN1="159.44.131.219" DDN2="159.44.147.219"></server>
+             <server NAME="SGPI-DDNVCVA02B-1" DDN1="159.44.131.220" DDN2="159.44.147.220"></server>
+<!--  -->
+<!-- Singapore - CVAs HSI, TAIFEX, HKS -->
+             <server NAME="SGPI-DDNMCVA03A-1" DDN1="159.44.131.37" DDN2="159.44.147.37"></server>
+             <server NAME="SGPI-DDNMCVA03B-1" DDN1="159.44.131.38" DDN2="159.44.147.38"></server>
+<!--  -->
+<!-- Singapore - CVAs OSD, TFX-FX, TFX-Derivatives -->
+             <server NAME="SGVI-DDNCVA04A-1" DDN1="159.44.131.39" DDN2="159.44.147.39"></server>
+             <server NAME="SGVI-DDNCVA04B-1" DDN1="159.44.131.40" DDN2="159.44.147.40"></server>
+<!--  -->
+<!-- Singapore - CVAs TSE, ASX, Metadata -->
+             <server NAME="SGVI-DDNCVA05A-1" DDN1="159.44.131.41" DDN2="159.44.147.41"></server>
+             <server NAME="SGVI-DDNCVA05B-1" DDN1="159.44.131.42" DDN2="159.44.147.42"></server>
+<!--  -->
+<!-- Singapore - CVA CFETS-ICAP, CFETS TBT, SMDF, SSE -->
+             <server NAME="SGPI-DDNCCVA06A-1" DDN1="159.44.131.43" DDN2="159.44.147.43"></server>
+             <server NAME="SGPI-DDNCCVA06B-1" DDN1="159.44.131.44" DDN2="159.44.147.44"></server>
+<!--  -->
+<!-- Singapore - AFEX and HKF OMD-D, ASX24 -->
+             <server NAME="SGPI-DDNMCVA07A-1" DDN1="159.44.131.45" DDN2="159.44.147.45"></server>
+             <server NAME="SGPI-DDNMCVA07B-1" DDN1="159.44.131.46" DDN2="159.44.147.46"></server>
+<!--  -->
+<!-- Singapore - NSEI LL, NSEI FT -->
+             <server NAME="SGPI-DDNMCVA08A-1" DDN1="159.44.131.47" DDN2="159.44.147.47"></server>
+             <server NAME="SGPI-DDNMCVA08B-1" DDN1="159.44.131.48" DDN2="159.44.147.48"></server>
+<!--  -->
+<!-- Singapore - IDN Data Sources (APAC ITDG) -->
+             <server NAME="SGPI-DDNMIDG01B-1" DDN1="159.44.131.212" DDN2="159.44.147.212"></server>
+<!--  -->
+<!-- Singapore - MTC MC-RS -->
+             <server NAME="SGPI-DDNMMCR01A-1" DDN1="159.44.131.215" DDN2="159.44.147.215"></server>
+<!--  -->
+<!-- Singapore - Funnel Collections -->
+             <server NAME="SGCI-DDNEFX01A-1" DDN1="159.44.131.207" DDN2="159.44.147.207"></server>
+             <server NAME="SGCI-DDNEFX01B-1" DDN1="159.44.131.208" DDN2="159.44.147.208"></server>
+<!--  -->
+<!-- Singapore - Funnel MTC -->
+             <server NAME="SGMI-DDNEFX01A-1" DDN1="159.44.131.209" DDN2="159.44.147.209"></server>
+             <server NAME="SGMI-DDNEFX01B-1" DDN1="159.44.131.210" DDN2="159.44.147.210"></server>
+<!--  -->
+<!-- Singapore - KOSPI, KOSPI 200, KRX Gold & KRX Carbon -->
+             <server NAME="SGPI-DDNVCVA01A-1" DDN1="159.44.131.33" DDN2="159.44.147.33"></server>
+             <server NAME="SGPI-DDNVCVA01B-1" DDN1="159.44.131.34" DDN2="159.44.147.34"></server>
+<!--  -->
+<!-- Singapore - CDS Servers -->
+             <server NAME="SGPI-DDNMCDS01A-1" DDN1="159.44.131.180" DDN2="159.44.147.180"></server>
+             <server NAME="SGPI-DDNMCDS02A-1" DDN1="159.44.131.181" DDN2="159.44.147.181"></server>
+             <server NAME="SGPI-DDNMCDS03A-1" DDN1="159.44.131.182" DDN2="159.44.147.182"></server>
+<!--  -->
+<!-- Singapore - SIR -->
+             <server NAME="SGPI-DDNDEED01A-1" DDN1="159.44.131.234 " DDN2="Not Found"></server>
+<!--  -->
+<!-- Pre allocated CHEs for BA testing -->
+             <server NAME="SGCQ-DDNCHEV01A-1" DDN1="159.44.131.133" DDN2="159.44.147.133"></server>
+             <server NAME="SGCQ-DDNCHEV01B-1" DDN1="159.44.131.134" DDN2="159.44.147.134"></server>
+             <server NAME="SGCQ-DDNCHEV02A-1" DDN1="159.44.131.135" DDN2="159.44.147.135"></server>
+             <server NAME="SGCQ-DDNCHEV02B-1" DDN1="159.44.131.136" DDN2="159.44.147.136"></server>
+             <server NAME="SGCQ-DDNCHEV11A-1" DDN1="159.44.131.137" DDN2="159.44.147.137"></server>
+             <server NAME="SGCQ-DDNCHEV11B-1" DDN1="159.44.131.138" DDN2="159.44.147.138"></server>
+             <server NAME="SGCQ-DDNCHEV12A-1" DDN1="159.44.131.139" DDN2="159.44.147.139"></server>
+             <server NAME="SGCQ-DDNCHEV12B-1" DDN1="159.44.131.140" DDN2="159.44.147.140"></server>
+             <server NAME="SGCQ-DDNCHEV13A-1" DDN1="159.44.131.141" DDN2="159.44.147.141"></server>
+             <server NAME="SGCQ-DDNCHEV13B-1" DDN1="159.44.131.142" DDN2="159.44.147.142"></server>
+             <server NAME="SGCQ-DDNCHEV14A-1" DDN1="159.44.131.143" DDN2="159.44.147.143"></server>
+             <server NAME="SGCQ-DDNCHEV14B-1" DDN1="159.44.131.144" DDN2="159.44.147.144"></server>
+             <server NAME="SGCQ-DDNCHEV15A-1" DDN1="159.44.131.145" DDN2="159.44.147.145"></server>
+             <server NAME="SGCQ-DDNCHEV15B-1" DDN1="159.44.131.146" DDN2="159.44.147.146"></server>
+             <server NAME="SGCQ-DDNCHEV16A-1" DDN1="159.44.131.147" DDN2="159.44.147.147"></server>
+             <server NAME="SGCQ-DDNCHEV16B-1" DDN1="159.44.131.148" DDN2="159.44.147.148"></server>
+             <server NAME="SGCQ-DDNCHEV17A-1" DDN1="159.44.131.149" DDN2="159.44.147.149"></server>
+             <server NAME="SGCQ-DDNCHEV17B-1" DDN1="159.44.131.150" DDN2="159.44.147.150"></server>
+             <server NAME="SGCQ-DDNCHEV18A-1" DDN1="159.44.131.151" DDN2="159.44.147.151"></server>
+             <server NAME="SGCQ-DDNCHEV18B-1" DDN1="159.44.131.152" DDN2="159.44.147.152"></server>
+             <server NAME="SGCQ-DDNCHEV19A-1" DDN1="159.44.131.168" DDN2="159.44.147.168"></server>
+             <server NAME="SGCQ-DDNCHEV19B-1" DDN1="159.44.131.169" DDN2="159.44.147.169"></server>
+             <server NAME="SGCQ-DDNCHEV20A-1" DDN1="159.44.131.193" DDN2="159.44.147.193"></server>
+             <server NAME="SGCQ-DDNCHEV20B-1" DDN1="159.44.131.194" DDN2="159.44.147.194"></server>
+             <server NAME="SGCQ-DDNCHE06A-1" DDN1="159.44.131.79" DDN2="159.44.147.79"></server>
+             <server NAME="SGCQ-DDNCHE06B-1" DDN1="159.44.131.80" DDN2="159.44.147.80"></server>
+             <server NAME="SGCQ-DDNCHE12A-1" DDN1="159.44.131.91" DDN2="159.44.147.91"></server>
+             <server NAME="SGCQ-DDNCHE12B-1" DDN1="159.44.131.92" DDN2="159.44.147.92"></server>
+<!--  -->
+<!-- Pre allocated CVAs for BA testing -->
+             <server NAME="SGCQ-DDNCVA01A-1" DDN1="159.44.131.101" DDN2="159.44.147.101"></server>
+             <server NAME="SGCQ-DDNCVA01B-1" DDN1="159.44.131.102" DDN2="159.44.147.102"></server>
+             <server NAME="SGCQ-DDNCVA02A-1" DDN1="159.44.131.103" DDN2="159.44.147.103"></server>
+             <server NAME="SGCQ-DDNCVA02B-1" DDN1="159.44.131.104" DDN2="159.44.147.104"></server>
+             <server NAME="SGCQ-DDNCVA03A-1" DDN1="159.44.131.105" DDN2="159.44.147.105"></server>
+             <server NAME="SGCQ-DDNCVA03B-1" DDN1="159.44.131.106" DDN2="159.44.147.106"></server>
+<!--  -->
+<!-- CATF CHEs -->
+             <server NAME="SGPD-DDNBCHE01A-1" DDN1="192.168.207.1" DDN2="192.168.208.1"></server>
+             <server NAME="SGPD-DDNBCHE01B-1" DDN1="192.168.207.51" DDN2="192.168.208.51"></server>
+             <server NAME="SGPD-DDNBCHE02A-1" DDN1="192.168.207.2" DDN2="192.168.208.2"></server>
+             <server NAME="SGPD-DDNBCHE02B-1" DDN1="192.168.207.52" DDN2="192.168.208.52"></server>
+             <server NAME="SGPD-DDNBCHE03A-1" DDN1="192.168.207.3" DDN2="192.168.208.3"></server>
+             <server NAME="SGPD-DDNBCHE03B-1" DDN1="192.168.207.53" DDN2="192.168.208.53"></server>
+             <server NAME="SGPD-DDNBCHE04A-1" DDN1="192.168.207.4" DDN2="192.168.208.4"></server>
+             <server NAME="SGPD-DDNBCHE04B-1" DDN1="192.168.207.54" DDN2="192.168.208.54"></server>
+             <server NAME="SGPD-DDNBCHE05A-1" DDN1="192.168.207.5" DDN2="192.168.208.5"></server>
+             <server NAME="SGPD-DDNBCHE05B-1" DDN1="192.168.207.55" DDN2="192.168.208.55"></server>
+             <server NAME="SGPD-DDNBCHE06A-1" DDN1="192.168.207.6" DDN2="192.168.208.6"></server>
+             <server NAME="SGPD-DDNBCHE06B-1" DDN1="192.168.207.56" DDN2="192.168.208.56"></server>
+             <server NAME="SGPD-DDNBCHE07A-1" DDN1="192.168.207.7" DDN2="192.168.208.7"></server>
+             <server NAME="SGPD-DDNBCHE07B-1" DDN1="192.168.207.57" DDN2="192.168.208.57"></server>
+             <server NAME="SGPD-DDNBCHE08A-1" DDN1="192.168.207.8" DDN2="192.168.208.8"></server>
+             <server NAME="SGPD-DDNBCHE08B-1" DDN1="192.168.207.58" DDN2="192.168.208.58"></server>
+             <server NAME="SGPD-DDNBCHE09A-1" DDN1="192.168.207.9" DDN2="192.168.208.9"></server>
+             <server NAME="SGPD-DDNBCHE09B-1" DDN1="192.168.207.59" DDN2="192.168.208.59"></server>
+             <server NAME="SGPD-DDNBCHE10A-1" DDN1="192.168.207.10" DDN2="192.168.208.10"></server>
+             <server NAME="SGPD-DDNBCHE10B-1" DDN1="192.168.207.60" DDN2="192.168.208.60"></server>
+             <server NAME="SGPD-DDNBCHE11A-1" DDN1="192.168.207.11" DDN2="192.168.208.11"></server>
+             <server NAME="SGPD-DDNBCHE11B-1" DDN1="192.168.207.61" DDN2="192.168.208.61"></server>
+             <server NAME="SGPD-DDNBCHE12A-1" DDN1="192.168.207.12" DDN2="192.168.208.12"></server>
+             <server NAME="SGPD-DDNBCHE12B-1" DDN1="192.168.207.62" DDN2="192.168.208.62"></server>
+             <server NAME="SGPD-DDNBCHE13A-1" DDN1="192.168.207.13" DDN2="192.168.208.13"></server>
+             <server NAME="SGPD-DDNBCHE13B-1" DDN1="192.168.207.63" DDN2="192.168.208.63"></server>
+             <server NAME="SGPD-DDNBCHE14A-1" DDN1="192.168.207.14" DDN2="192.168.208.14"></server>
+             <server NAME="SGPD-DDNBCHE14B-1" DDN1="192.168.207.64" DDN2="192.168.208.64"></server>
+             <server NAME="SGPD-DDNBCHE15A-1" DDN1="192.168.207.15" DDN2="192.168.208.15"></server>
+             <server NAME="SGPD-DDNBCHE15B-1" DDN1="192.168.207.65" DDN2="192.168.208.65"></server>
+             <server NAME="SGPD-DDNBCHE16A-1" DDN1="192.168.207.16" DDN2="192.168.208.16"></server>
+             <server NAME="SGPD-DDNBCHE16B-1" DDN1="192.168.207.66" DDN2="192.168.208.66"></server>
+             <server NAME="SGPD-DDNBCHE17A-1" DDN1="192.168.207.17" DDN2="192.168.208.17"></server>
+             <server NAME="SGPD-DDNBCHE17B-1" DDN1="192.168.207.67" DDN2="192.168.208.67"></server>
+             <server NAME="SGPD-DDNBCHE18A-1" DDN1="192.168.207.18" DDN2="192.168.208.18"></server>
+             <server NAME="SGPD-DDNBCHE18B-1" DDN1="192.168.207.68" DDN2="192.168.208.68"></server>
+             <server NAME="SGPD-DDNBCHE19A-1" DDN1="192.168.207.19" DDN2="192.168.208.19"></server>
+             <server NAME="SGPD-DDNBCHE19B-1" DDN1="192.168.207.69" DDN2="192.168.208.69"></server>
+             <server NAME="SGPD-DDNBCHE20A-1" DDN1="192.168.207.20" DDN2="192.168.208.20"></server>
+             <server NAME="SGPD-DDNBCHE20B-1" DDN1="192.168.207.70" DDN2="192.168.208.70"></server>
+             <server NAME="SGPD-DDNBCHE21A-1" DDN1="192.168.207.21" DDN2="192.168.208.21"></server>
+             <server NAME="SGPD-DDNBCHE21B-1" DDN1="192.168.207.71" DDN2="192.168.208.71"></server>
+             <server NAME="SGPD-DDNBCHE22A-1" DDN1="192.168.207.22" DDN2="192.168.208.22"></server>
+             <server NAME="SGPD-DDNBCHE22B-1" DDN1="192.168.207.72" DDN2="192.168.208.72"></server>
+             <server NAME="SGPD-DDNBCHE23A-1" DDN1="192.168.207.23" DDN2="192.168.208.23"></server>
+             <server NAME="SGPD-DDNBCHE23B-1" DDN1="192.168.207.73" DDN2="192.168.208.73"></server>
+             <server NAME="SGPD-DDNBCHE24A-1" DDN1="192.168.207.24" DDN2="192.168.208.24"></server>
+             <server NAME="SGPD-DDNBCHE24B-1" DDN1="192.168.207.74" DDN2="192.168.208.74"></server>
+             <server NAME="SGPD-DDNBCHE25A-1" DDN1="192.168.207.25" DDN2="192.168.208.25"></server>
+             <server NAME="SGPD-DDNBCHE25B-1" DDN1="192.168.207.75" DDN2="192.168.208.75"></server>
+             <server NAME="SGPD-DDNBCHE26A-1" DDN1="192.168.207.26" DDN2="192.168.208.26"></server>
+             <server NAME="SGPD-DDNBCHE26B-1" DDN1="192.168.207.76" DDN2="192.168.208.76"></server>
+             <server NAME="SGPD-DDNBCHE27A-1" DDN1="192.168.207.27" DDN2="192.168.208.27"></server>
+             <server NAME="SGPD-DDNBCHE27B-1" DDN1="192.168.207.77" DDN2="192.168.208.77"></server>
+             <server NAME="SGPD-DDNBCHE28A-1" DDN1="192.168.207.28" DDN2="192.168.208.28"></server>
+             <server NAME="SGPD-DDNBCHE28B-1" DDN1="192.168.207.78" DDN2="192.168.208.78"></server>
+<!--  -->
+<!-- PPDS -->
+             <server NAME="SGPD-DDNMPPD01A-1" DDN1="159.44.131.67" DDN2="159.44.147.67"></server>
+        </servers>
+</ddn>
