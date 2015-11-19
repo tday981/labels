@@ -25,8 +25,6 @@ $results="results";
 
 #$dbh = DBI->connect( "DBI:mysql:database=" . $current . ";host=localhost",
 #"user", "password", { 'RaiseError' => 1 } );
-$dbh = DBI->connect( "DBI:mysql:database=" . $current . ";host=reghost",
-"quest", "Pegestech1", { 'RaiseError' => 1 } );
 
 if ( ! -d "./$results" ) {
 
@@ -66,7 +64,8 @@ foreach $val (@mult) {
 
 	elsif ( $val eq "Funnel" ) {
 
-		fun();
+		funOut();
+		funPair();
 
 	}
 
@@ -1406,7 +1405,7 @@ sub efxDiff {
 
 }
 
-sub fun {
+sub funOut {
 
 	$prepCmg = $dbh->prepare( "select distinct multGroup,labelId from $current.$table where multGroup is not null;");
 	$prepNmg = $dbh->prepare( "select distinct multGroup,labelId from $new.$table where multGroup is not null;");
@@ -1417,7 +1416,7 @@ sub fun {
 	while ( @row = $prepCmg->fetchrow_array() ) {
 
 		$Cmg{$row[1]}=$row[0];	
-		$Cm="$row[0]/$row[1]";
+		#$Cm="$row[0]/$row[1]";
 		push(@Cmg,$row[1]);
 
 	}
@@ -1425,24 +1424,146 @@ sub fun {
 	while ( @row = $prepNmg->fetchrow_array() ) {
 
 		$Nmg{$row[1]}=$row[0];	
-		$Nm="$row[0]/$row[1]";
+		#$Nm="$row[0]/$row[1]";
 		push(@Nmg,$row[1]);
 
 	}
 
 	foreach $mg (uniq (@Cmg,@Nmg)) {
 
-		$Cnum=grep(/\Q$mg\E/,@Cmg);
-		$Nnum=grep(/\Q$mg\E/,@Nmg);
-		
-		print "mg $mg Cnum $Cnum Nnum $Nnum\n";
+		@Cnum=grep(/\Q$mg\E/,@Cmg);
+		@Nnum=grep(/\Q$mg\E/,@Nmg);
 		$Clm=$Cmg{$mg};
 		$Nlm=$Nmg{$mg};
+		
+		#print "mg $mg Cnum $Cnum Nnum $Nnum\n";
 
-		#if ( 
-		print "Clm $Clm Nlm $Nlm\n";
+		if ( defined $Cnum[0] && ! defined $Nnum[0] ) {
+
+			print "Clm $Clm Cnum $Cnum\n";
+
+		}
+
+		elsif ( ! defined $Cnum[0] &&  defined $Nnum[0] ) {
+
+			print "Nlm $Nlm Nnum $Nnum\n";
+
+		}
+
+		elsif ( defined $Cnum[0] && defined $Nnum[0] && $Clm eq $Nlm ) {
+
+			#print "Num $Cnum[0] Clm $Clm Nlm $Nlm\n";
+
+		}
+
+		elsif ( defined $Cnum[0] && defined $Nnum[0] && $Clm ne $Nlm ) {
+
+			print "Num $Cnum[0] Clm $Clm Nlm $Nlm\n";
+
+		}
 
 	}
+
+}
+
+sub funPair {
+
+	undef @Cpn;
+	undef @Npn;
+	undef @Cfn;
+	undef @Nfn;
+	undef @Cr;
+	undef @Nr;
+	$prepCpair = $dbh->prepare( "select distinct pairName,funnelName from $current.$table where pairName is not null;");
+	$prepNpair = $dbh->prepare( "select distinct pairName,funnelName  from $new.$table where pairName is not null;");
+
+	$prepCpair->execute;
+	$prepNpair->execute;
+
+	while ( @row = $prepCpair->fetchrow_array() ) {
+
+		if ( defined $row[1] ) {
+
+			$Cpair{$row[1]}=$row[0];	
+			$Cn="$row[1]";	
+			push(@Cfn,$Cn);
+	
+		}
+
+		elsif ( ! defined $row[1] ) {
+
+			push(@Cpn,$row[0]);
+
+		}
+
+		#$Cp="$row[0]/$row[1]";
+
+	}
+
+	while ( @row = $prepNpair->fetchrow_array() ) {
+
+		if ( defined $row[1] ) {
+
+			$Npair{$row[1]}=$row[0];	
+			$Nn="$row[1]";	
+			push(@Nfn,$Nn);
+	
+		}
+
+		elsif ( ! defined $row[1] ) {
+
+			push(@Npn,$row[0]);
+		
+		}
+		#$Np="$row[0]/$row[1]";
+
+	}
+
+	foreach $pair (uniq (@Cfn,@Nfn)) {
+
+
+		$Npname=$Npair{$pair};
+		$Cpname=$Cpair{$pair};
+
+		if ( defined $Cpname && defined $Npname ) {
+
+			@Cr=grep(/$pair/,@Cfn);
+			@Nr=grep(/$pair/,@Nfn);
+			#print "Cpname $Cpname Npname $Npname\n";
+
+		}
+
+		elsif ( ! defined $Cpname && defined $Npname ) {
+
+			@Nr=grep(/$pair/,@Nfn);
+			#print "Npname $Npname\n";
+	
+		}
+
+		elsif (  defined $Cpname && ! defined $Npname ) {
+
+			@Cr=grep (/$pair/,@Cfn);
+			#print "Cpname $Cpname\n";
+	
+		}
+
+		$Crn=@Cr;
+		$Nrn=@Nr;
+
+		if ( defined $Crn && defined $Nrn && $Crn != $Nrn ) {
+
+			print "Crn @Cr Nrn @Nr\n";
+
+		}
+
+		elsif ( defined $Crn && defined $Nrn && $Crn == $Nrn ) {
+
+			#print "Crn @Cr Nrn @Nr\n";
+
+		}
+
+	}
+
 
 }
 
