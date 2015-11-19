@@ -15,6 +15,12 @@ if ( $#ARGV == "-1" ) {
 
 }
 
+if ( ! -d "out" ) {
+
+	mkdir "out";
+
+}
+
 foreach $table (@mainProc) {
 
 $file="out/".$table.".xml";

@@ -23,8 +23,7 @@ $results="results";
 #$table="ddnPublishers";
 
 
-#$dbh = DBI->connect( "DBI:mysql:database=" . $current . ";host=localhost",
-#"user", "password", { 'RaiseError' => 1 } );
+#$dbh = DBI->connect( "DBI:mysql:database=" . $current . ";host=localhost","user", "password", { 'RaiseError' => 1 } );
 
 if ( ! -d "./$results" ) {
 
@@ -1415,50 +1414,65 @@ sub funOut {
 
 	while ( @row = $prepCmg->fetchrow_array() ) {
 
-		$Cmg{$row[1]}=$row[0];	
+		$Cm{$row[1]}=$row[0];	
 		#$Cm="$row[0]/$row[1]";
-		push(@Cmg,$row[1]);
+		push(@Cmg,$row[0]);
+		push(@Cli,$row[1]);
 
 	}
 
 	while ( @row = $prepNmg->fetchrow_array() ) {
 
-		$Nmg{$row[1]}=$row[0];	
+		$Nm{$row[1]}=$row[0];	
 		#$Nm="$row[0]/$row[1]";
-		push(@Nmg,$row[1]);
+		push(@Nmg,$row[0]);
+		push(@Nli,$row[1]);
 
 	}
 
-	foreach $mg (uniq (@Cmg,@Nmg)) {
+	foreach $li (uniq (@Cli,@Nli)) {
 
-		@Cnum=grep(/\Q$mg\E/,@Cmg);
-		@Nnum=grep(/\Q$mg\E/,@Nmg);
-		$Clm=$Cmg{$mg};
-		$Nlm=$Nmg{$mg};
+		@Cnum=grep(/\Q$li\E/,@Cli);
+		@Nnum=grep(/\Q$li\E/,@Nli);
+		$Clm=$Cm{$li};
+		$Nlm=$Nm{$li};
+
+		if ( defined $Clm ) { 
+
+			$Cme=grep(/\Q$Clm\E/,@Cmg);
+
+		}
+
+		if ( defined $Nlm ) {
+
+			$Nme=grep(/\Q$Nlm\E/,@Nmg);
+
+		}
 		
 		#print "mg $mg Cnum $Cnum Nnum $Nnum\n";
 
 		if ( defined $Cnum[0] && ! defined $Nnum[0] ) {
 
-			print "Clm $Clm Cnum $Cnum\n";
+			print "Clm $Clm Cnum @Cnum\n";
 
 		}
 
 		elsif ( ! defined $Cnum[0] &&  defined $Nnum[0] ) {
 
-			print "Nlm $Nlm Nnum $Nnum\n";
+			print "Nlm $Nlm Nnum @Nnum\n";
 
 		}
 
 		elsif ( defined $Cnum[0] && defined $Nnum[0] && $Clm eq $Nlm ) {
 
-			#print "Num $Cnum[0] Clm $Clm Nlm $Nlm\n";
+			#print "Equal Num $Cnum[0] Clm $Clm Nlm $Nlm\n";
+			print "Cme $Cme Nme $Nme\n";
 
 		}
 
 		elsif ( defined $Cnum[0] && defined $Nnum[0] && $Clm ne $Nlm ) {
 
-			print "Num $Cnum[0] Clm $Clm Nlm $Nlm\n";
+			print "Changed Num $Cnum[0] Clm $Clm Nlm $Nlm\n";
 
 		}
 
