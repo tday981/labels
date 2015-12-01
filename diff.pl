@@ -24,6 +24,7 @@ $results="results";
 
 
 #$dbh = DBI->connect( "DBI:mysql:database=" . $current . ";host=localhost","user", "password", { 'RaiseError' => 1 } );
+$dbh = DBI->connect( "DBI:mysql:database=" . $current . ";host=reghost","quest", "Pegestech1", { 'RaiseError' => 1 } );
 
 if ( ! -d "./$results" ) {
 
@@ -65,6 +66,7 @@ foreach $val (@mult) {
 
 		funOut();
 		funPair();
+		funInst();
 
 	}
 
@@ -1416,6 +1418,7 @@ sub funOut {
 
 		$Cm{$row[1]}=$row[0];	
 		#$Cm="$row[0]/$row[1]";
+		#print "Cm $Cm\n";
 		push(@Cmg,$row[0]);
 		push(@Cli,$row[1]);
 
@@ -1425,54 +1428,54 @@ sub funOut {
 
 		$Nm{$row[1]}=$row[0];	
 		#$Nm="$row[0]/$row[1]";
+		#print "Nm $Nm\n";
 		push(@Nmg,$row[0]);
 		push(@Nli,$row[1]);
 
 	}
 
-	foreach $li (uniq (@Cli,@Nli)) {
+	$Cmgn=uniq(@Cmg);
+	$Nmgn=uniq(@Nmg);
 
-		@Cnum=grep(/\Q$li\E/,@Cli);
-		@Nnum=grep(/\Q$li\E/,@Nli);
-		$Clm=$Cm{$li};
-		$Nlm=$Nm{$li};
+	if ( $Cmgn != $Nmgn ) {
 
-		if ( defined $Clm ) { 
+		print "Cmgn $Cmgn is not equal to Nmgn $Nmgn\n";
 
-			$Cme=grep(/\Q$Clm\E/,@Cmg);
+	}
 
-		}
+	foreach $mul (uniq(@Cmg,@Nmg)) {
 
-		if ( defined $Nlm ) {
+		$Cmn=grep(/\Q$mul\E/,@Cmg);
+		$Nmn=grep(/\Q$mul\E/,@Nmg);
 
-			$Nme=grep(/\Q$Nlm\E/,@Nmg);
+		if ( $Cmn == "0" && $Nmn == "1" ) {
 
-		}
-		
-		#print "mg $mg Cnum $Cnum Nnum $Nnum\n";
-
-		if ( defined $Cnum[0] && ! defined $Nnum[0] ) {
-
-			print "Clm $Clm Cnum @Cnum\n";
+			print "$mul was added\n";
 
 		}
 
-		elsif ( ! defined $Cnum[0] &&  defined $Nnum[0] ) {
+		if ( $Cmn == "1" && $Nmn == "0" ) {
 
-			print "Nlm $Nlm Nnum @Nnum\n";
-
-		}
-
-		elsif ( defined $Cnum[0] && defined $Nnum[0] && $Clm eq $Nlm ) {
-
-			#print "Equal Num $Cnum[0] Clm $Clm Nlm $Nlm\n";
-			print "Cme $Cme Nme $Nme\n";
+			print "$mul was removed\n";
 
 		}
 
-		elsif ( defined $Cnum[0] && defined $Nnum[0] && $Clm ne $Nlm ) {
+	}
 
-			print "Changed Num $Cnum[0] Clm $Clm Nlm $Nlm\n";
+	foreach $lab (uniq(@Cli,@Nli)) {
+
+		$Cmv=$Cm{$lab};
+		$Nmv=$Nm{$lab};
+
+		if ( defined $Cmv && ! defined $Nmv ) {
+
+			print "$lab was removed for $Cmv\n";
+
+		}
+
+		if ( ! defined $Cmv && defined $Nmv ) {
+
+			print "$lab was added for $Nmv\n";
 
 		}
 
@@ -1501,6 +1504,7 @@ sub funPair {
 			$Cpair{$row[1]}=$row[0];	
 			$Cn="$row[1]";	
 			push(@Cfn,$Cn);
+			push(@Cpn,$row[0]);
 	
 		}
 
@@ -1521,6 +1525,7 @@ sub funPair {
 			$Npair{$row[1]}=$row[0];	
 			$Nn="$row[1]";	
 			push(@Nfn,$Nn);
+			push(@Npn,$row[0]);
 	
 		}
 
@@ -1533,31 +1538,50 @@ sub funPair {
 
 	}
 
-	foreach $pair (uniq (@Cfn,@Nfn)) {
+	foreach $pn (uniq(@Cpn,@Npn)) {
+
+		$Ce=grep(/\Q$pn\E/,@Cpn);
+		$Ne=grep(/\Q$pn\E/,@Npn);
+
+		if ( $Ce == "1" && $Ne == "0" ) {
+
+			print "$pn was removed\n";
+
+		}
+
+		if ( $Ce == "0" && $Ne == "1" ) {
+
+			print "$pn was added\n";
+
+		}
+
+	}
+
+	foreach $fun (uniq(@Cfn,@Nfn)) {
 
 
-		$Npname=$Npair{$pair};
-		$Cpname=$Cpair{$pair};
+		$Npname=$Npair{$fun};
+		$Cpname=$Cpair{$fun};
 
 		if ( defined $Cpname && defined $Npname ) {
 
-			@Cr=grep(/$pair/,@Cfn);
-			@Nr=grep(/$pair/,@Nfn);
+			@Cr=grep(/$fun/,@Cfn);
+			@Nr=grep(/$fun/,@Nfn);
 			#print "Cpname $Cpname Npname $Npname\n";
 
 		}
 
 		elsif ( ! defined $Cpname && defined $Npname ) {
 
-			@Nr=grep(/$pair/,@Nfn);
-			#print "Npname $Npname\n";
+			@Nr=grep(/$fun/,@Nfn);
+			print "Npname $fun for $Npname is added\n";
 	
 		}
 
 		elsif (  defined $Cpname && ! defined $Npname ) {
 
-			@Cr=grep (/$pair/,@Cfn);
-			#print "Cpname $Cpname\n";
+			@Cr=grep(/$fun/,@Cfn);
+			print "Cpname $fun for $Cpname is removed\n";
 	
 		}
 
@@ -1578,6 +1602,76 @@ sub funPair {
 
 	}
 
+}
+
+sub funInst {
+
+	undef @Cpn;
+	undef @Npn;
+	undef @Cfn;
+	undef @Nfn;
+	undef @Cr;
+	undef @Nr;
+	$prepCint = $dbh->prepare( "select distinct inputLabel,funnelName,instId,instName from $current.$table where inputLabel is not null;");
+	$prepNint = $dbh->prepare( "select distinct inputLabel,funnelName,instId,instName from $new.$table where inputLabel is not null;");
+
+	$prepCint->execute;
+	$prepNint->execute;
+
+	while ( @row = $prepCint->fetchrow_array() ) {
+
+		$Clid=$row[0];
+		$Cfi="$row[0],$row[1]/$row[2]/$row[3]";
+		push @Id,$Clid;
+		push @Cfun,$Cfi;
+
+	}
+
+	while ( @row = $prepNint->fetchrow_array() ) {
+
+		$Nlid=$row[0];
+		$Nfi="$row[0],$row[1]/$row[2]/$row[3]";
+		push @Id,$Nlid;
+		push @Nfun,$Nfi;
+
+	}
+
+	foreach $il (uniq(@Id)) {
+
+		#print "il $il\n";
+		@Clst=grep(/\Q$il\E/,@Cfun);
+		@Nlst=grep(/\Q$il\E/,@Nfun);
+
+		#print "Clst @Clst\n";
+		#print "Nlst @Nlst\n";
+		$Cnm=@Clst;
+		$Nnm=@Nlst;
+
+		if ( $Cnm == "0" ) {
+
+			@Nrow = split( /\//, $Nlst[0] );
+                	$Npre = "$Nrow[0]/$Nrow[1]/$Nrow[2]/$Nrow[3]";
+
+		}
+
+		elsif ( $Nnm == "0" ) {
+
+			@Crow = split( /\//, $Clst[0] );
+                	$Cpre = "$Crow[0]/$Crow[1]/$Crow[2]/$Crow[3]";
+
+		}
+
+		elsif ( $Cnm != "0" && $Nnm != "0" ) {
+
+			@Crow = split( /\//, $Clst[0] );
+			@Nrow = split( /\//, $Nlst[0] );
+                	$Cpre = "$Crow[0]/$Crow[1]/$Crow[2]/$Crow[3]";
+                	$Npre = "$Nrow[0]/$Nrow[1]/$Nrow[2]/$Nrow[3]";
+
+		}
+			
+
+	}	
 
 }
 
