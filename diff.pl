@@ -1604,6 +1604,7 @@ sub funPair {
 
 }
 
+
 sub funInst {
 
 	undef @Cpn;
@@ -1612,62 +1613,249 @@ sub funInst {
 	undef @Nfn;
 	undef @Cr;
 	undef @Nr;
-	$prepCint = $dbh->prepare( "select distinct inputLabel,funnelName,instId,instName from $current.$table where inputLabel is not null;");
-	$prepNint = $dbh->prepare( "select distinct inputLabel,funnelName,instId,instName from $new.$table where inputLabel is not null;");
+	$prepCint = $dbh->prepare( "select distinct outGroup,inputLabel,funnelName,instId,instName from $current.$table where inputLabel is not null;");
+	$prepNint = $dbh->prepare( "select distinct outGroup,inputLabel,funnelName,instId,instName from $new.$table where inputLabel is not null;");
 
 	$prepCint->execute;
 	$prepNint->execute;
 
 	while ( @row = $prepCint->fetchrow_array() ) {
 
-		$Clid=$row[0];
-		$Cfi="$row[0],$row[1]/$row[2]/$row[3]";
-		push @Id,$Clid;
+		$Cog=$row[0];
+		$Cfi="$row[0]/$row[1]/$row[2]/$row[3]/$row[4]";
+		push @Og,$Cog;
+		#push @Fn,$$row[;
 		push @Cfun,$Cfi;
 
 	}
 
 	while ( @row = $prepNint->fetchrow_array() ) {
 
-		$Nlid=$row[0];
-		$Nfi="$row[0],$row[1]/$row[2]/$row[3]";
-		push @Id,$Nlid;
+		$Nog=$row[0];
+		$Nfi="$row[0]/$row[1]/$row[2]/$row[3]/$row[4]";
+		push @Og,$Nog;
 		push @Nfun,$Nfi;
 
 	}
 
-	foreach $il (uniq(@Id)) {
+	foreach $og (uniq(@Og)) {
 
-		#print "il $il\n";
-		@Clst=grep(/\Q$il\E/,@Cfun);
-		@Nlst=grep(/\Q$il\E/,@Nfun);
+		undef @CId;
+		undef @NId;
+		undef @CFn;
+		undef @NFn;
+		undef @CIs;
+		undef @NIs;
+
+		print "og $og\n";
+		@Clst=grep(/^\Q$og\/\E/,@Cfun);
+		@Nlst=grep(/^\Q$og\/\E/,@Nfun);
 
 		#print "Clst @Clst\n";
 		#print "Nlst @Nlst\n";
 		$Cnm=@Clst;
 		$Nnm=@Nlst;
 
-		if ( $Cnm == "0" ) {
+		#print "$og Cnm $Cnm Nnm $Nnm\n";
+
+		if ( $Cnm == "0" && $Nnm != "0" ) {
+
+			#@Nrow = split( /\//, $Nlst[0] );
+                	#$Npre = "$Nrow[0]/$Nrow[1]/$Nrow[2]/$Nrow[3]";
+			print "Output Group  $og was added.\n";
+
+			foreach $n ( @Nlst ) {
+
+				print "$n\n";
+
+			}
+		}
+
+		elsif ( $Nnm == "0" && $Cnm != "0" ) {
+
+			#@Crow = split( /\//, $Clst[0] );
+                	#$Cpre = "$Crow[0]/$Crow[1]/$Crow[2]/$Crow[3]";
+			print "Output Group  $og was removed.\n";
+
+			foreach $n ( @Clst ) {
+
+				print "$n\n";
+
+			}
+		}
+
+		elsif ( $Cnm != "0" && $Nnm != "0" ) {
+
+			foreach $st (@Clst) {
+
+				#print "Clst $st\n";
+				@ar=split(/\//,$st);
+				push @CId,$ar[1];
+				push @CFn,$ar[2];
+				push @CIs,"$ar[3]/$ar[4]";
+
+			}
+
+			foreach $st (@Nlst) {
+
+				@ar=split(/\//,$st);
+				push @NId,$ar[1];
+				push @NFn,$ar[2];
+				push @NIs,"$ar[3]/$ar[4]";
+
+			}
+
+			foreach $id (sort { $a <=> $b } uniq(@CId,@NId)) {
+
+				$gst="$og/$id/";
+				#print "og $og $id\n";
+				#print "id $id\n";
+				@CL1=grep(/$gst/,@Clst);
+				@NL1=grep(/$gst/,@Nlst);
+
+				#print "@CL1\n";
+
+				$Cl1=@CL1;
+				$Nl1=@NL1;
+
+				if ( $Cl1 != "0" && $Nl1 == "0" ) {
+
+					print "Input Label $id was removed from output group $og.\n";
+						
+				}
+
+				elsif ( $Cl1 == "0" && $Nl1 != "0" ) {
+
+					print "Input Label $id was added to output group $og.\n";
+
+					foreach $n (uniq(@CL1)) {
+
+						print "$n\n";
+
+					}
+						
+				}
+
+				elsif ( $Cl1 != "0" && $Nl1 != "0" ) {
+
+					#print "Cl1 $Cl1 Nl1 $Nl1\n";
+
+					foreach $fn (uniq(@CFn,@NFn)) {
+
+						$gst1="$gst/$fn";
+						@CL2=grep(/$gst1/,@Clst);	
+						@NL2=grep(/$gst1/,@Nlst);	
+
+						$Cl2=@CL2;
+						$Nl2=@NL2;
+
+						if ( $Cl2 == "0" && $Nl2 != "0" ) {
+
+							print "Funnel $fn with id $id was removed from output group $og.\n";
+						
+						}
+
+						elsif ( $Cl2 != "0" && $Nl2 == "0" ) {
+
+							print "Funnel $fn with id $id was added to output group $og.\n";
+						
+						}
+
+						elsif ( $Cl2 != "0" && $Nl2 != "0" ) {
+
+							print "Cl2 $Cl2 Nl2 $Nl2\n";
+						
+						}
+					}
+							
+				}
+
+			}
+		}
+			
+
+	}	
+
+}
+
+sub OldfunInst {
+
+	undef @Cpn;
+	undef @Npn;
+	undef @Cfn;
+	undef @Nfn;
+	undef @Cr;
+	undef @Nr;
+	$prepCint = $dbh->prepare( "select distinct outGroup,inputLabel,funnelName,instId,instName from $current.$table where inputLabel is not null;");
+	$prepNint = $dbh->prepare( "select distinct outGroup,inputLabel,funnelName,instId,instName from $new.$table where inputLabel is not null;");
+
+	$prepCint->execute;
+	$prepNint->execute;
+
+	while ( @row = $prepCint->fetchrow_array() ) {
+
+		$Clid=$row[1];
+		$Cfi="$row[1]/$row[2]/$row[3]/$row[4]";
+		push @Id,$Clid;
+		#push @Fn,$$row[;
+		push @Cfun,$Cfi;
+
+	}
+
+	while ( @row = $prepNint->fetchrow_array() ) {
+
+		$Nlid=$row[1];
+		$Nfi="$row[1]/$row[2]/$row[3]/$row[4]";
+		push @Id,$Nlid;
+		push @Nfun,$Nfi;
+
+	}
+
+	foreach $il (sort { $a <=> $b } uniq(@Id)) {
+
+		#print "il $il\n";
+		@Clst=grep(/^\Q$il\/\E/,@Cfun);
+		@Nlst=grep(/^\Q$il\/\E/,@Nfun);
+
+		#print "Clst @Clst\n";
+		#print "Nlst @Nlst\n";
+		$Cnm=@Clst;
+		$Nnm=@Nlst;
+
+		#print "$il Cnm $Cnm Nnm $Nnm\n";
+
+		if ( $Cnm == "0" && $Nnm != "0" ) {
 
 			@Nrow = split( /\//, $Nlst[0] );
                 	$Npre = "$Nrow[0]/$Nrow[1]/$Nrow[2]/$Nrow[3]";
+			print "InputLabel $il was added.\n";
 
 		}
 
-		elsif ( $Nnm == "0" ) {
+		elsif ( $Nnm == "0" && $Cnm != "0" ) {
 
 			@Crow = split( /\//, $Clst[0] );
                 	$Cpre = "$Crow[0]/$Crow[1]/$Crow[2]/$Crow[3]";
+			print "InputLabel $il was removed.\n";
 
 		}
 
 		elsif ( $Cnm != "0" && $Nnm != "0" ) {
 
-			@Crow = split( /\//, $Clst[0] );
-			@Nrow = split( /\//, $Nlst[0] );
-                	$Cpre = "$Crow[0]/$Crow[1]/$Crow[2]/$Crow[3]";
-                	$Npre = "$Nrow[0]/$Nrow[1]/$Nrow[2]/$Nrow[3]";
+			#@Crow = split( /\//, $Clst[0] );
+			#@Nrow = split( /\//, $Nlst[0] );
+                	#$Cpre = "$Crow[0]/$Crow[1]/$Crow[2]/$Crow[3]";
+                	#$Cpre = "$Crow[0]/$Crow[1]/$Crow[2]";
+                	#$Npre = "$Nrow[0]/$Nrow[1]/$Nrow[2]/$Nrow[3]";
+                	#$Npre = "$Nrow[0]/$Nrow[1]/$Nrow[2]";
 
+			#print "Cpre $Cpre Npre $Npre\n";
+
+			foreach $st (@Clst) {
+
+				push @Id,$Clst[1]
+
+			}
 		}
 			
 
