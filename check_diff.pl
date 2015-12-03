@@ -27,6 +27,7 @@ foreach $file (@flist) {
 		}
 
 		if ( $line =~ /\Qconsumer>\E/ && defined $la) {
+		#if ( $line =~ /\QmultTag>\E/ && defined $la) {
 
 			@cons=split(/[<>]/,$line);
 			#print "$cons[2]\n";	
@@ -55,20 +56,29 @@ foreach $file (@flist) {
 	}
 }
 
-open $out, '>', "consumers.txt" or die "Can't open file: $!\n";
+open $out, '>', "ddnLabconsumers.txt" or die "Can't open file: $!\n";
+#open $out, '>', "ddnLabmult.txt" or die "Can't open file: $!\n";
 foreach $l (sort { $a <=> $b } uniq(@lab)) {
 
-	if ( defined $valq{$l} ) {
+	if ( defined $valq{$l} && defined $valp{$l} && "$valq{$l}" ne "$valp{$l}" ) {
 
 		print $out "quest:$l->$valq{$l}\n";
+		print $out "pre_prod:$l->$valp{$l}\n\n";
 	
 	}
 
-	if ( defined $valp{$l} ) {
+	if ( ! defined $valq{$l} && defined $valp{$l} ) {
 
 		print $out "pre_prod:$l->$valp{$l}\n\n";
 	
 	}
+
+	if (  defined $valq{$l} && ! defined $valp{$l} ) {
+
+		print $out "quest:$l->$valq{$l}\n\n";
+	
+	}
+
 
 }
 
