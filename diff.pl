@@ -4,8 +4,8 @@ use DBI;
 use List::MoreUtils qw(uniq);
 use Data::Dumper;
 
-#@mult=("ddnCoreLabels","ddnLabels","ddnPublishers","ddnReqLabels","finLabels","LocalLabels","ddnServers","efxsitelist","Funnel","RecoveryLabelExceptionList");
-@mult=("Funnel");
+@mult=("ddnCoreLabels","ddnLabels","ddnPublishers","ddnReqLabels","finLabels","LocalLabels","ddnServers","efxsitelist","Funnel","RecoveryLabelExceptionList");
+#@mult=("Funnel");
 #@lab=("ddnCoreLabels","ddnLabels","ddnPublishers","ddnReqLabels","LocalLabels");
 
 $current = "quest_labels";
@@ -24,8 +24,7 @@ $results="results";
 #$table="ddnPublishers";
 
 
-#$dbh = DBI->connect( "DBI:mysql:database=" . $current . ";host=localhost","user", "password", { 'RaiseError' => 1 } );
-$dbh = DBI->connect( "DBI:mysql:database=" . $current . ";host=reghost","quest", "Pegestech1", { 'RaiseError' => 1 } );
+$dbh = DBI->connect( "DBI:mysql:database=" . $current . ";host=localhost","user", "password", { 'RaiseError' => 1 } );
 
 if ( ! -d "./$results" ) {
 
