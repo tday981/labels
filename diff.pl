@@ -4,11 +4,12 @@ use DBI;
 use List::MoreUtils qw(uniq);
 use Data::Dumper;
 
-@mult=("ddnCoreLabels","ddnLabels","ddnPublishers","ddnReqLabels","finLabels","LocalLabels","ddnServers","efxsitelist","Funnel","RecoveryLabelExceptionList");
-#@mult=("RecoveryLabelExceptionList");
+#@mult=("ddnCoreLabels","ddnLabels","ddnPublishers","ddnReqLabels","finLabels","LocalLabels","ddnServers","efxsitelist","Funnel","RecoveryLabelExceptionList");
+@mult=("Funnel");
 #@lab=("ddnCoreLabels","ddnLabels","ddnPublishers","ddnReqLabels","LocalLabels");
 
-$current = "prod_20150917";
+$current = "quest_labels";
+#$current = "prod_20150917";
 #$current = "prod_20151007";
 #$current = "prod_20151019";
 #$current = "pre_prod";
@@ -1314,13 +1315,13 @@ sub efxDiff {
 
 	if ( defined $Cfx[0] && ! defined $Nfx[0] ) {
 
-		print "item1 $Cfx[0] item2 $Cfx[1] only in $current.\n";
+		print $rem "item1 $Cfx[0] item2 $Cfx[1] only in $current.\n";
 
 	}
 
 	elsif ( ! defined $Cit && defined $Nit ) {
 
-		print "item1 $Nfx[0] item2 $Nfx[1] only in $new.\n";
+		print $add "item1 $Nfx[0] item2 $Nfx[1] only in $new.\n";
 
 	}
 
@@ -1597,6 +1598,10 @@ sub funPair {
 
 	foreach $fun (uniq(@Cfn,@Nfn)) {
 
+		undef @Cr;
+		undef @Nr;
+		undef $Crn;
+		undef $Nrn;
 
 		$Npname=$Npair{$fun};
 		$Cpname=$Cpair{$fun};
@@ -1605,7 +1610,7 @@ sub funPair {
 
 			@Cr=grep(/$fun/,@Cfn);
 			@Nr=grep(/$fun/,@Nfn);
-			#print "Cpname $Cpname Npname $Npname\n";
+			print "Cpname $Cpname Npname $Npname\n";
 
 		}
 
@@ -1614,6 +1619,7 @@ sub funPair {
 			@Nr=grep(/$fun/,@Nfn);
         		#openLog();
 			print $add "Funnel $fun for $Npname is added\n";
+			#print "Nr @Nr\n";
 	
 		}
 
@@ -1628,10 +1634,13 @@ sub funPair {
 		$Crn=@Cr;
 		$Nrn=@Nr;
 
-		if ( defined $Crn && defined $Nrn && $Crn != $Nrn ) {
+		if ( $Crn != "0" && $Nrn != "0" && $Crn != $Nrn ) {
+			print "fun $fun\n";
+			print "Crn $Crn\n";
+			print "Nrn $Nrn\n";
 
         		#openLog();
-			print "Crn @Cr Nrn @Nr\n";
+			print $chan "Crn @Cr Nrn @Nr\n";
 
 		}
 
