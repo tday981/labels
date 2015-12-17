@@ -3,9 +3,9 @@ use warnings;
 use DBI;
 use List::MoreUtils qw(uniq);
 use Data::Dumper;
-test;
 
 @mult=("ddnCoreLabels","ddnLabels","ddnPublishers","ddnReqLabels","finLabels","LocalLabels","ddnServers","efxsitelist","Funnel","RecoveryLabelExceptionList");
+#@mult=("LocalLabels");
 #@mult=("ddnLabels");
 #@lab=("ddnCoreLabels","ddnLabels","ddnPublishers","ddnReqLabels","LocalLabels");
 
@@ -89,6 +89,8 @@ foreach $val (@mult) {
 
 sub mult {
 
+	undef @Cml;
+	undef @Nml;
 $prepCMList = $dbh->prepare(
     "select distinct tag,addr from $current.$table where addr is not null;");
 $prepNMList = $dbh->prepare(
@@ -169,30 +171,39 @@ $mCount    = 0;
 
 foreach $m (uniq @Am) {
 
-	#print "st is $m\n";	
-    #$Cm = $cm{$m};
-    #$Nm = $nm{$m};
-    @CMl=grep(/^$m\//,@Cml);
-    @NMl=grep(/^$m\//,@Nml);
+	undef @CMl;
+	undef @NMl;
+
+    	@CMl=grep(/^$m\//,@Cml);
+    	@NMl=grep(/^$m\//,@Nml);
+	$Cm=@CMl;
+	$Nm=@NMl;
 
 	
-	#print "m $m Cm $Cm Nm $Nm\n";
+	if ( $Cm == "1" && $Nm == "1" ) {
 
-	foreach $ent (uniq(@CMl,@NMl)) {
+		$Cmn=$CMl[0];
+		$Nmn=$NMl[0];
 
-		@Cch=grep(/$ent/,@CMl);
-		@Nch=grep(/$ent/,@NMl);
+		#print "Cmn $Cmn\n";
+		#print "Nmn $Nmn\n";
 
-		#print "Cch @Cch\n";
-		#print "Nch @Nch\n";
+		if ( $Cmn ne "$Nmn" ) {
 
-		$Cm=@Cch;
-		$Nm=@Nch;
+			@Car=split(/\//,$Cmn);
+			$Cmn=$Car[1];	
+			@Nar=split(/\//,$Nmn);
+			$Nmn=$Nar[1];	
+			print $chan "MultAddr $Cmn with name $Car[0] in $current\n";
+			print $chan "MultAddr $Nmn with name $Nar[0] in $new\n\n";
+			
+		}
 
-    		#if ( ! defined $Cm && defined $Nm ) {
-    		if ( $Cm == "0" && $Nm != "0" ) {
+	}
 
-			@Nar=split(/\//,$ent);
+    	elsif ( $Cm == "0" && $Nm == "1" ) {
+
+			@Nar=split(/\//,$NMl[0]);
 			$Nmn=$Nar[1];	
 
 			#print "Nmn is $Nmn\n";
@@ -203,10 +214,9 @@ foreach $m (uniq @Am) {
 
     		}
 
-    		#elsif ( defined $Cm && ! defined $Nm ) {
-    		elsif ( $Cm != "0" && $Nm == "0" ) {
+    	elsif ( $Cm == "1" && $Nm == "0" ) {
 
-			@Car=split(/\//,$ent);
+			@Car=split(/\//,$CMl[0]);
 			$Cmn=$Car[1];	
 
 			#print "Car is @Car\n";
@@ -217,27 +227,47 @@ foreach $m (uniq @Am) {
 
     		}
 
-    		#elsif ( defined $Cm && defined $Nm && $Cm eq $Nm ) {
-    		elsif ( $Cm != "0" && $Nm != "0" && $Cm eq $Nm ) {
+	elsif ( $Cm >= "1" && $Nm >= "1" ) {
 
-        		#print "MultAddr is $m with name $Cm in all.\n";
-        		$mCount++;
-    		}
+		foreach $ent (uniq(@CMl,@NMl)) {
 
-    		elsif ( $Cm != "0" && $Nm != "0" && $Cm ne $Nm ) {
+			undef @Cch;
+			undef @Nch;
+			undef $Cm;
+			undef $Nm;
 
-        		#print $chan "MultAddr $m $Cm is in $current.\n";
-        		#print $chan "MultAddr $m $Nm is in $new.\n\n";
-        		#openLog();
-        		#print $chan "MultAddr $Cm with name $m in $current.\n";
-        		#print $chan "MultAddr $Nm with name $m in $new.\n\n";
-			@Car=split(/\//,$ent);
-			$Nmn=$Car[1];	
-			@Nar=split(/\//,$ent);
-			$Nmn=$Nar[1];	
-        		print "Jimi we have a problem with $m\n";
+			@Cch=grep(/\Q$ent\E/,@CMl);
+			@Nch=grep(/\Q$ent\E/,@NMl);
 
-    		}
+
+			if ( defined $Cch[0] && defined $Nch[0] && $Cch[0] ne $Nch[0] ) {
+
+				@Car=split(/\//,$Cch[0]);
+				$Cmn=$Car[1];	
+				@Nar=split(/\//,$Nch[0]);
+				$Nmn=$Nar[1];	
+				print $chan "MultAddr $Cmn with name $ent in $current\n";
+				print $chan "MultAddr $Nmn with name $ent in $new\n";
+
+			}
+
+			elsif ( defined $Cch[0] && ! defined $Nch[0] ) {
+
+				@Car=split(/\//,$Cch[0]);
+				$Cmn=$Car[1];	
+				print $rem "MultAddr $Cmn with name $ent only in $current\n";
+
+			}
+
+			elsif ( ! defined $Cch[0] && defined $Nch[0] ) {
+
+				@Nar=split(/\//,$Nch[0]);
+				$Nmn=$Nar[1];	
+				print $add "MultAddr $Nmn with name $ent only in $new\n";
+
+			}
+		
+		}
 
 	}
 
