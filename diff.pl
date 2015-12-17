@@ -44,7 +44,7 @@ foreach $val (@mult) {
 
 	open $rem, '>',"$results/$table.removed";
 	open $add, '>',"$results/$table.added";
-	open $chan , '>',"$results/$table.changes";
+	open $chan , '>',"$results/$table.changed";
 
 	if ( $val eq "finLabels" ) {
 
@@ -2063,7 +2063,7 @@ sub openLog {
 
 	if ( ! defined $chan ) {
 
-		open $chan , '>',"$results/$table.changes";
+		open $chan , '>',"$results/$table.changed";
 
 	}
 
