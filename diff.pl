@@ -3,6 +3,7 @@ use warnings;
 use DBI;
 use List::MoreUtils qw(uniq);
 use Data::Dumper;
+test;
 
 @mult=("ddnCoreLabels","ddnLabels","ddnPublishers","ddnReqLabels","finLabels","LocalLabels","ddnServers","efxsitelist","Funnel","RecoveryLabelExceptionList");
 #@mult=("ddnLabels");
