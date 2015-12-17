@@ -5,7 +5,7 @@ use List::MoreUtils qw(uniq);
 use Data::Dumper;
 
 @mult=("ddnCoreLabels","ddnLabels","ddnPublishers","ddnReqLabels","finLabels","LocalLabels","ddnServers","efxsitelist","Funnel","RecoveryLabelExceptionList");
-#@mult=("Funnel");
+#@mult=("ddnLabels");
 #@lab=("ddnCoreLabels","ddnLabels","ddnPublishers","ddnReqLabels","LocalLabels");
 
 $current = "quest_labels";
@@ -24,7 +24,8 @@ $results="results";
 #$table="ddnPublishers";
 
 
-$dbh = DBI->connect( "DBI:mysql:database=" . $current . ";host=localhost","user", "password", { 'RaiseError' => 1 } );
+#$dbh = DBI->connect( "DBI:mysql:database=" . $current . ";host=localhost","user", "password", { 'RaiseError' => 1 } );
+$dbh = DBI->connect( "DBI:mysql:database=" . $current . ";host=reghost","quest", "Pegestech1", { 'RaiseError' => 1 } );
 
 if ( ! -d "./$results" ) {
 
@@ -108,8 +109,21 @@ $prepNMList->execute;
 
 		else {
 
-    			$cm{ $row[1] } = $row[0];
-    			push @Am, $row[1];
+			#if ( defined $cm{$row[0]} ) {
+
+	    		#	$cm{ $row[0]."dup" } = $row[1];
+    			#	#push @Am, $row[0]."dup";
+    			#	push @Am, $row[0];
+
+			#}
+
+			#else {
+
+	    			#$cm{ $row[0] } = $row[1];
+	    			push @Cml,"$row[0]/$row[1]";
+    				push @Am, $row[0];
+
+			#}
 			
 		}
 
@@ -129,8 +143,21 @@ $prepNMList->execute;
 
 		else {
 
-    			$nm{ $row[1] } = $row[0];
-    			push @Am, $row[1];
+			#if ( defined $nm{$row[0]} ) {
+
+	    		#	$nm{ $row[0]."dup" } = $row[1];
+    			#	#push @Am, $row[0]."dup";
+    			#	push @Am, $row[0];
+
+			#}
+
+			#else {
+
+	    			#$nm{ $row[0] } = $row[1];
+	    			push @Nml,"$row[0]/$row[1]";
+    				push @Am, $row[0];
+
+			#}
 			
 		}
 
@@ -141,45 +168,77 @@ $mCount    = 0;
 
 foreach $m (uniq @Am) {
 
-	
-    $Cm = $cm{$m};
-    $Nm = $nm{$m};
+	#print "st is $m\n";	
+    #$Cm = $cm{$m};
+    #$Nm = $nm{$m};
+    @CMl=grep(/^$m\//,@Cml);
+    @NMl=grep(/^$m\//,@Nml);
+
 	
 	#print "m $m Cm $Cm Nm $Nm\n";
 
-    if ( ! defined $Cm && defined $Nm ) {
+	foreach $ent (uniq(@CMl,@NMl)) {
 
-        #print $add "MultAddr $m $Nm is only in $new.\n";
-        #print "MultAddr $m $Nm is only in $new.\n";
-        #openLog();
-        print $add "MultAddr $m with name $Nm only in $new.\n";
+		@Cch=grep(/$ent/,@CMl);
+		@Nch=grep(/$ent/,@NMl);
 
-    }
+		#print "Cch @Cch\n";
+		#print "Nch @Nch\n";
 
-    elsif ( defined $Cm && ! defined $Nm ) {
+		$Cm=@Cch;
+		$Nm=@Nch;
 
-        #print $rem "MultAddr $m $Cm is only in $current.\n";
-        #print "MultAddr $m $Cm is only in $current.\n";
-        #openLog();
-        print $rem "MultAddr $m with name $Cm only in $current.\n";
+    		#if ( ! defined $Cm && defined $Nm ) {
+    		if ( $Cm == "0" && $Nm != "0" ) {
 
-    }
+			@Nar=split(/\//,$ent);
+			$Nmn=$Nar[1];	
 
-    elsif ( defined $Cm && defined $Nm && $Cm eq $Nm ) {
+			#print "Nmn is $Nmn\n";
+        		#print $add "MultAddr $m $Nm is only in $new.\n";
+        		#print "MultAddr $m $Nmn is only in $new.\n";
+        		#openLog();
+        		print $add "MultAddr $Nmn with name $m only in $new.\n";
 
-        #print "MultAddr is $m with name $Cm in all.\n";
-        $mCount++;
-    }
+    		}
 
-    else {
+    		#elsif ( defined $Cm && ! defined $Nm ) {
+    		elsif ( $Cm != "0" && $Nm == "0" ) {
 
-        #print $chan "MultAddr $m $Cm is in $current.\n";
-        #print $chan "MultAddr $m $Nm is in $new.\n\n";
-        #openLog();
-        print $chan "MultAddr $m with name $Cm in $current.\n";
-        print $chan "MultAddr $m with name $Nm in $new.\n\n";
+			@Car=split(/\//,$ent);
+			$Cmn=$Car[1];	
 
-    }
+			#print "Car is @Car\n";
+        		#print $rem "MultAddr $m $Cm is only in $current.\n";
+        		#print "MultAddr $m $Cm is only in $current.\n";
+        		#openLog();
+        		print $rem "MultAddr $Cmn with name $m only in $current.\n";
+
+    		}
+
+    		#elsif ( defined $Cm && defined $Nm && $Cm eq $Nm ) {
+    		elsif ( $Cm != "0" && $Nm != "0" && $Cm eq $Nm ) {
+
+        		#print "MultAddr is $m with name $Cm in all.\n";
+        		$mCount++;
+    		}
+
+    		elsif ( $Cm != "0" && $Nm != "0" && $Cm ne $Nm ) {
+
+        		#print $chan "MultAddr $m $Cm is in $current.\n";
+        		#print $chan "MultAddr $m $Nm is in $new.\n\n";
+        		#openLog();
+        		#print $chan "MultAddr $Cm with name $m in $current.\n";
+        		#print $chan "MultAddr $Nm with name $m in $new.\n\n";
+			@Car=split(/\//,$ent);
+			$Nmn=$Car[1];	
+			@Nar=split(/\//,$ent);
+			$Nmn=$Nar[1];	
+        		print "Jimi we have a problem with $m\n";
+
+    		}
+
+	}
 
 }
 
@@ -1989,6 +2048,8 @@ sub closeLog {
 
 sub undefMain {
 
+	undef %cm;
+	undef %nm;
 	undef @Am;
 	undef @Lall;
 	undef @Clab;
