@@ -14,10 +14,11 @@ use warnings;
 #}
 
 ##Assign commandline arguments to variables
-$ver=$ARGV[0];
+#$ver=$ARGV[0];
 
 ##set up the connect to the database
 #$dbh = DBI->connect("DBI:mysql:database=pre_prod;host=localhost","name","password",{'RaiseError' => 1});
+$dbh = DBI->connect("DBI:mysql:database=pre_prod;host=reghost","quest","Pegestech1",{'RaiseError' => 1});
 
 $prepVers = $dbh->prepare("select version from pre_prod.ddnLabels;");
 
@@ -40,7 +41,7 @@ $prepCreate = $dbh->prepare("create table pre_prod_".$vers.".".$table." like ".$
 $prepCreate->execute;
 
 $prepCopy = $dbh->prepare("insert pre_prod_".$vers.".".$table." select * from ".$table.";");
-print "Copying $table to ".$table." ".$table."_".$vers."....\n";
+print "Copying $table to ".$table." pre_prod".$table."....\n";
 $prepCopy->execute;
 
 }

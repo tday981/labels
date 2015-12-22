@@ -15,6 +15,7 @@ if ( $#ARGV == "-1" ) {
 $db=$ARGV[0];
 
 #$dbh = DBI->connect("DBI:mysql:database=pre_prod;host=localhost","name","password",{'RaiseError' => 1});
+$dbh = DBI->connect("DBI:mysql:database=$db;host=reghost","quest","Pegestech1",{'RaiseError' => 1});
 #$prepConf = $dbh->prepare("truncate table ?;");
 
 #$dbh->trace(5);

@@ -20,7 +20,8 @@ $dir=$ARGV[1];
 ##List files for processing
 if ( $dir eq "apac" ) {
 
-@mainProc=("ddnCoreLabels.xml","ddnLabels.xml","ddnPublishers.xml","ddnReqLabels.xml","finLabels.xml");
+#@mainProc=("ddnCoreLabels.xml","ddnLabels.xml","ddnPublishers.xml","ddnReqLabels.xml","finLabels.xml");
+@mainProc=("ddnCoreLabels.xml","ddnLabels.xml","ddnPublishers.xml","ddnReqLabels.xml");
 @otherProc=("efxsitelist.xml","Funnel.xml","ddnServers.xml","RecoveryLabelExceptionList.xml");
 
 }
@@ -28,13 +29,16 @@ if ( $dir eq "apac" ) {
 else {
 
 
-@mainProc=("ddnCoreLabels.xml","ddnLabels.xml","ddnPublishers.xml","ddnReqLabels.xml","LocalLabels.xml","finLabels.xml");
-@otherProc=("efxsitelist.xml","Funnel.xml","ddnServers.xml","RecoveryLabelExceptionList.xml","finServers.xml");
+#@mainProc=("ddnCoreLabels.xml","ddnLabels.xml","ddnPublishers.xml","ddnReqLabels.xml","LocalLabels.xml","finLabels.xml");
+#@otherProc=("efxsitelist.xml","Funnel.xml","ddnServers.xml","RecoveryLabelExceptionList.xml","finServers.xml");
+@mainProc=("ddnCoreLabels.xml","ddnLabels.xml","ddnPublishers.xml","ddnReqLabels.xml","LocalLabels.xml");
+@otherProc=("efxsitelist.xml","Funnel.xml","ddnServers.xml","RecoveryLabelExceptionList.xml");
 
 }
 
 ##set up the connect to the database
 #$dbh = DBI->connect("DBI:mysql:database=pre_prod;host=localhost","name","password",{'RaiseError' => 1});
+$dbh = DBI->connect("DBI:mysql:database=$db;host=reghost","quest","Pegestech1",{'RaiseError' => 1});
 
 
 #@list=glob("$dir/*.xml");
@@ -48,7 +52,7 @@ $comm=0;
 	print "Processing $in...\n";
 	
 	##Open current file in a file handle
-	open $fh, '<', $dir."/".$in or die "Can't open input $!\n";
+	open $fh, '<', $dir."/".$in or die "Can't open $in: $!\n";
 	@file=<$fh>;
 
 	#Trim file name for genric use 

@@ -4,11 +4,16 @@ use DBI;
 use List::MoreUtils qw(uniq);
 use Data::Dumper;
 
-@mult=("ddnCoreLabels","ddnLabels","ddnPublishers","ddnReqLabels","finLabels","LocalLabels","ddnServers","efxsitelist","Funnel","RecoveryLabelExceptionList");
+#@mult=("ddnCoreLabels","ddnLabels","ddnPublishers","ddnReqLabels","finLabels","LocalLabels","ddnServers","efxsitelist","Funnel","RecoveryLabelExceptionList");
+@mult=("ddnCoreLabels","ddnLabels","ddnPublishers","ddnReqLabels","LocalLabels","ddnServers","efxsitelist","Funnel","RecoveryLabelExceptionList");
 #@mult=("LocalLabels");
 #@mult=("ddnLabels");
+#@mult=("ddnServers");
+#@mult=("efxsitelist");
+#@mult=("ddnCoreLabels");
 #@lab=("ddnCoreLabels","ddnLabels","ddnPublishers","ddnReqLabels","LocalLabels");
 
+#$current = "pre_prod_2_32";
 $current = "quest_labels";
 #$current = "prod_20150917";
 #$current = "prod_20151007";
@@ -194,8 +199,8 @@ foreach $m (uniq @Am) {
 			$Cmn=$Car[1];	
 			@Nar=split(/\//,$Nmn);
 			$Nmn=$Nar[1];	
-			print $chan "MultAddr $Cmn with name $Car[0] in $current\n";
-			print $chan "MultAddr $Nmn with name $Nar[0] in $new\n\n";
+			print $chan "$current MultAddr $Cmn name $Car[0].\n";
+			print $chan "$new MultAddr $Nmn name $Nar[0].\n\n";
 			
 		}
 
@@ -210,7 +215,7 @@ foreach $m (uniq @Am) {
         		#print $add "MultAddr $m $Nm is only in $new.\n";
         		#print "MultAddr $m $Nmn is only in $new.\n";
         		#openLog();
-        		print $add "MultAddr $Nmn with name $m only in $new.\n";
+        		print $add "$new MultAddr $Nmn name $m.\n";
 
     		}
 
@@ -223,7 +228,7 @@ foreach $m (uniq @Am) {
         		#print $rem "MultAddr $m $Cm is only in $current.\n";
         		#print "MultAddr $m $Cm is only in $current.\n";
         		#openLog();
-        		print $rem "MultAddr $Cmn with name $m only in $current.\n";
+        		print $rem "$current MultAddr $Cmn name $m.\n";
 
     		}
 
@@ -246,8 +251,8 @@ foreach $m (uniq @Am) {
 				$Cmn=$Car[1];	
 				@Nar=split(/\//,$Nch[0]);
 				$Nmn=$Nar[1];	
-				print $chan "MultAddr $Cmn with name $ent in $current\n";
-				print $chan "MultAddr $Nmn with name $ent in $new\n";
+				print $chan "$current MultAddr $Cmn name $ent.\n";
+				print $chan "$new MultAddr $Nmn name $ent.\n";
 
 			}
 
@@ -255,7 +260,7 @@ foreach $m (uniq @Am) {
 
 				@Car=split(/\//,$Cch[0]);
 				$Cmn=$Car[1];	
-				print $rem "MultAddr $Cmn with name $ent only in $current\n";
+				print $rem "$current MultAddr $Cmn name $Car[0].\n";
 
 			}
 
@@ -263,7 +268,7 @@ foreach $m (uniq @Am) {
 
 				@Nar=split(/\//,$Nch[0]);
 				$Nmn=$Nar[1];	
-				print $add "MultAddr $Nmn with name $ent only in $new\n";
+				print $add "$new MultAddr $Nmn with name $Nar[0].\n";
 
 			}
 		
@@ -392,7 +397,10 @@ $lcount = 0;
 foreach $l ( uniq (sort {$a <=> $b} @Lall)) {
 
 	#print "label is $l.\n";
-    preCheck($l);
+	preCheck($l);
+
+	print $add "\n";
+	print $rem "\n";
 
 #print $chan "Done with label $l.\n";
 #print $rem "Done with label $l.\n";
@@ -427,6 +435,8 @@ sub preCheck {
 	$Cstnum=@Cst;
 	$Nstnum=@Nst;
 
+	#print "Cst @Cst\n";
+	#print "Nst @Nst\n";
 	#print "Cstnum $Cstnum Nstnum $Nstnum\n";
 
 	if ( $Cstnum == 0 ) {
@@ -470,6 +480,8 @@ sub preCheck {
     if ( defined $Cpre && defined $Npre && $Cpre eq $Npre ) {
 
         #next;
+        #print "Cpre $Cpre\n";
+        #print "Npre $Npre\n";
         $lcount++;
 	prov();
 
@@ -519,15 +531,17 @@ sub preDiff {
 
         if ( ! defined $Cid && defined $Nid ) {
 
+	#print "only Nid $Nid\n";
             #print $add "label $Nid only in $new.\n";
             $Nsour = $Nrow[1];
 
         }
 
         elsif ( defined $Cid && ! defined $Nid ) {
-
+		
+	#print "only Cid $Cid\n";
         	#openLog();
-            print $rem "label $Cid only in $current.\n";
+            print $rem "$current label $Cid.\n";
 		$lrem=1;
             $Csour = $Crow[1];
 
@@ -536,13 +550,14 @@ sub preDiff {
         elsif ( defined $Cid && defined $Nid && $Cid ne $Nid ) {
   
         	#openLog();
+		#print "Cid $Cid Nid $Nid\n";
             print $chan "$current label $Cid.\n";
             print $chan "$new label $Nid.\n\n";
 
+	}
             $Csour = $Crow[1];
             $Nsour = $Nrow[1];
 
-	}
 
         if ( ! defined $Csour && defined $Nsour ) {
 
@@ -553,62 +568,56 @@ sub preDiff {
 
         elsif ( defined $Csour && ! defined $Nsour ) {
 
-            #print $rem "label $Cid source $Csour only in $current.\n";
-                $Cdest = $Crow[2];
+            	#print $rem "label $Cid source $Csour only in $current.\n";
+		$Cdest = $Crow[2];
 
         }
 
             elsif ( defined $Csour && defined $Nsour && $Csour ne $Nsour ) {
 
         	#openLog();
-                print $chan "$current label $Cid has source $Csour.\n";
-                print $chan "$new label $Nid has source $Nsour.\n\n";
+                print $chan "$current label $Cid source $Csour.\n";
+                print $chan "$new label $Nid source $Nsour.\n\n";
 
+            }
                 $Cdest = $Crow[2];
                 $Ndest = $Nrow[2];
 
-            }
 
                 if ( ! defined $Cdest && defined $Ndest ) {
 
-                    #print $add
-#"label $Nid destination $Ndest only in $new.\n";
-                    $Nmult = $Nrow[3];
+			#print $add "label $Nid destination $Ndest only in $new.\n";
+			$Nmult = $Nrow[3];
 
                 }
 
                 elsif ( defined $Cdest && ! defined $Ndest ) {
 
-                    #print $rem
-#"label $Cid destination $Cdest only in $current.\n";
-                    $Cmult = $Crow[3];
+			#print $rem "label $Cid destination $Cdest only in $current.\n";
+			$Cmult = $Crow[3];
 
                 }
 
                 elsif ( defined $Cdest && defined $Ndest && $Cdest ne $Ndest ) {
 
-        	#openLog();
-                    print $chan
-"$current label $Cid source $Csour has destination $Cdest.\n";
-                    print $chan
-"$new label $Nid source $Nsour has destination $Ndest.\n\n";
+			#openLog();
+			print $chan "$current label $Cid source $Csour destination $Cdest.\n";
+			print $chan "$new label $Nid source $Nsour has destination $Ndest.\n\n";
 
-                    $Cmult = $Crow[3];
-                    $Nmult = $Nrow[3];
                 }
+			$Cmult = $Crow[3];
+			$Nmult = $Nrow[3];
 
                     if ( ! defined $Cmult && defined $Nmult ) {
 
-                        #print $add
-#"label $Nid multTag $Nmult only in $new.\n";
+			#print $add "label $Nid multTag $Nmult only in $new.\n";
                         $Ncons = $Nrow[4];
 
                     }
 
                     elsif ( defined $Cmult && ! defined $Nmult ) {
 
-                        #print $rem
-#"label $Cid multTag $Cmult only in $current.\n";
+			#print $rem "label $Cid multTag $Cmult only in $current.\n";
                         $Ccons = $Crow[4];
 
                     }
@@ -620,10 +629,13 @@ sub preDiff {
 "$current label $Cid source $Csour destination $Cdest multTag $Cmult.\n";
                         print $chan
 "$new label $Nid source $Nsour destination $Ndest multTag $Nmult.\n\n";
+                    }
 
                         $Ccons = $Crow[4];
                         $Ncons = $Nrow[4];
-                    }
+
+			#print "Ccons $Ccons Ncons $Ncons\n";
+
 
                         if ( ! defined $Ccons && defined $Ncons ) {
 
@@ -645,17 +657,17 @@ sub preDiff {
                             print $chan "$current label $Cid has consumers $Ccons.\n";
                             print $chan "$new label $Nid has consumers $Ncons.\n\n";
 
+                        }
                            $CsList = $Crow[5];
                            $NsList = $Nrow[5];
 			    
-                        }
 			
 
                             if ( ! defined $CsList && defined $NsList ) {
 
                                 #print $add "label $Nid spsList $NsList only in $new.\n";
         			#openLog();
-                                print $add "label $Nid with source $Nsour with dest $Ndest on mult $Nmult with consumers $Ncons and spsList $NsList only in $new.\n";
+                                print $add "$new label $Nid source $Nsour dest $Ndest mult $Nmult consumers $Ncons spsList $NsList.\n";
 				#print "label $l NsList $NsList\n";
 
                             }
@@ -709,11 +721,12 @@ sub prov {
 		if ( $table eq "ddnCoreLabels" || $table eq "ddnReqLabels" ) {
 
 			push @Cprov,$Cstr;
+			#print "Crow8 $Crow[8]\n";
 			push @Psrc,$Crow[6];
 
 		}
 
-		if ( $table eq "ddnPublishers" ) {
+		elsif ( $table eq "ddnPublishers" ) {
 
 			push @Cprov,$Cstr;
 			push @Psrc,$Crow[10];
@@ -749,6 +762,7 @@ sub prov {
 		if ( $table eq "ddnCoreLabels" || $table eq "ddnReqLabels" ) {
 
 			push @Nprov,$Nstr;
+			#print "Nrow6 $Nrow[6]\n";
 			push @Psrc,$Nrow[6];
 
 		}
@@ -771,8 +785,11 @@ sub prov {
 
 	@PSrc=uniq(@Psrc);
 
+	#print "PSrc @PSrc\n";
+
 	foreach $src (@PSrc) {
 
+		#print "src loop $src\n";
 		undef @Npr;
 		undef @Cpr;
 		@Cuprov=uniq @Cprov;
@@ -803,35 +820,42 @@ sub prov {
 		$Cpmnum=@Cpm;
 		$Npmnum=@Npm;
 
+		#print "Cpmnum $Cpmnum\n";
+		#print "Npmnum $Npmnum\n";
 		#print "label $l src $src Cpmnum $Cpmnum Npmnum $Npmnum.\n";
 		#print "Cpm $Cpm[0]\n";
 		#print "Npm $Npm[0]\n";
 
-		if ( $Cpmnum != 0 && $Npmnum != 0 && $Cpm[0] ne $Npm[0] ) {
+		#if ( $Cpmnum != 0 && $Npmnum != 0 && $Cpm[0] ne $Npm[0] ) {
+		
+			#print "label $l src $src\n";
+			#print "Cpm $Cpm[0]\n";
+		#	push @Cpr,split(/\//,$Cpm[0]);
+			#print "Npm $Npm[0]\n";
+		#	push @Npr,split(/\//,$Npm[0]);
+		#	provDiff();
+
+		#}
+
+		if ( $Cpmnum != 0 && $Npmnum != 0 ) {
 		
 			#print "label $l src $src\n";
 			#print "Cpm $Cpm[0]\n";
 			push @Cpr,split(/\//,$Cpm[0]);
 			#print "Npm $Npm[0]\n";
 			push @Npr,split(/\//,$Npm[0]);
-			provDiff();
 
-		}
-
-		elsif ( $Cpmnum != 0 && $Npmnum != 0 && $Cpm[0] eq $Npm[0] ) {
 		
-			#print "label $l src $src\n";
-			#print "Cpm $Cpm[0]\n";
-			push @Cpr,split(/\//,$Cpm[0]);
-			#print "Npm $Npm[0]\n";
-			push @Npr,split(/\//,$Npm[0]);
 			provDiff();
+
+			#print "@Cpr\n";
 
 		}
 
 		#if ( ! defined $Cpm[0] && defined $Npm[0] && $Cpm[0] ne $Npm[0] ) {
 		elsif ( $Cpmnum == 0 && $Npmnum != 0 ) {
 		
+			#print "Npm @Npm\n";
 			#print "label $l src $src\n";
 			#print "Npm $Npm[0]\n";
 			push @Npr,split(/\//,$Npm[0]);
@@ -843,9 +867,11 @@ sub prov {
 		#if ( defined $Cpm[0] && ! defined $Npm[0] && $Cpm[0] ne $Npm[0] ) {
 		elsif ( $Cpmnum != 0 && $Npmnum == 0 ) {
 		
+			#print "Cpm @Cpm\n";
 			#print "label $l src $src\n";
 			#print "Cpm $Cpm[0]\n";
 			push @Cpr,split(/\//,$Cpm[0]);
+			#print "at Cpr @Cpr\n";
 			provDiff();
 
 		}
@@ -864,8 +890,6 @@ sub provDiff {
 	$Cp=$Cpr[1];
 	$Np=$Npr[1];
 
-	#print "Cp $Cp Np $Np\n";
-
 	#if ( defined $Cp && defined $Np && $Cp ne $Np ) {
 
 	#	print $chan "$current has label $l provider $Cp srcid $src\n";
@@ -874,7 +898,14 @@ sub provDiff {
 	#}
 
 	if ( ! defined $Cp && defined $Np ) {
-		#print "Np $Np\n";
+		
+		if ( $table eq "ddnCoreLabels" ) {
+
+			$src=$Npr[3];
+
+		}
+		
+		#print "Np $Np src $src\n";
 
 		#print $add "label $l provider $Np srcid $src only in $new.\n";
 		$Nty=$Npr[2];	
@@ -884,12 +915,19 @@ sub provDiff {
 	}
 
 	elsif ( defined $Cp && ! defined $Np ) {
-		#print "Cp $Cp\n";
+		
+		if ( $table eq "ddnCoreLabels" ) {
+
+			$src=$Cpr[3];
+
+		}
+
+		#print "Cp $Cp src $src\n";
 
 		if ( ! defined $lrem ) {
 
         	#openLog();
-		print $rem "label $l provider $Cp srcid $src only in $current.\n";
+		print $rem "$current label $l provider $Cp srcid $src.\n";
 		$Cty=$Cpr[2];	
 	
 		#print "Cty $Cty\n";
@@ -1116,14 +1154,14 @@ sub provDiff {
 							if ( $Nva eq "null" ) {
 
         							#openLog();
-								print $add "label $l provider $Np type $Nty srcid $Nsrcid const $Ncon sps $Nsps only in $new.\n";
+								print $add "$new label $l provider $Np type $Nty srcid $Nsrcid const $Ncon sps $Nsps.\n";
 
 							}
 
 							else {
 
         							#openLog();
-								print $add "label $l provider $Np type $Nty srcid $Nsrcid const $Ncon cva $Nva sps $Nsps only in $new.\n";
+								print $add "$new label $l provider $Np type $Nty srcid $Nsrcid const $Ncon cvaMultTag $Nva sps $Nsps.\n";
 						
 							}
 
@@ -1132,7 +1170,7 @@ sub provDiff {
 						else {
 
         						#openLog();
-							print $add "label $l provider $Np type $Nty srcid $Nsrcid const $Ncon sps $Nsps only in $new.\n";
+							print $add "$new label $l provider $Np type $Nty srcid $Nsrcid const $Ncon sps $Nsps.\n";
 
 						}
 					}
@@ -1151,16 +1189,16 @@ sub provDiff {
 							if ( $Nva eq "null" ) {
 
         							#openLog();
-								print $chan "label $l provider $Cp type $Cty srcid $Csrcid const $Ccon sps $Csps in $current.\n";
-								print $chan "label $l provider $Np type $Nty srcid $Nsrcid const $Ncon sps $Nsps in $new.\n\n";
+								print $chan "$current label $l provider $Cp type $Cty srcid $Csrcid const $Ccon sps $Csps.\n";
+								print $chan "$new label $l provider $Np type $Nty srcid $Nsrcid const $Ncon sps $Nsps.\n\n";
 
 							}
 
 							else {
 
         							#openLog();
-								print $chan "label $l provider $Cp type $Cty srcid $Csrcid const $Ccon cva $Cva sps $Csps in $current.\n";
-								print $chan "label $l provider $Np type $Nty srcid $Nsrcid const $Ncon cva $Nva sps $Nsps in $new.\n\n";
+								print $chan "$current label $l provider $Cp type $Cty srcid $Csrcid const $Ccon cvaMultTag $Cva sps $Csps.\n";
+								print $chan "$new label $l provider $Np type $Nty srcid $Nsrcid const $Ncon cvaMultTag $Nva sps $Nsps.\n\n";
 
 							}
 
@@ -1169,8 +1207,8 @@ sub provDiff {
 						else {
 
         						#openLog();
-							print $chan "label $l provider $Cp type $Cty srcid $Csrcid const $Ccon sps $Csps in $current.\n";
-							print $chan "label $l provider $Np type $Nty srcid $Nsrcid const $Ncon sps $Nsps in $new.\n\n";
+							print $chan "$current label $l provider $Cp type $Cty srcid $Csrcid const $Ccon sps $Csps.\n";
+							print $chan "$new label $l provider $Np type $Nty srcid $Nsrcid const $Ncon sps $Nsps.\n\n";
 	
 						}
 
@@ -1221,14 +1259,14 @@ sub serv {
     		$Nm1 = $nm1{$m};
     		$Nm2 = $nm2{$m};
 
-		#print "Cm1 $Cm1 Nm1 $Nm1\n";
+		#print "Cm1 $Cm1 Cm2 $Cm2 Nm1 $Nm1 Nm2 $Nm2\n";
 
 		#if ( (defined $Cm1 && ! defined $Nm1 ) || (defined $Cm2 && ! defined $Nm2)) {
 		if ( defined $Cm1 && ! defined $Nm1 && defined $Cm2 && ! defined $Nm2) {
 
 			#print "Host $m addr $Cm1 only $current.\n";
         		#openLog();
-			print $rem "Host $Cm1 ddn1 $m ddn2 $Cm2 only $current.\n";
+			print $rem "$current Host $Cm1 ddn1 $m ddn2 $Cm2.\n";
 
 		}
 
@@ -1236,7 +1274,7 @@ sub serv {
 
 			#print "Host $m addr $Nm1 only $new.\n";
         		#openLog();
-			print $add "Host $Nm1 ddn1 $m ddn2 $Nm2 only $new.\n";
+			print $add "$new Host $Nm1 ddn1 $m ddn2 $Nm2.\n";
 
 		}
 
@@ -1245,8 +1283,8 @@ sub serv {
 			#print "Host $m addr $Cm1 $current.\n";
 			#print "Host $m addr $Nm1 $new.\n\n";
         		#openLog();
-			print $chan "Host $Cm1 addr $m $current.\n";
-			print $chan "Host $Nm1 addr $m $new.\n\n";
+			print $chan "$current Host $Cm1 addr $m.\n";
+			print $chan "$new Host $Nm1 addr $m.\n\n";
 
 		}
 
@@ -1255,8 +1293,8 @@ sub serv {
 			#print "Host $m addr $Cm1 $current.\n";
 			#print "Host $m addr $Nm1 $new.\n\n";
         		#openLog();
-			print $chan "Host $Cm1 ddn2 $Cm2 $current.\n";
-			print $chan "Host $Nm1 ddn2 $Nm2 $new.\n\n";
+			print $chan "$current Host $Cm1 ddn2 $Cm2.\n";
+			print $chan "$new Host $Nm1 ddn2 $Nm2.\n\n";
 
 		}
 
@@ -1343,6 +1381,28 @@ sub efx {
 
 		#print "Cf @Cf\n";
 		#print "Nf @Nf\n";
+		#print "Cfn $Cfn\n";
+		#print "Nfn $Nfn\n";
+
+		if ( $Cfn > "1" ) {
+
+			#print "C matched two strings.\n";
+			#$CM1=$Cf[0];
+			#$CM2=$Cf[1];
+
+			#print "CM1 $CM1 CM2 $CM2\n";
+			#$CC1=(grep(/$CM1/,@Nf));
+			#$CC2=(grep(/$CM2/,@Nf));
+
+			#print "CC1 $CC1 CC2 $CC2\n";
+
+		}
+
+		if ( $Nfn > "1" ) {
+
+			#print "N matched two strings.\n";
+
+		}
 
 		if ( $Cfn != 0 && $Nfn == 0 ) {
 
@@ -1394,7 +1454,7 @@ sub efxDiff {
 	
 	if ( defined $Nit ) {
 
-		#print "Nit $Nit\n";
+		print "Nit $Nit\n";
 		@Nfx=split(/\//,$Nit);
 
 		#print "Nfx @Nfx\n";
@@ -1404,13 +1464,13 @@ sub efxDiff {
 
 	if ( defined $Cfx[0] && ! defined $Nfx[0] ) {
 
-		print $rem "item1 $Cfx[0] item2 $Cfx[1] only in $current.\n";
+		print $rem "$current item1 $Cfx[0] item2 $Cfx[1].\n";
 
 	}
 
 	elsif ( ! defined $Cit && defined $Nit ) {
 
-		print $add "item1 $Nfx[0] item2 $Nfx[1] only in $new.\n";
+		print $add "$new item1 $Nfx[0] item2 $Nfx[1].\n";
 
 	}
 
@@ -1573,14 +1633,14 @@ sub funOut {
 		if ( $Cmn == "0" && $Nmn == "1" ) {
 
         		#openLog();
-			print $add "$mul was added\n";
+			print $add "$new mult $mul.\n";
 
 		}
 
 		if ( $Cmn == "1" && $Nmn == "0" ) {
 
         		#openLog();
-			print $rem "$mul was removed\n";
+			print $rem "$current mult $mul.\n";
 
 		}
 
@@ -1594,14 +1654,14 @@ sub funOut {
 		if ( defined $Cmv && ! defined $Nmv ) {
 
         		#openLog();
-			print $rem "$lab was removed for $Cmv\n";
+			print $rem "$current lab $lab for $Cmv.\n";
 
 		}
 
 		if ( ! defined $Cmv && defined $Nmv ) {
 
         		#openLog();
-			print $add "$lab was added for $Nmv\n";
+			print $add "$new lab $lab for $Nmv.\n";
 
 		}
 
@@ -1672,14 +1732,14 @@ sub funPair {
 		if ( $Ce != "0" && $Ne == "0" ) {
 
         		#openLog();
-			print $rem "$pn was removed\n";
+			print $rem "$current pairName $pn.\n";
 
 		}
 
 		if ( $Ce == "0" && $Ne != "0" ) {
 
         		#openLog();
-			print $add "$pn was added\n";
+			print $add "$new pairName $pn.\n";
 
 		}
 
@@ -1699,7 +1759,7 @@ sub funPair {
 
 			@Cr=grep(/$fun/,@Cfn);
 			@Nr=grep(/$fun/,@Nfn);
-			print "Cpname $Cpname Npname $Npname\n";
+			#print "Cpname $Cpname Npname $Npname\n";
 
 		}
 
@@ -1707,7 +1767,7 @@ sub funPair {
 
 			@Nr=grep(/$fun/,@Nfn);
         		#openLog();
-			print $add "Funnel $fun for $Npname is added\n";
+			print $add "$new pairName $Npname Funnel $fun.\n";
 			#print "Nr @Nr\n";
 	
 		}
@@ -1716,7 +1776,7 @@ sub funPair {
 
 			@Cr=grep(/$fun/,@Cfn);
         		#openLog();
-			print $rem "Funnel $fun for $Cpname is removed\n";
+			print $rem "$current pairName $Cpname Funnel $fun.\n";
 	
 		}
 
@@ -1804,11 +1864,11 @@ sub funInst {
 			#@Nrow = split( /\//, $Nlst[0] );
                 	#$Npre = "$Nrow[0]/$Nrow[1]/$Nrow[2]/$Nrow[3]";
         		#openLog();
-			print $add "Output Group  $og was added.\n";
+			print $add "$new OutputGroup $og.\n";
 
 			foreach $n ( @Nlst ) {
 
-				print "$n\n";
+				#print "$n\n";
 
 			}
 		}
@@ -1817,11 +1877,11 @@ sub funInst {
 
 			#@Crow = split( /\//, $Clst[0] );
                 	#$Cpre = "$Crow[0]/$Crow[1]/$Crow[2]/$Crow[3]";
-			print $rem "Output Group  $og was removed.\n";
+			print $rem "$ current OutputGroup $og.\n";
 
 			foreach $n ( @Clst ) {
 
-				print "$n\n";
+				#print "$n\n";
 
 			}
 		}
@@ -1865,7 +1925,7 @@ sub funInst {
 				if ( $Cl1 != "0" && $Nl1 == "0" ) {
 
         				#openLog();
-					print $rem "Input Label $id was removed from output group $og.\n";
+					print $rem "$current InputLabel $id outputGroup $og.\n";
 						
 				}
 
@@ -1873,11 +1933,11 @@ sub funInst {
 
 
         				#openLog();
-					print $add "Input Label $id was added to output group $og.\n";
+					print $add "$new InputLabel $id outputGroup $og.\n";
 
 					foreach $n (uniq(@NL1)) {
 
-						print $add "$n\n";
+						#print $add "$n\n";
 
 					}
 						
@@ -1903,7 +1963,7 @@ sub funInst {
 
 							#print "fn $fn\n";
         						#openLog();
-							print $rem "Funnel $fn in output $og id $id was added.\n";
+							print $rem "$current Funnel $fn output $og id $id.\n";
 						
 						}
 
@@ -1911,11 +1971,11 @@ sub funInst {
 
 							#print "fn $fn\n";
         						#openLog();
-							print $add "Funnel $fn in output $og id $id was removed.\n";
+							print $add "$new Funnel $fn output $og id $id.\n";
 
 							foreach $n (uniq(@NL2)) {
 
-								print $add "$n\n";
+								#print $add "$n\n";
 
 							}
 						
@@ -1960,7 +2020,8 @@ sub funInst {
 								if ( defined $CIdif && defined $NIdif && $CIdif ne $NIdif ) {
 
         								#openLog();
-									print $chan "Instrument $inst for label $id Funnel $fn changed from $CIdif to $NIdif\n";
+									print $chan "$current inst $inst label $id Funnel $fn system $CIdif.\n";
+									print $chan "$new inst $inst label $id Funnel $fn system $NIdif\n\n";
 									#print "CIdif $CIdif NIdif $NIdif\n";
 
 								}
@@ -1968,14 +2029,14 @@ sub funInst {
 								if ( ! defined $CIdif && defined $NIdif ) {
 
         								#openLog();
-									print $add "Instrument $inst for label $id Funnel $fn was added.\n";
+									print $add "$new inst $inst label $id Funnel $fn.\n";
 
 								}
 
 								if ( defined $CIdif && ! defined $NIdif ) {
 
         								#openLog();
-									print $rem "Instrument $inst for label $id Funnel $fn was removed.\n";
+									print $rem "$current inst $inst label $id Funnel $fn.\n";
 
 								}
 									
@@ -2030,14 +2091,14 @@ sub reqLabel {
 		if ( $Cv == 0 && $Nv != 0 ) {
 
         		#openLog();
-			print $add "Label $id was added.\n";
+			print $add "$new Label $id.\n";
 
 		}
 
 		if ( $Cv != 0 && $Nv == 0 ) {
 		
         		#openLog();
-			print $rem "Label $id was removed.\n";
+			print $rem "$current Label $id.\n";
 
 		}
 				

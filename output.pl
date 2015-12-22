@@ -47,6 +47,7 @@ $db=$ARGV[0];
 
 ##set up the connect to the database
 #$dbh = DBI->connect("DBI:mysql:database=pre_prod;host=localhost","name","password",{'RaiseError' => 1});
+$dbh = DBI->connect("DBI:mysql:database=$db;host=reghost","quest","Pegestech1",{'RaiseError' => 1});
 #
 
 	if ( $table eq "ddnServers" ) {
