@@ -1,0 +1,11 @@
+                <dscp ID="Local">39</dscp>
+                <dscp ID="Regional">51</dscp>
+                <dscp ID="WestGlobal">49</dscp>
+                <dscp ID="InterAreaToAsia">63</dscp>
+                <dscp ID="GlobalT2">63</dscp>
+                <dscp ID="Global">50</dscp>
+                <dscp ID="RecReq">23</dscp>
+                <dscp ID="InternalFeeds">52</dscp>
+                <dscp ID="LocalCntrlSync">39</dscp>
+                <dscp ID="RegionalCntrlSync">51</dscp>
+                <dscp ID="DevRegional">7</dscp>

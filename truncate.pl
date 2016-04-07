@@ -3,7 +3,7 @@ use File::Basename;
 use DBI;
 use warnings;
 
-@tables=('ddnCoreLabels','ddnLabels','ddnPublishers','ddnReqLabels','ddnReqLabels','LocalLabels',"finLabels","finServers","efxsitelist","Funnel","ddnServers","RecoveryLabelExceptionList");
+@tables=('ddnCoreLabels','ddnLabels','ddnPublishers','ddnReqLabels','ddnReqLabels','LocalLabels',"finLabels","finServers","efxsitelist","Funnel","ddnServers","RecoveryLabelExceptionList",'version','constId');
 
 if ( $#ARGV == "-1" ) {
 

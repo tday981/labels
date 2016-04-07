@@ -31,7 +31,7 @@ else {
 
 #@mainProc=("ddnCoreLabels.xml","ddnLabels.xml","ddnPublishers.xml","ddnReqLabels.xml","LocalLabels.xml","finLabels.xml");
 #@otherProc=("efxsitelist.xml","Funnel.xml","ddnServers.xml","RecoveryLabelExceptionList.xml","finServers.xml");
-@mainProc=("ddnCoreLabels.xml","ddnLabels.xml","ddnPublishers.xml","ddnReqLabels.xml","LocalLabels.xml");
+@mainProc=("ddnCoreLabels.xml","ddnLabels.xml","ddnPublishers.xml","ddnReqLabels.xml","LocalLabels.xml","finLabels.xml");
 @otherProc=("efxsitelist.xml","Funnel.xml","ddnServers.xml","RecoveryLabelExceptionList.xml");
 
 }
@@ -59,14 +59,14 @@ $comm=0;
 	($name=basename($in)) =~ s/\.xml//;
 
 	#sql for version,major,minor,date,port,dscp
-	$prepVer = $dbh->prepare("insert into ".$name." (version) VALUES(?);");
-	$prepMaj = $dbh->prepare("insert into ".$name." (major) VALUES(?);");
-	$prepMin = $dbh->prepare("insert into ".$name." (minor) VALUES(?);");
+	$prepVer = $dbh->prepare("insert into version (version,major,minor,date) VALUES(?,?,?,?);");
+	#$prepMaj = $dbh->prepare("insert into ".$name." (major) VALUES(?);");
+	#$prepMin = $dbh->prepare("insert into ".$name." (minor) VALUES(?);");
 	$prepInc = $dbh->prepare("insert into ".$name." (includeHref) VALUES(?);");
-	$prepDate = $dbh->prepare("insert into ".$name." (date) VALUES(?);");
+	#$prepDate = $dbh->prepare("insert into ".$name." (date) VALUES(?);");
 	$prepPort = $dbh->prepare("insert into ".$name." (portId,portNum) VALUES(?,?);");
-	$prepDscp = $dbh->prepare("insert into ".$name." (dscpId,dscpNum) VALUES(?,?);");
-	$prepConst = $dbh->prepare("insert into ".$name." (conId,conNum) VALUES(?,?);");
+	$prepDscp = $dbh->prepare("insert into dscp (dscpId,dscpNum) VALUES(?,?);");
+	$prepConst = $dbh->prepare("insert into constId (conId,conNum) VALUES(?,?);");
 
 
 	##Define sql statements
@@ -323,14 +323,15 @@ foreach $in (@otherProc) {
 	($name=basename($in)) =~ s/\.xml//;
 
 	#sql for version,major,minor,date,port,dscp
-	$prepVer = $dbh->prepare("insert into ".$name." (version) VALUES(?);");
-	$prepMaj = $dbh->prepare("insert into ".$name." (major) VALUES(?);");
-	$prepMin = $dbh->prepare("insert into ".$name." (minor) VALUES(?);");
+	#$prepVer = $dbh->prepare("insert into ".$name." (version) VALUES(?);");
+	$prepVer = $dbh->prepare("insert into version (version,major,minor,date) VALUES(?,?,?,?);");
+	#$prepMaj = $dbh->prepare("insert into ".$name." (major) VALUES(?);");
+	#$prepMin = $dbh->prepare("insert into ".$name." (minor) VALUES(?);");
 	$prepInc = $dbh->prepare("insert into ".$name." (includeHref) VALUES(?);");
-	$prepDate = $dbh->prepare("insert into ".$name." (date) VALUES(?);");
+	#$prepDate = $dbh->prepare("insert into ".$name." (date) VALUES(?);");
 	$prepPort = $dbh->prepare("insert into ".$name." (portId,portNum) VALUES(?,?);");
-	$prepDscp = $dbh->prepare("insert into ".$name." (dscpId,dscpNum) VALUES(?,?);");
-	$prepConst = $dbh->prepare("insert into ".$name." (conId,conNum) VALUES(?,?);");
+	$prepDscp = $dbh->prepare("insert into dscp (dscpId,dscpNum) VALUES(?,?);");
+	$prepConst = $dbh->prepare("insert into constId (conId,conNum) VALUES(?,?);");
 
 	##Define sql statements
 	if ( $name eq "Funnel" ) {
@@ -419,13 +420,14 @@ foreach $in (@otherProc) {
 	
 			}
 
-			if ( defined $outG && $count == "0" ) {
+			if ( defined $outG && ! defined $Ilab ) {
 
-				$prepOutGroup->execute($outG);
-				$count++;
+			    #print "outG is $outG and Ilab $Ilab\n";
+				#$prepOutGroup->execute($outG);
+				#$count++;
 
 			}
-	
+
 			if ( $line =~ /\Q<\/Funnel\E/ ) {
 	
 			#	print "matched\n";
@@ -439,13 +441,18 @@ foreach $in (@otherProc) {
 			#	print "matched\n";
 				undef $funName;
 				undef $instId;
-				undef $Ilab;
+				#undef $Ilab;
 	
 			}
 
 			if ( $line =~ /\Q<\/Output\E/ ) {
 
+			   if ( defined $outG && ! defined $Ilab ) {
+			      $prepOutGroup->execute($outG);
+                           }
+
 				undef $outG;
+				undef $Ilab;
 				$count=0;
 
 			}
@@ -555,7 +562,8 @@ sub version {
 	if ( $line =~ /\Q<version TEXT\E/ ) {
 
 		@vers=split(/\"/,$line);
-		$prepVer->execute($vers[1]);
+		#$prepVer->execute($vers[1]);
+		push (@Ver,$vers[1]);
 		#print "version is $ver\n";
 
 	}
@@ -569,7 +577,8 @@ sub major {
 		if ( $line =~ /\QMajor=\E/ ) {
 
 			@ma=split(/\"/,$line);
-			$prepMaj->execute($ma[3]);
+			#$prepMaj->execute($ma[3]);
+			push (@Ver,$ma[3]);
 			#print "major is $ma\n";
 
 		}
@@ -581,7 +590,8 @@ sub major {
 		if ( $line =~ /\Q<major\E/ ) {
 
 			@ma=split(/[<>]/,$line);
-			$prepMaj->execute($ma[2]);
+			#$prepMaj->execute($ma[2]);
+			push (@Ver,$ma[2]);
 			#print "major is $ma\n";
 
 		}
@@ -597,7 +607,8 @@ sub minor {
 		if ( $line =~ /\QMinor=\E/ ) {
 
 			@mi=split(/\"/,$line);
-			$prepMin->execute($mi[5]);
+			#$prepMin->execute($mi[5]);
+			push (@Ver,$mi[5]);
 			#print "minor is $min\n";
 
 		}
@@ -609,7 +620,8 @@ sub minor {
 		if ( $line =~ /\Q<minor\E/ ) {
 
 			@mi=split(/[<>]/,$line);
-			$prepMin->execute($mi[2]);
+			#$prepMin->execute($mi[2]);
+			push (@Ver,$mi[2]);
 			#print "minor is $min\n";
 
 		}
@@ -623,7 +635,10 @@ sub date {
 	if ( $line =~ /\Q<date\E/ ) {
 
 		@dat=split(/[<>]/,$line);
-		$prepDate->execute($dat[2]);
+		$v=$Ver[0];
+		$m=$Ver[1];
+		$mn=$Ver[2];
+		$prepVer->execute($v,$m,$mn,$dat[2]);
 		#print "date is $date\n";
 
 	}
